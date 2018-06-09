@@ -1,0 +1,35 @@
+.input {
+    // width: 382px;
+    position: relative;
+    height: 36px;
+    border: 1px solid #dfe3e9;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    outline: none;
+    &::-webkit-input-placeholder {
+        color: #b0b0b1;
+    }
+    &::-moz-placeholder {
+        color: #b0b0b1;
+    }
+    /* Firefox 19+ */
+    &:-moz-placeholder {
+        color: #b0b0b1;
+    }
+    /* Firefox 18- */
+    &:-ms-input-placeholder {
+        color: #b0b0b1;
+    }
+
+    &:focus {
+        // box-shadow: 0 0 1px 0px #000;
+    }
+    &.has-error {
+      // box-shadow: none;
+      border: 2px solid #ed1c24;
+    }
+    &.valid {
+      border: 2px solid #00a651;
+    }
+}
