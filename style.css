@@ -558,11 +558,12 @@ body {
   border: none; }
 
 .wizzard {
-  background: url(../img/bg-aqua1.svg) no-repeat;
-  height: 660px;
+  background: url(../img/bg-aqua1.svg);
+  height: 739px;
   margin-top: -87px;
   position: relative;
-  margin-bottom: 185px; }
+  background-position: center center;
+  margin-bottom: 107px; }
   .wizzard .container {
     padding: 24px 165px 20px 165px; }
   .wizzard__item {
@@ -603,12 +604,16 @@ body {
   width: 915px;
   height: 335px;
   border-radius: 35px;
-  background: #ccc;
+  background: #f9c7d5;
   margin: 70px auto 0;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  overflow: hidden; }
   .feedback_image {
-    width: 45%; }
+    width: 45%;
+    overflow: hidden; }
+    .feedback_image img {
+      width: 100%; }
   .feedback_message {
     width: 55%;
     padding: 74px 39px 50px 39px; }
