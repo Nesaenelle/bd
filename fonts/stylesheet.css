@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'ExposureCTwo';
+    src: url('ExposureCTwo.eot');
+    src: url('ExposureCTwo.eot?#iefix') format('embedded-opentype'),
+        url('ExposureCTwo.woff2') format('woff2'),
+        url('ExposureCTwo.woff') format('woff'),
+        url('ExposureCTwo.ttf') format('truetype'),
+        url('ExposureCTwo.svg#ExposureCTwo') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+

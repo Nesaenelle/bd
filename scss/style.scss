@@ -10,3 +10,17 @@
 @import 'inputs.scss';
 @import 'icons.scss';
 @import 'media.scss';
+
+
+
+@font-face {
+    font-family: 'ExposureCTwo';
+    src: url('../fonts/ExposureCTwo.eot');
+    src: url('../fonts/ExposureCTwo.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ExposureCTwo.woff2') format('woff2'),
+    url('../fonts/ExposureCTwo.woff') format('woff'),
+    url('../fonts/ExposureCTwo.ttf') format('truetype');
+    // url('./fonts/ExposureCTwo.svg#./fonts/ExposureCTwo') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
