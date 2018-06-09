@@ -15,27 +15,29 @@ button {
 }
 
 .calculate-btn {
-    width: 350px;
-    height: 50px;
+    width: 100%;
+    max-width: 550px;
+    height: 102px;
     background: url(../img/calculate_button.png) no-repeat;
-    background-size: contain;
     margin: 50px auto 0;
-    background-position: center;
+    background-position: 0 7px;
     display: block;
     border: none;
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1.2px;
 }
 
 .section-title {
     font-size: 48px;
     letter-spacing: 0.3px;
-    line-height: 50px;  
+    line-height: 50px;
     margin: auto;
     text-align: center;
     font-family: ExposureCTwo;
-    &.aqua{
-        color: #1ebec4;
-    }
 }
+
 
 
 
@@ -176,7 +178,7 @@ button {
 
 
 .horizontal-slider {
-    .section-title  {
+    .section-title {
         width: 70%;
     }
     &__title {
@@ -189,7 +191,7 @@ button {
     }
 
     &__container {
-        height: 645px;
+        height: 580px;
         overflow: hidden;
         margin-top: 22px;
         .scroller {
@@ -201,60 +203,270 @@ button {
         width: 470px;
         display: inline-block;
         &_text {
-             margin-top: -20px;
-             width: 80%;
-             margin: auto;
-             line-height: 22px;
+            margin-top: -20px;
+            width: 80%;
+            margin: auto;
+            line-height: 24px;
         }
     }
 }
 
 .shows {
-    height: 1078px;
-    margin-top: 190px;
+    height: 1150px;
+    margin-top: 0;
+    background: url(../img/bg-aqua2.svg);
+    background-size: cover;
+    padding: 150px;
+    .feedback {
+        margin: 53px auto;
+        height: 310px;
+        &__message {
+            padding: 56px 39px 50px 33px;
+            &_user {
+                margin-top: 24px;
+            }
+        }
+    }
+    .container {
+        padding: 17px 153px 20px 153px;
+    }
+    &__title {
+        margin-top: 30px;
+        font-size: 20px;
+        width: 67%;
+        padding: 0px 10px;
+        font-weight: 500;
+        font-size: 22px;
+        letter-spacing: 0.1px;
+        line-height: 30px;
+    }
+    &__descr {
+        margin-top: 30px;
+        font-size: 24px;
+        width: 29%;
+        color: #fff;
+        font-family: ExposureCTwo;
+        padding: 0px 10px;
+        line-height: 27px
+    }
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 46px;
+        padding-right: 22px;
+        &_item {
+            $c: &;
+            &:nth-child(1) {
+                #{$c}_img {
+
+                    &:before {
+                        content: '';
+                        background: url(../img/border1.png) no-repeat;
+                        background-size: contain;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                    }
+                    &:after {
+                        content: '';
+                        background: url(../img/books.png) no-repeat;
+                        background-size: contain;
+                        position: absolute;
+                        width: 150px;
+                        height: 150px;
+                        left: -58px;
+                        bottom: -6px;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                #{$c}_img {
+
+                    &:before {
+                        content: '';
+                        background: url(../img/border2.png) no-repeat;
+                        background-size: contain;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                    }
+                    &:after {
+                        content: '';
+                        background: url(../img/hat.png) no-repeat;
+                        background-size: contain;
+                        position: absolute;
+                        width: 175px;
+                        height: 175px;
+                        right: -22px;
+                        top: -70px;
+                    }
+                }
+            }
+            &_img {
+                img {
+                    width: 100%;
+                }
+                position: relative;
+            }
+            &_text {
+                font-size: 13px;
+                padding-left: 13px;
+                letter-spacing: 0.5px;
+            }
+        }
+    }
 }
 
 
 .master-classes {
-    margin-top: 54px;
+    margin-top: 160px;
     .container {
-        padding: 0px 136px;
+        padding: 0px 164px;
     }
     &__item {
         margin-top: 60px;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        position: relative;
+        $c: &;
         &:first-child {
             margin-top: 0;
         }
+        &:nth-child(1) {
+            &:after {
+                content: '';
+                background: url(../img/tent.png) no-repeat;
+                background-size: contain;
+                position: absolute;
+                width: 238px;
+                height: 225px;
+                left: -63px;
+                bottom: -9px;
+            }
+            #{$c}_image {
+                &:before {
+                    content: '';
+                    background: url(../img/border3.png) no-repeat;
+                    background-size: contain;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                }
+                &:after {
+                    content: '';
+                    background: url(../img/compas.png) no-repeat;
+                    background-size: contain;
+                    position: absolute;
+                    width: 240px;
+                    height: 240px;
+                    right: -89px;
+                    top: -111px;
+                }
+            }
+        }
+        &:nth-child(2) {
+            #{$c}_image {
+                &:before {
+                    content: '';
+                    background: url(../img/border4.png) no-repeat;
+                    background-size: contain;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                }
+                &:after {
+                    content: '';
+                    background: url(../img/crockery.png) no-repeat;
+                    background-size: contain;
+                    position: absolute;
+                    width: 250px;
+                    height: 250px;
+                    right: -69px;
+                    bottom: -20px
+                }
+            }
+        }
+        &:nth-child(3) {
+            #{$c}_image {
+                &:before {
+                    content: '';
+                    background: url(../img/border5.png) no-repeat;
+                    background-size: contain;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                }
+            }
+        }
         &_title {
             font-size: 22px;
-            width: 68%;
+            width: 67%;
             padding-right: 20px;
             line-height: 29px;
+            font-weight: 500;
+            letter-spacing: -0.4px;
         }
         &_link {
-            width: 28%;
-            font-size: 20px;
+            width: 27%;
+            font-family: ExposureCTwo;
+            color: #8765d1;
+            font-size: 24px;
+            line-height: 25px;
         }
         &_descr {
             font-size: 14px;
-            width: 50%;
-            margin-top: 12px;
+            width: 58%;
+            margin-top: 22px;
+            letter-spacing: 0.2px;
         }
         &_image {
+            position: relative;
             margin-top: 87px;
-            width: 100%;
-            height: 701px;
-            background: red;
-            margin-top: 47px;
+            width: 100%; // height: 701px; // background: red;
+            margin-top: 45px;
+            img {
+                width: 100%
+            }
         }
     }
 }
 
 .birthday-calculator {
     height: 600px;
+    margin-top: 116px;
+    .section-title {}
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__title {
+        font-size: 22px;
+        width: 67%;
+        padding-right: 20px;
+        line-height: 29px;
+        font-weight: 500;
+        letter-spacing: -0.4px;
+    }
+    &__link {
+        width: 27%;
+        font-family: ExposureCTwo;
+        color: #8765d1;
+        font-size: 24px;
+        line-height: 25px;
+    }
 }
 
 .google-map {
@@ -356,4 +568,17 @@ button {
             font-size: 20px;
         }
     }
+}
+
+
+.aqua {
+    color: #1ebec4;
+}
+
+.white {
+    color: #fff;
+}
+
+.violet {
+    color: #8765d1;
 }

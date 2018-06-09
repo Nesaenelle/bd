@@ -566,14 +566,18 @@ button {
   margin: auto; }
 
 .calculate-btn {
-  width: 350px;
-  height: 50px;
+  width: 100%;
+  max-width: 550px;
+  height: 102px;
   background: url(../img/calculate_button.png) no-repeat;
-  background-size: contain;
   margin: 50px auto 0;
-  background-position: center;
+  background-position: 0 7px;
   display: block;
-  border: none; }
+  border: none;
+  font-size: 30px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1.2px; }
 
 .section-title {
   font-size: 48px;
@@ -582,8 +586,6 @@ button {
   margin: auto;
   text-align: center;
   font-family: ExposureCTwo; }
-  .section-title.aqua {
-    color: #1ebec4; }
 
 .wizzard {
   background: url(../img/bg-aqua1.svg);
@@ -701,7 +703,7 @@ button {
   font-weight: 600; }
 
 .horizontal-slider__container {
-  height: 645px;
+  height: 580px;
   overflow: hidden;
   margin-top: 22px; }
   .horizontal-slider__container .scroller {
@@ -714,44 +716,202 @@ button {
     margin-top: -20px;
     width: 80%;
     margin: auto;
-    line-height: 22px; }
+    line-height: 24px; }
 
 .shows {
-  height: 1078px;
-  margin-top: 190px; }
+  height: 1150px;
+  margin-top: 0;
+  background: url(../img/bg-aqua2.svg);
+  background-size: cover;
+  padding: 150px; }
+  .shows .feedback {
+    margin: 53px auto;
+    height: 310px; }
+    .shows .feedback__message {
+      padding: 56px 39px 50px 33px; }
+      .shows .feedback__message_user {
+        margin-top: 24px; }
+  .shows .container {
+    padding: 17px 153px 20px 153px; }
+  .shows__title {
+    margin-top: 30px;
+    font-size: 20px;
+    width: 67%;
+    padding: 0px 10px;
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 0.1px;
+    line-height: 30px; }
+  .shows__descr {
+    margin-top: 30px;
+    font-size: 24px;
+    width: 29%;
+    color: #fff;
+    font-family: ExposureCTwo;
+    padding: 0px 10px;
+    line-height: 27px; }
+  .shows__container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 46px;
+    padding-right: 22px; }
+    .shows__container_item:nth-child(1) .shows__container_item_img:before {
+      content: '';
+      background: url(../img/border1.png) no-repeat;
+      background-size: contain;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0; }
+    .shows__container_item:nth-child(1) .shows__container_item_img:after {
+      content: '';
+      background: url(../img/books.png) no-repeat;
+      background-size: contain;
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      left: -58px;
+      bottom: -6px; }
+    .shows__container_item:nth-child(2) .shows__container_item_img:before {
+      content: '';
+      background: url(../img/border2.png) no-repeat;
+      background-size: contain;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0; }
+    .shows__container_item:nth-child(2) .shows__container_item_img:after {
+      content: '';
+      background: url(../img/hat.png) no-repeat;
+      background-size: contain;
+      position: absolute;
+      width: 175px;
+      height: 175px;
+      right: -22px;
+      top: -70px; }
+    .shows__container_item_img {
+      position: relative; }
+      .shows__container_item_img img {
+        width: 100%; }
+    .shows__container_item_text {
+      font-size: 13px;
+      padding-left: 13px;
+      letter-spacing: 0.5px; }
 
 .master-classes {
-  margin-top: 54px; }
+  margin-top: 160px; }
   .master-classes .container {
-    padding: 0px 136px; }
+    padding: 0px 164px; }
   .master-classes__item {
     margin-top: 60px;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    position: relative; }
     .master-classes__item:first-child {
       margin-top: 0; }
+    .master-classes__item:nth-child(1):after {
+      content: '';
+      background: url(../img/tent.png) no-repeat;
+      background-size: contain;
+      position: absolute;
+      width: 238px;
+      height: 225px;
+      left: -63px;
+      bottom: -9px; }
+    .master-classes__item:nth-child(1) .master-classes__item_image:before {
+      content: '';
+      background: url(../img/border3.png) no-repeat;
+      background-size: contain;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0; }
+    .master-classes__item:nth-child(1) .master-classes__item_image:after {
+      content: '';
+      background: url(../img/compas.png) no-repeat;
+      background-size: contain;
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      right: -89px;
+      top: -111px; }
+    .master-classes__item:nth-child(2) .master-classes__item_image:before {
+      content: '';
+      background: url(../img/border4.png) no-repeat;
+      background-size: contain;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0; }
+    .master-classes__item:nth-child(2) .master-classes__item_image:after {
+      content: '';
+      background: url(../img/crockery.png) no-repeat;
+      background-size: contain;
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      right: -69px;
+      bottom: -20px; }
+    .master-classes__item:nth-child(3) .master-classes__item_image:before {
+      content: '';
+      background: url(../img/border5.png) no-repeat;
+      background-size: contain;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0; }
     .master-classes__item_title {
       font-size: 22px;
-      width: 68%;
+      width: 67%;
       padding-right: 20px;
-      line-height: 29px; }
+      line-height: 29px;
+      font-weight: 500;
+      letter-spacing: -0.4px; }
     .master-classes__item_link {
-      width: 28%;
-      font-size: 20px; }
+      width: 27%;
+      font-family: ExposureCTwo;
+      color: #8765d1;
+      font-size: 24px;
+      line-height: 25px; }
     .master-classes__item_descr {
       font-size: 14px;
-      width: 50%;
-      margin-top: 12px; }
+      width: 58%;
+      margin-top: 22px;
+      letter-spacing: 0.2px; }
     .master-classes__item_image {
+      position: relative;
       margin-top: 87px;
       width: 100%;
-      height: 701px;
-      background: red;
-      margin-top: 47px; }
+      margin-top: 45px; }
+      .master-classes__item_image img {
+        width: 100%; }
 
 .birthday-calculator {
-  height: 600px; }
+  height: 600px;
+  margin-top: 116px; }
+  .birthday-calculator .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+  .birthday-calculator__title {
+    font-size: 22px;
+    width: 67%;
+    padding-right: 20px;
+    line-height: 29px;
+    font-weight: 500;
+    letter-spacing: -0.4px; }
+  .birthday-calculator__link {
+    width: 27%;
+    font-family: ExposureCTwo;
+    color: #8765d1;
+    font-size: 24px;
+    line-height: 25px; }
 
 .google-map {
   width: 100%;
@@ -823,6 +983,15 @@ button {
     font-weight: bold; }
   .faq__item_text {
     font-size: 20px; }
+
+.aqua {
+  color: #1ebec4; }
+
+.white {
+  color: #fff; }
+
+.violet {
+  color: #8765d1; }
 
 .slider {
   height: 268px;
