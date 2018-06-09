@@ -1,0 +1,24 @@
+.footer {
+    margin-top: 200px;
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    &__phone {
+        width: 306px;
+        // padding: 20px;
+        // height: 165px;
+        background: url(../img/spot-footer.png) no-repeat;
+        font-size: 16px;
+        &_number {
+            font-size: 30px;
+            font-weight: 800;
+        }
+        &_text {
+            font-size: 12px;
+            padding-left: 10px;
+        }
+    }
+    &__socials {
+
+    }
+}

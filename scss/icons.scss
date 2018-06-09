@@ -1,0 +1,10 @@
+.icon {
+	display: inline-block;
+	&.icon {
+		&-inst {
+			background: red;
+			width: 30px;
+			height: 30px;
+		}
+	}
+}

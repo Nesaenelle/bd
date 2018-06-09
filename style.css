@@ -461,51 +461,34 @@ a {
 .width-100 {
   width: 100% !important; }
 
-.header {
-  background: #f0f8f9; }
-  .header .container {
-    position: relative; }
-  .header__kid-bg {
-    background: url(../img/kid_bg.png) no-repeat;
-    right: 0;
-    position: absolute;
-    top: 0;
-    width: 1000px;
-    height: 100%;
-    background-position: center top; }
-  .header__menu {
-    font-size: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    width: 100%;
-    height: 87px; }
-  .header__phone {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 306px;
-    padding: 20px;
-    height: 165px;
-    background: url(../img/spot.png) no-repeat;
-    font-size: 16px; }
-    .header__phone_number {
-      font-size: 30px;
-      font-weight: 800; }
-    .header__phone_text {
-      font-size: 12px;
-      padding-left: 10px; }
-  .header .logo {
-    position: absolute; }
-  .header nav {
-    padding-left: 210px; }
-    .header nav ul {
+.header .container {
+  position: relative; }
+
+.header__kid-bg {
+  background: url(../img/kid_bg.png) no-repeat;
+  right: 0;
+  position: absolute;
+  top: 0;
+  width: 847px;
+  height: 100%;
+  background-position: center -60px; }
+
+.header__menu {
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 87px; }
+  .header__menu nav {
+    padding-left: 212px; }
+    .header__menu nav ul {
       display: flex; }
-      .header nav ul li {
+      .header__menu nav ul li {
         position: relative;
         margin: 10px; }
-        .header nav ul li.active:after {
+        .header__menu nav ul li.active:after {
           background: #8765d1;
           height: 4px;
           width: 100%;
@@ -513,38 +496,74 @@ a {
           position: absolute;
           bottom: -5px;
           left: 0; }
-        .header nav ul li a {
+        .header__menu nav ul li a {
+          text-shadow: 1px 1px 14px #FFF, 0 0 2em #fff;
           font-size: 16px;
           letter-spacing: 0.1px;
           display: block;
           color: #000; }
 
+.header__phone {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 306px;
+  padding: 20px;
+  height: 165px;
+  background: url(../img/spot.png) no-repeat;
+  font-size: 16px; }
+  .header__phone_number {
+    font-size: 30px;
+    font-weight: 800; }
+  .header__phone_text {
+    font-size: 12px;
+    padding-left: 10px; }
+
+.header .logo {
+  position: absolute; }
+
+.header .top-block {
+  background: #f0f8f9;
+  height: 550px; }
+  .header .top-block .container {
+    padding: 27px 165px 20px 136px; }
+  .header .top-block__title {
+    color: #8765d1;
+    font-size: 64px;
+    letter-spacing: 0.4px;
+    line-height: 71px; }
+  .header .top-block__descr {
+    width: 50%;
+    font-size: 22px;
+    margin-top: 35px;
+    line-height: 29px;
+    padding-left: 5px;
+    letter-spacing: 0.2px; }
+
 body {
-  font-family: Montserrat; }
+  font-family: Montserrat;
+  background: #f0f8f9; }
 
 .container {
   padding: 0px 20px;
-  max-width: 1415px;
+  max-width: 1425px;
   margin: auto; }
 
-.top-block {
-  background: #f0f8f9;
-  height: 550px; }
-  .top-block .container {
-    padding: 24px 165px 20px 165px; }
-  .top-block__title {
-    color: #8765d1;
-    font-size: 54px; }
-  .top-block__descr {
-    width: 50%;
-    font-size: 22px; }
+.calculate-btn {
+  width: 300px;
+  height: 50px;
+  background: url(../img/bg-pink1.png);
+  margin: 50px auto 0;
+  display: block;
+  border: none; }
 
 .wizzard {
   background: url(../img/bg-pink1.png);
   height: 660px;
-  margin-top: -100px;
+  margin-top: -87px;
   position: relative;
-  background-position: center center; }
+  background-position: 2317px center;
+  margin-bottom: 185px; }
   .wizzard .container {
     padding: 24px 165px 20px 165px; }
   .wizzard__item {
@@ -552,16 +571,20 @@ body {
     align-items: center; }
     .wizzard__item:nth-child(1) {
       position: absolute;
-      top: -150px; }
+      top: -155px; }
+      .wizzard__item:nth-child(1) .wizzard__item_text {
+        width: 180px; }
+      .wizzard__item:nth-child(1) .wizzard__item_text,
+      .wizzard__item:nth-child(1) .wizzard__item_number {
+        color: #f7a1b9; }
     .wizzard__item:nth-child(2) {
-      margin-top: 50px;
-      margin-left: 50px; }
+      margin-top: 52px;
+      margin-left: 70px; }
     .wizzard__item:nth-child(3) {
-      margin-top: 50px;
-      margin-left: 125px; }
-    .wizzard__item.pink .wizzard__item_text,
-    .wizzard__item.pink .wizzard__item_number {
-      color: #f7a1b9; }
+      margin-top: 37px;
+      margin-left: 178px; }
+      .wizzard__item:nth-child(3) .wizzard__item_text {
+        margin-right: 20px; }
     .wizzard__item_number {
       font-size: 100px;
       color: #fff;
@@ -569,11 +592,114 @@ body {
     .wizzard__item_text {
       font-size: 18px;
       color: #fff;
-      width: 180px;
-      margin-right: 50px; }
+      width: 150px;
+      line-height: 24px; }
     .wizzard__item_descr {
       font-size: 22px;
-      width: 550px; }
+      width: 580px;
+      line-height: 29px;
+      padding-top: 11px; }
+
+.feedback {
+  width: 915px;
+  height: 335px;
+  border-radius: 35px;
+  background: #ccc;
+  margin: 70px auto 0;
+  display: flex;
+  justify-content: space-between; }
+  .feedback_image {
+    width: 45%; }
+  .feedback_message {
+    width: 55%;
+    padding: 74px 39px 50px 39px; }
+    .feedback_message_text {
+      font-size: 18px;
+      line-height: 25px; }
+    .feedback_message_user {
+      margin-top: 22px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap; }
+      .feedback_message_user_name {
+        margin-left: 10px;
+        color: #000;
+        text-decoration: underline; }
+      .feedback_message_user_exrta {
+        width: 100%; }
+
+.horizontal-slider__title {
+  text-align: center;
+  font-size: 40px;
+  width: 65%;
+  margin: auto;
+  color: #1dbfc1;
+  font-weight: 600; }
+
+.horizontal-slider__container {
+  height: 645px;
+  overflow: hidden; }
+  .horizontal-slider__container .scroller {
+    width: 4000px; }
+
+.horizontal-slider__item {
+  width: 470px;
+  display: inline-block; }
+
+.shows {
+  height: 1078px;
+  margin-top: 190px; }
+
+.master-classes {
+  margin-top: 54px; }
+  .master-classes .container {
+    padding: 0px 136px; }
+  .master-classes__item {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .master-classes__item:first-child {
+      margin-top: 0; }
+    .master-classes__item_title {
+      font-size: 22px;
+      width: 68%;
+      padding-right: 20px;
+      line-height: 29px; }
+    .master-classes__item_link {
+      width: 28%;
+      font-size: 20px; }
+    .master-classes__item_descr {
+      font-size: 14px;
+      width: 50%;
+      margin-top: 12px; }
+    .master-classes__item_image {
+      margin-top: 87px;
+      width: 100%;
+      height: 701px;
+      background: red;
+      margin-top: 47px; }
+
+.birthday-calculator {
+  height: 600px; }
+
+.google-map {
+  width: 100%;
+  height: 800px; }
+
+.section-title {
+  font-size: 50px;
+  margin: auto;
+  text-align: center; }
+
+.faq__item {
+  margin-top: 20px; }
+  .faq__item_title {
+    font-size: 20px;
+    font-weight: bold; }
+  .faq__item_text {
+    font-size: 20px; }
 
 .slider {
   height: 268px;
@@ -641,6 +767,22 @@ body {
       .slider__controls__item.active {
         background: #353c48; }
 
+.footer {
+  margin-top: 200px;
+  position: relative;
+  justify-content: space-between;
+  display: flex; }
+  .footer__phone {
+    width: 306px;
+    background: url(../img/spot-footer.png) no-repeat;
+    font-size: 16px; }
+    .footer__phone_number {
+      font-size: 30px;
+      font-weight: 800; }
+    .footer__phone_text {
+      font-size: 12px;
+      padding-left: 10px; }
+
 .input {
   position: relative;
   height: 36px;
@@ -663,6 +805,13 @@ body {
     border: 2px solid #ed1c24; }
   .input.valid {
     border: 2px solid #00a651; }
+
+.icon {
+  display: inline-block; }
+  .icon.icon-inst {
+    background: red;
+    width: 30px;
+    height: 30px; }
 
 /* MOBILES */
 .desktop {
