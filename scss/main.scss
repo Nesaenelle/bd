@@ -12,7 +12,7 @@ body {
 .calculate-btn {
     width: 300px;
     height: 50px;
-    background: url(../img/bg-pink1.png);
+    background: url(../img/bg-pink1.svg);
     margin: 50px auto 0;
     display: block;
     border: none;
@@ -20,7 +20,7 @@ body {
 
 
 .wizzard {
-    background: url(../img/bg-pink1.png);
+    background: url(../img/bg-pink1.svg);
     height: 660px;
     margin-top: -87px;
     position: relative;
@@ -159,9 +159,9 @@ body {
         }
         &_title {
             font-size: 22px;
-                width: 68%;
-                padding-right: 20px;
-                line-height: 29px;
+            width: 68%;
+            padding-right: 20px;
+            line-height: 29px;
         }
         &_link {
             width: 28%;
@@ -189,14 +189,94 @@ body {
 .google-map {
     width: 100%;
     height: 800px;
+    margin-top: 30px;
 }
 
+.organization {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__col {
+        width: 48%;
+    }
+    &__tags {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        &_item {
+            border: 1px solid red;
+            padding: 10px;
+            border-radius: 20px;
+        }
+    }
+}
 
 .section-title {
     font-size: 50px;
     margin: auto;
     text-align: center;
 }
+
+
+
+.addresses {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__title {
+        font-weight: 600;
+        width: 100%;
+        margin-top: 20px;
+    }
+    &__address {
+        margin-top: 10px;
+        &_metro {
+            margin-top: 10px;
+            &.violet {
+                color: #a3228d;
+            }
+            &.yellow {
+                color: #ffca30;
+            }
+            &.d-green {
+                color: #02a54f;
+            }
+            &.l-green {
+                color: #7ec141;
+            }
+            &.green {
+                color: #4fb050;
+            }
+            &.grey {
+                color: #898b8e;
+            }
+            &.red {
+                color: #ed1a22;
+            }
+            &.orange {
+                color: #f58120;
+            }
+            &.brown {
+                color: #8a3f32;
+            }
+            &.blue {
+                color: #0d65ae;
+            }
+        }
+    }
+    .addresses__col {
+        width: 48%;
+        display: flex;
+        flex-wrap: wrap;
+        &_item {
+            width: 50%;
+        }
+    }
+}
+
 
 .faq {
     &__item {

@@ -552,13 +552,13 @@ body {
 .calculate-btn {
   width: 300px;
   height: 50px;
-  background: url(../img/bg-pink1.png);
+  background: url(../img/bg-pink1.svg);
   margin: 50px auto 0;
   display: block;
   border: none; }
 
 .wizzard {
-  background: url(../img/bg-pink1.png);
+  background: url(../img/bg-pink1.svg);
   height: 660px;
   margin-top: -87px;
   position: relative;
@@ -686,12 +686,71 @@ body {
 
 .google-map {
   width: 100%;
-  height: 800px; }
+  height: 800px;
+  margin-top: 30px; }
+
+.organization {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .organization__col {
+    width: 48%; }
+  .organization__tags {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%; }
+    .organization__tags_item {
+      border: 1px solid red;
+      padding: 10px;
+      border-radius: 20px; }
 
 .section-title {
   font-size: 50px;
   margin: auto;
   text-align: center; }
+
+.addresses .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+.addresses__title {
+  font-weight: 600;
+  width: 100%;
+  margin-top: 20px; }
+
+.addresses__address {
+  margin-top: 10px; }
+  .addresses__address_metro {
+    margin-top: 10px; }
+    .addresses__address_metro.violet {
+      color: #a3228d; }
+    .addresses__address_metro.yellow {
+      color: #ffca30; }
+    .addresses__address_metro.d-green {
+      color: #02a54f; }
+    .addresses__address_metro.l-green {
+      color: #7ec141; }
+    .addresses__address_metro.green {
+      color: #4fb050; }
+    .addresses__address_metro.grey {
+      color: #898b8e; }
+    .addresses__address_metro.red {
+      color: #ed1a22; }
+    .addresses__address_metro.orange {
+      color: #f58120; }
+    .addresses__address_metro.brown {
+      color: #8a3f32; }
+    .addresses__address_metro.blue {
+      color: #0d65ae; }
+
+.addresses .addresses__col {
+  width: 48%;
+  display: flex;
+  flex-wrap: wrap; }
+  .addresses .addresses__col_item {
+    width: 50%; }
 
 .faq__item {
   margin-top: 20px; }
@@ -774,7 +833,6 @@ body {
   display: flex; }
   .footer__phone {
     width: 306px;
-    background: url(../img/spot-footer.png) no-repeat;
     font-size: 16px; }
     .footer__phone_number {
       font-size: 30px;
