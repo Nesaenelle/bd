@@ -85,14 +85,22 @@ body {
     display: flex; // align-items: center;
     justify-content: space-between;
     overflow: hidden;
-    &_image {
+    &__star {
+        background: url(../img/star2.png);
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30px;
+        height: 30px;
+    }
+    &__image {
         width: 45%;
         overflow: hidden;
         img {
             width: 100%;
         }
     }
-    &_message {
+    &__message {
         width: 55%;
         padding: 74px 39px 50px 39px;
         &_text {

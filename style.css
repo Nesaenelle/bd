@@ -609,28 +609,35 @@ body {
   display: flex;
   justify-content: space-between;
   overflow: hidden; }
-  .feedback_image {
+  .feedback__star {
+    background: url(../img/star2.png);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px; }
+  .feedback__image {
     width: 45%;
     overflow: hidden; }
-    .feedback_image img {
+    .feedback__image img {
       width: 100%; }
-  .feedback_message {
+  .feedback__message {
     width: 55%;
     padding: 74px 39px 50px 39px; }
-    .feedback_message_text {
+    .feedback__message_text {
       font-size: 18px;
       line-height: 25px; }
-    .feedback_message_user {
+    .feedback__message_user {
       margin-top: 22px;
       font-size: 14px;
       display: flex;
       align-items: center;
       flex-wrap: wrap; }
-      .feedback_message_user_name {
+      .feedback__message_user_name {
         margin-left: 10px;
         color: #000;
         text-decoration: underline; }
-      .feedback_message_user_exrta {
+      .feedback__message_user_exrta {
         width: 100%; }
 
 .horizontal-slider__title {
@@ -871,9 +878,10 @@ body {
 .icon {
   display: inline-block; }
   .icon.icon-inst {
-    background: red;
-    width: 30px;
-    height: 30px; }
+    background: url(../img/instagram.png);
+    background-size: contain;
+    width: 33px;
+    height: 33px; }
 
 /* MOBILES */
 .desktop {
