@@ -554,7 +554,8 @@ a {
 
 body {
   font-family: Montserrat;
-  background: #f0f8f9; }
+  background: #f0f8f9;
+  min-width: 1200px; }
 
 button {
   outline: none;
@@ -578,6 +579,8 @@ button {
   color: #fff;
   font-weight: bold;
   letter-spacing: 1.2px; }
+  .calculate-btn:active {
+    transform: translateY(1px); }
 
 .section-title {
   font-size: 48px;
@@ -893,25 +896,174 @@ button {
         width: 100%; }
 
 .birthday-calculator {
-  height: 600px;
   margin-top: 116px; }
   .birthday-calculator .container {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    padding: 0px 80px; }
   .birthday-calculator__title {
     font-size: 22px;
     width: 67%;
     padding-right: 20px;
     line-height: 29px;
     font-weight: 500;
-    letter-spacing: -0.4px; }
+    letter-spacing: -0.2px;
+    margin-top: 39px;
+    padding: 0px 61px 0px 53px; }
   .birthday-calculator__link {
-    width: 27%;
-    font-family: ExposureCTwo;
-    color: #8765d1;
-    font-size: 24px;
-    line-height: 25px; }
+    width: 29%;
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 39px; }
+    .birthday-calculator__link_price {
+      font-size: 34px;
+      font-weight: 500;
+      margin-bottom: 10px;
+      letter-spacing: 0.7px;
+      font-family: ExposureCTwo; }
+  .birthday-calculator__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; }
+  .birthday-calculator__form {
+    background: url(../img/calculator/bg-calculator.png) no-repeat;
+    width: 770px;
+    height: 870px;
+    background-size: 100%;
+    margin-top: 24px; }
+    .birthday-calculator__form form {
+      margin: auto;
+      padding: 108px 63px 100px 105px;
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      .birthday-calculator__form form .input,
+      .birthday-calculator__form form .radio {
+        width: 80%; }
+    .birthday-calculator__form .calculate-btn {
+      background: url(../img/calculator/calculate1.png) no-repeat;
+      width: 300px;
+      height: 67px;
+      margin-top: 24px;
+      font-size: 24px; }
+  .birthday-calculator__form-info {
+    width: 495px; }
+    .birthday-calculator__form-info img {
+      margin: 69px auto 0;
+      display: block; }
+    .birthday-calculator__form-info_descr {
+      margin: 10px auto 0;
+      display: block;
+      width: 62%;
+      font-size: 18px;
+      letter-spacing: 0.1px;
+      line-height: 24px;
+      font-weight: 500;
+      padding-left: 15px; }
+      .birthday-calculator__form-info_descr:last-child {
+        margin: 148px auto 0; }
+
+.examples {
+  background: url(../img/bg-yellow.svg);
+  background-size: cover;
+  padding: 93px 0; }
+  .examples .container {
+    padding: 0 230px; }
+  .examples__title {
+    margin: 24px auto 47px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 500; }
+  .examples__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 12px; }
+  .examples__item {
+    width: 31%; }
+    .examples__item_images {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      .examples__item_images_img {
+        width: 140px;
+        height: 140px;
+        border: 2px solid #fff;
+        border-radius: 18px;
+        margin-bottom: 11px; }
+    .examples__item_text {
+      font-size: 18px;
+      margin-top: 6px; }
+    .examples__item_price {
+      font-size: 36px;
+      color: #fff;
+      font-family: ExposureCTwo; }
+
+.holiday-calculator {
+  margin-top: 44px; }
+  .holiday-calculator__title {
+    font-size: 22px;
+    padding-right: 20px;
+    line-height: 29px;
+    font-weight: 500;
+    /* letter-spacing: -0.3px; */
+    margin-top: 0px;
+    /* padding: 0px 61px 0px 53px; */
+    width: 70%;
+    text-align: center;
+    margin: 9px auto 0; }
+  .holiday-calculator__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; }
+  .holiday-calculator__form {
+    background: url(../img/order/order-bg.png) no-repeat;
+    width: 1005px;
+    height: 870px;
+    margin: auto;
+    background-size: 100%;
+    padding-top: 64px; }
+    .holiday-calculator__form form {
+      margin: auto;
+      padding: 31px 100px 20px 109px;
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      .holiday-calculator__form form .input {
+        width: 48%;
+        flex-wrap: wrap;
+        margin-bottom: 54px; }
+        .holiday-calculator__form form .input:nth-child(even) {
+          width: 45%; }
+        .holiday-calculator__form form .input input {
+          width: 100%; }
+        .holiday-calculator__form form .input label {
+          padding-left: 8px;
+          font-weight: 500;
+          width: 100%;
+          font-size: 14px; }
+        .holiday-calculator__form form .input-descr {
+          font-size: 14px;
+          width: 44%;
+          letter-spacing: -0.1px;
+          padding-top: 12px;
+          font-weight: 400; }
+    .holiday-calculator__form_bottom-text {
+      font-size: 14px;
+      text-align: center;
+      margin: 13px auto;
+      width: 90%;
+      letter-spacing: 0px; }
+    .holiday-calculator__form .calculate-btn {
+      background: url(../img/calculator/calculate1.png) no-repeat;
+      width: 300px;
+      height: 67px;
+      margin-top: 9px;
+      font-size: 24px; }
 
 .google-map {
   width: 100%;
@@ -1077,25 +1229,72 @@ button {
 .input {
   position: relative;
   height: 36px;
-  border: 1px solid #dfe3e9;
-  border-radius: 4px;
-  margin-bottom: 20px;
-  padding: 5px 10px;
-  outline: none;
-  /* Firefox 19+ */
-  /* Firefox 18- */ }
-  .input::-webkit-input-placeholder {
-    color: #b0b0b1; }
-  .input::-moz-placeholder {
-    color: #b0b0b1; }
-  .input:-moz-placeholder {
-    color: #b0b0b1; }
-  .input:-ms-input-placeholder {
-    color: #b0b0b1; }
-  .input.has-error {
-    border: 2px solid #ed1c24; }
-  .input.valid {
-    border: 2px solid #00a651; }
+  margin-bottom: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; }
+  .input label {
+    width: 60%;
+    font-size: 22px;
+    letter-spacing: 0.4px; }
+  .input input {
+    width: 125px;
+    padding: 10px 14px 5px 14px;
+    outline: none;
+    border: 1px solid #d7d7d7;
+    border-radius: 10px;
+    font-size: 22px;
+    height: 46px;
+    /* Firefox 19+ */
+    /* Firefox 18- */ }
+    .input input::-webkit-input-placeholder {
+      color: #b0b0b1; }
+    .input input::-moz-placeholder {
+      color: #b0b0b1; }
+    .input input:-moz-placeholder {
+      color: #b0b0b1; }
+    .input input:-ms-input-placeholder {
+      color: #b0b0b1; }
+    .input input.has-error {
+      border: 2px solid #ed1c24; }
+    .input input.valid {
+      border: 2px solid #00a651; }
+
+.radio {
+  width: 100%;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .radio label {
+    width: 60%;
+    font-size: 22px;
+    letter-spacing: 0.4px; }
+  .radio input {
+    display: none; }
+    .radio input:checked[value="1"] ~ .radio__toggle > label:first-child {
+      box-shadow: 0 0 20px -2px #1ebec4;
+      border-color: #1ebec4;
+      border-width: 2px; }
+    .radio input:checked[value="0"] ~ .radio__toggle > label:last-child {
+      box-shadow: 0 0 20px -2px #fe84a6;
+      border-color: #fe84a6;
+      border-width: 2px; }
+  .radio__toggle {
+    width: 125px;
+    display: flex;
+    justify-content: space-between; }
+
+.radio-control, .radio__toggle_yes, .radio__toggle_no {
+  transition: 0.2s;
+  width: 52px;
+  min-width: 52px;
+  max-width: 52px;
+  height: 52px;
+  border: 1px solid #d7d7d7;
+  border-radius: 100%;
+  cursor: pointer; }
 
 .icon {
   display: inline-block; }

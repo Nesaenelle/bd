@@ -206,31 +206,204 @@
             </div>
         </div>
         <div class="birthday-calculator">
-                <div class="section-title violet">Стоимость детского
-                    <br>Дня Рождения</div>
+            <div class="section-title violet">Стоимость детского
+                <br>Дня Рождения</div>
             <div class="container">
                 <div class="birthday-calculator__title">На стоимость праздника влияют несколько факторов: количество гостей, выбранная анимационная программа или мастер-класс, торт на заказ, аквагрим для гостей и украшение стола. Точную сумму назовет менеджер, когда узнает все пожелания.</div>
                 <div class="birthday-calculator__link">
-                    <div class="aqua">5000 ₽</div>
-                    предоплаты нужно внести для брони. Мы вернем деньги при ее отмене за 3 дня
+                    <div class="aqua birthday-calculator__link_price">5000 ₽</div>
+                    предоплаты нужно внести
+                    <br>для брони. Мы вернем деньги
+                    <br>при ее отмене за 3 дня
                 </div>
-            </div>
-        </div>
-        <div class="values-examples">
-            <div class="container">
-                <div>Примеры стоимости меню</div>
-                <div>У нас нет минимального заказа. Ждем вас, если вы захотите выпить чаю с тортом и поиграть в игровой комнате. В то же время можем накрыть банкет для большой компании в «Шоколаднице» в «Меге» Химки и на Авиапарке.
-                </div>
-                <div>
-                    <div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                <div class="birthday-calculator__container">
+                    <div class="birthday-calculator__form">
+                        <form action="">
+                            <div class="input">
+                                <label for="">Кол-во детей </label>
+                                <input type="number" value="12">
+                            </div>
+                            <div class="input">
+                                <label for="">Кол-во взрослых</label>
+                                <input type="number" value="5">
+                            </div>
+                            <div class="radio">
+                                <label for="">Анимационная программа
+                                </label>
+                                <input type="radio" id="anim_prog_yes" name="radio-anim" value="1">
+                                <input type="radio" id="anim_prog_no" name="radio-anim" value="0">
+                                <div class="radio__toggle">
+                                    <label for="anim_prog_yes" class="radio__toggle_yes"></label>
+                                    <label for="anim_prog_no" class="radio__toggle_no"></label>
+                                </div>
+                            </div>
+                            <div class="radio">
+                                <label for="">Мастер-класс</label>
+                                <input type="radio" id="master_yes" name="radio-master" value="1">
+                                <input type="radio" id="master_no" name="radio-master" value="0">
+                                <div class="radio__toggle">
+                                    <label for="master_yes" class="radio__toggle_yes"></label>
+                                    <label for="master_no" class="radio__toggle_no"></label>
+                                </div>
+                            </div>
+                            <div class="radio">
+                                <label for="">Торт на заказ</label>
+                                <input type="radio" id="cake_yes" name="radio-cake" value="1">
+                                <input type="radio" id="cake_no" name="radio-cake" value="0">
+                                <div class="radio__toggle">
+                                    <label for="cake_yes" class="radio__toggle_yes"></label>
+                                    <label for="cake_no" class="radio__toggle_no"></label>
+                                </div>
+                            </div>
+                            <div class="radio">
+                                <label for="">Аквагрим
+                                </label>
+                                <input type="radio" id="aqua_yes" name="radio-aqua" value="1">
+                                <input type="radio" id="aqua_no" name="radio-aqua" value="0">
+                                <div class="radio__toggle">
+                                    <label for="aqua_yes" class="radio__toggle_yes"></label>
+                                    <label for="aqua_no" class="radio__toggle_no"></label>
+                                </div>
+                            </div>
+                            <div class="radio">
+                                <label for="">Украшение стола</label>
+                                <input type="radio" id="decoradion_yes" name="radio-decoradion" value="1">
+                                <input type="radio" id="decoradion_no" name="radio-decoradion" value="0">
+                                <div class="radio__toggle">
+                                    <label for="decoradion_yes" class="radio__toggle_yes"></label>
+                                    <label for="decoradion_no" class="radio__toggle_no"></label>
+                                </div>
+                            </div>
+                            <button type="submit" class="calculate-btn">Рассчитать</button>
+                            <!-- <div>Нажимая кнопку Заказать, вы подтверждаете, что ознакомились с Условиями обработки персональных данных и принимаете их</div> -->
+                        </form>
+                    </div>
+                    <div class="birthday-calculator__form-info">
+                        <img src="img/cake.png" alt="">
+                        <div class="birthday-calculator__form-info_descr">Если вы уже отмечали у нас день рождения или сделали заказ на 10 000 ₽, мы дарим шоколадный торт весом 1 кг</div>
+                        <div class="birthday-calculator__form-info_descr">Мы считаем среднюю цену
+                            <br>на развлекательную
+                            <br>программу. Точную стоимость
+                            <br>скажет менеджер, когда
+                            <br>обсудит с вами все детали</div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="examples">
+            <div class="container">
+                <div class="section-title white">Примеры стоимости меню</div>
+                <div class="examples__title">У нас нет минимального заказа. Ждем вас, если вы захотите выпить чаю
+                    <br>с тортом и поиграть в игровой комнате. В то же время можем накрыть
+                    <br>банкет для большой компании в «Шоколаднице» в «Меге» Химки
+                    <br> и на Авиапарке.
+                </div>
+                <div class="examples__container">
+                    <div class="examples__item">
+                        <div class="examples__item_images">
+                            <div class="examples__item_images_img" style="background: url(img/small_photo_blog/1.png)"></div>
+                            <div class="examples__item_images_img" style="background: url(img/small_photo_blog/2.png)"></div>
+                            <div class="examples__item_images_img" style="background: url(img/small_photo_blog/3.png)"></div>
+                            <div class="examples__item_images_img" style="background: url(img/small_photo_blog/4.png)"></div>
+                        </div>
+                        <div class="examples__item_text"> Детское на 7 гостей </div>
+                        <div class="examples__item_price"> 6 000 ₽</div>
+                    </div>
+                    <div class="examples__item">
+                        <div class="examples__item_images">
+                            <div class="examples__item_images_img" style="background: url(img/small_photo_blog/5.png)"></div>
+                            <div class="examples__item_images_img" style="background: url(img/small_photo_blog/6.png)"></div>
+                            <div class="examples__item_images_img" style="background: url(img/small_photo_blog/7.png)"></div>
+                            <div class="examples__item_images_img" style="background: url(img/small_photo_blog/8.png)"></div>
+                        </div>
+                        <div class="examples__item_text"> Взрослое на 5 гостей</div>
+                        <div class="examples__item_price"> 6 000 ₽</div>
+                    </div>
+                    <div class="examples__item">
+                        <div class="examples__item_images">
+                            <div class="examples__item_images_img" style="background: url(img/small_photo_blog/9.png)"></div>
+                            <div class="examples__item_images_img" style="background: url(img/small_photo_blog/10.png)"></div>
+                            <div class="examples__item_images_img" style="background: url(img/small_photo_blog/11.png)"></div>
+                            <div class="examples__item_images_img" style="background: url(img/small_photo_blog/12.png)"></div>
+                        </div>
+                        <div class="examples__item_text"> Взрослое на 10 гостей </div>
+                        <div class="examples__item_price"> 12 000 ₽</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="holiday-calculator">
+
+            <div class="container">
+     
+<!--                 <div class="holiday-calculator__link">
+                    <div class="aqua holiday-calculator__link_price">5000 ₽</div>
+                    предоплаты нужно внести
+                    <br>для брони. Мы вернем деньги
+                    <br>при ее отмене за 3 дня
+                </div> -->
+                <div class="holiday-calculator__container">
+                    <div class="holiday-calculator__form">
+                        <div class="section-title aqua">Заказать праздник</div>
+                        <div class="holiday-calculator__title">Ответим на все ваши вопросы, поможем определиться <br>с выбором развлечений и меню</div>
+                        <form action="">
+                            <div class="input">
+                                <label for="">Имя </label>
+                                <input type="text">
+                            </div>
+                            <div class="input">
+                                <label for="">Дата праздника</label>
+                                <input type="text">
+                            </div>
+                            <div class="input">
+                                <label for="">Телефон</label>
+                                <input type="text">
+                            </div>
+                            <div class="input">
+                                <label for="">Кафе</label>
+                                <input type="text">
+                            </div>
+                            <div class="input">
+                                <label for="">Эл. адрес</label>
+                                <input type="text">
+                            </div>
+                            <div class="input-descr">
+                                 С 9 до 20 по Москве перезвоним через 10 минут. В остальное время перезваниваем на следующее утро.
+                            </div>
+              
+                            <button type="submit" class="calculate-btn">Рассчитать</button>
+                            <div class="holiday-calculator__form_bottom-text">Нажимая кнопку «Заказать», вы подтверждаете, что ознакомились с Условиями обработки персональных данных и принимаете их</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+
         <div class="organization container">
             <div class="section-title">Организуем праздник в любом районе Москвы</div>
             <div classs="organization__col">
@@ -336,24 +509,6 @@
                 </div>
             </div>
         </div>
-        <!--         <div class="container">
-
-            </div>
-      
-            <div class="calculator">
-                <div>Заказать праздник</div>
-                <form action="">
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
-                    <button type="submit">Рассчитать</button>
-                </form>
-                <div>Нажимая кнопку Заказать, вы подтверждаете, что ознакомились с Условиями обработки персональных данных и принимаете их</div>
-            </div>
-
-        </div> -->
         <div class="faq">
             <div class="container">
                 <div class="section-title">Частые вопросы</div>
