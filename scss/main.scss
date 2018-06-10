@@ -505,6 +505,42 @@ button {
         height: 870px;
         background-size: 100%;
         margin-top: 24px;
+        &_calculated {
+            padding: 132px 143px;
+            &_message {
+                font-size: 32px;
+                margin-top: 64px;
+                padding-left: 16px;
+                width: 91%;
+                letter-spacing: -0.7px;
+                line-height: 37px;
+            }
+            &_estimate {
+                font-size: 18px;
+                margin-top: 1px;
+                padding-left: 17px;
+                letter-spacing: 0.1px;
+            }
+            &_total {
+                font-size: 110px;
+                color: #1ebec4;
+                line-height: 120px;
+                font-family: ExposureCTwo;
+            }
+            &_phone-number {
+                font-size: 48px;
+                font-family: ExposureCTwo;
+                margin-top: 169px;
+                padding-left: 18px;
+            }
+            &_phone-text {
+
+                padding-left: 17px;
+                margin-top: 5px;
+                letter-spacing: -0.2px;
+                font-size: 18px;
+            }
+        }
         form {
             margin: auto;
             padding: 108px 63px 100px 105px;

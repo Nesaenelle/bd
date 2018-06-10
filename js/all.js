@@ -218,3 +218,67 @@
 //         }
 //     }, false);
 // }());
+
+
+
+(function() {
+    var calculators = document.querySelectorAll('[data-holiday-calculator]');
+
+    calculators.forEach(function(calculator) {
+        calculator.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            calculator.querySelector('[data-holiday-calculator-init]').classList.add('hidden');
+            calculator.querySelector('[data-holiday-calculator-calculated]').classList.remove('hidden');
+        }, false);
+    });
+}());
+
+(function() {
+
+    var dropdowns;
+
+    dropdownsInit();
+
+    function dropdownsInit() {
+        dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(function(dropdown) {
+
+            var valElem = dropdown.querySelector('.dropdown-value');
+            var items = dropdown.querySelectorAll('ul li');
+
+            valElem.addEventListener('click', function() {
+                if (dropdown.classList.contains('opened')) {
+                    dropdown.classList.remove('opened');
+                } else {
+                    dropdown.classList.add('opened');
+                }
+            }, false);
+
+            items.forEach(function(r) {
+                r.addEventListener('click', function() {
+                    items.forEach(function(r) { r.classList.remove('selected') });
+                    this.classList.add('selected');
+                    // valElem.classList.add('dirty');
+                    valElem.value = this.innerHTML;
+                    dropdown.classList.remove('opened');
+                });
+            })
+
+        });
+    }
+
+    window.addEventListener('click', function(e) {
+        dropdowns.forEach(function(res) {
+            if (!res.contains(e.target)) {
+                res.classList.remove('opened');
+            }
+        });
+    }, false);
+
+}());
+
+$(document).ready(function() {
+    $('.date-mask').mask("00.00.0000", { placeholder: "__.__.____" });
+    $('.phone-mask').mask("+7(000) 000-00-00", { placeholder: "+7(000) 000-00-00" });
+});
+

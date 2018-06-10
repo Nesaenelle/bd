@@ -941,6 +941,35 @@ button {
     height: 870px;
     background-size: 100%;
     margin-top: 24px; }
+    .birthday-calculator__form_calculated {
+      padding: 132px 143px; }
+      .birthday-calculator__form_calculated_message {
+        font-size: 32px;
+        margin-top: 64px;
+        padding-left: 16px;
+        width: 91%;
+        letter-spacing: -0.7px;
+        line-height: 37px; }
+      .birthday-calculator__form_calculated_estimate {
+        font-size: 18px;
+        margin-top: 1px;
+        padding-left: 17px;
+        letter-spacing: 0.1px; }
+      .birthday-calculator__form_calculated_total {
+        font-size: 110px;
+        color: #1ebec4;
+        line-height: 120px;
+        font-family: ExposureCTwo; }
+      .birthday-calculator__form_calculated_phone-number {
+        font-size: 48px;
+        font-family: ExposureCTwo;
+        margin-top: 169px;
+        padding-left: 18px; }
+      .birthday-calculator__form_calculated_phone-text {
+        padding-left: 17px;
+        margin-top: 5px;
+        letter-spacing: -0.2px;
+        font-size: 18px; }
     .birthday-calculator__form form {
       margin: auto;
       padding: 108px 63px 100px 105px;
@@ -1567,19 +1596,46 @@ button {
         background: #353c48; }
 
 .footer {
-  margin-top: 200px;
+  margin-top: 25px;
   position: relative;
   justify-content: space-between;
   display: flex; }
   .footer__phone {
-    width: 306px;
-    font-size: 16px; }
+    width: 330px;
+    padding: 118px 15px 0 26px;
+    height: 200px;
+    background: url(../img/number_footer.png) no-repeat;
+    background-position: right 11px;
+    font-size: 16px;
+    background-size: cover; }
     .footer__phone_number {
       font-size: 30px;
       font-weight: 800; }
     .footer__phone_text {
       font-size: 12px;
       padding-left: 10px; }
+  .footer__socials {
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(3 * 66px + 17px);
+    position: absolute;
+    right: 20px;
+    bottom: 23px; }
+    .footer__socials_text {
+      width: 100%;
+      text-align: right;
+      font-size: 12px;
+      margin-top: 10px; }
+    .footer__socials_item {
+      width: 66px;
+      height: 66px; }
+      .footer__socials_item.fb {
+        background: url(../img/facebook_footer.png) no-repeat; }
+      .footer__socials_item.inst {
+        background: url(../img/instagram_footer.png) no-repeat; }
+      .footer__socials_item.vk {
+        background: url(../img/vkontakte_footer.png) no-repeat; }
 
 .input {
   position: relative;
@@ -1595,7 +1651,7 @@ button {
     letter-spacing: 0.4px; }
   .input input {
     width: 125px;
-    padding: 10px 14px 5px 14px;
+    padding: 10px 35px 5px 14px;
     outline: none;
     border: 1px solid #d7d7d7;
     border-radius: 10px;
@@ -1604,17 +1660,74 @@ button {
     /* Firefox 19+ */
     /* Firefox 18- */ }
     .input input::-webkit-input-placeholder {
-      color: #b0b0b1; }
+      color: #ddd;
+      font-weight: 300; }
     .input input::-moz-placeholder {
-      color: #b0b0b1; }
+      color: #ddd;
+      font-weight: 300; }
     .input input:-moz-placeholder {
-      color: #b0b0b1; }
+      color: #ddd;
+      font-weight: 300; }
     .input input:-ms-input-placeholder {
-      color: #b0b0b1; }
+      color: #ddd;
+      font-weight: 300; }
     .input input.has-error {
       border: 2px solid #ed1c24; }
     .input input.valid {
       border: 2px solid #00a651; }
+  .input.dropdown {
+    position: relative; }
+    .input.dropdown:after {
+      position: absolute;
+      top: 35px;
+      right: 20px;
+      content: '';
+      border: solid #d7d7d7;
+      border-width: 0 1px 1px 0;
+      display: inline-block;
+      padding: 4px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transition: 0.1s; }
+    .input.dropdown.opened:before {
+      content: '';
+      top: 56px;
+      width: calc(100% - 2px);
+      position: absolute;
+      background: #fff;
+      height: 2px;
+      left: 1px;
+      z-index: 1000; }
+    .input.dropdown.opened:after {
+      top: 40px;
+      transform: rotate(-135deg);
+      -webkit-transform: rotate(-135deg); }
+    .input.dropdown.opened .dropdown-container {
+      display: block; }
+    .input.dropdown .dropdown-container {
+      display: none;
+      width: 500px;
+      position: absolute;
+      top: 57px;
+      background: #fff;
+      padding: 10px 0 30px 0;
+      z-index: 999;
+      border-radius: 0 10px 10px 10px;
+      border: 1px solid #d7d7d7; }
+      .input.dropdown .dropdown-container ul li {
+        padding: 0 10px;
+        margin: 2px 0px 3px 0px;
+        font-size: 14px; }
+        .input.dropdown .dropdown-container ul li.dropdown-list__title {
+          font-weight: 800; }
+          .input.dropdown .dropdown-container ul li.dropdown-list__title:hover {
+            cursor: auto;
+            text-decoration: none; }
+        .input.dropdown .dropdown-container ul li.selected {
+          background: #efefef; }
+        .input.dropdown .dropdown-container ul li:hover {
+          cursor: pointer;
+          text-decoration: underline; }
 
 .radio {
   width: 100%;

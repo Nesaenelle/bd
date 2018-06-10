@@ -1,14 +1,16 @@
 .footer {
-    margin-top: 200px;
+    margin-top: 25px;
     position: relative;
     justify-content: space-between;
     display: flex;
     &__phone {
-        width: 306px;
-        // padding: 20px;
-        // height: 165px;
-        // background: url(../img/spot-footer.png) no-repeat;
+        width: 330px;
+        padding: 118px 15px 0 26px;
+        height: 200px;
+        background: url(../img/number_footer.png) no-repeat;
+        background-position: right 11px;
         font-size: 16px;
+        background-size: cover;
         &_number {
             font-size: 30px;
             font-weight: 800;
@@ -19,6 +21,32 @@
         }
     }
     &__socials {
+        justify-content: space-between;
+        display: flex;
+        flex-wrap: wrap;
+        width: calc(3 * 66px + 17px);
+        position: absolute;
+        right: 20px;
+        bottom: 23px;
+        &_text {
+            width: 100%;
+            text-align: right;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        &_item {
+            width: 66px;
+            height: 66px;
+            &.fb {
+                background: url(../img/facebook_footer.png) no-repeat;
+            }
+            &.inst {
+                background: url(../img/instagram_footer.png) no-repeat;
+            }
 
+            &.vk {
+                background: url(../img/vkontakte_footer.png) no-repeat;
+            }
+        }
     }
 }
