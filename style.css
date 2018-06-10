@@ -694,32 +694,34 @@ button {
         width: 100%;
         margin-left: 6px; }
 
-.horizontal-slider .section-title {
-  width: 70%; }
-
-.horizontal-slider__title {
-  text-align: center;
-  font-size: 40px;
-  width: 65%;
-  margin: auto;
-  color: #1dbfc1;
-  font-weight: 600; }
-
-.horizontal-slider__container {
-  height: 580px;
-  overflow: hidden;
-  margin-top: 22px; }
-  .horizontal-slider__container .scroller {
-    width: 4000px; }
-
-.horizontal-slider__item {
-  width: 470px;
-  display: inline-block; }
-  .horizontal-slider__item_text {
-    margin-top: -20px;
-    width: 80%;
+.horizontal-slider {
+  width: 100%; }
+  .horizontal-slider .section-title {
+    width: 70%; }
+  .horizontal-slider__title {
+    text-align: center;
+    font-size: 40px;
+    width: 65%;
     margin: auto;
-    line-height: 24px; }
+    color: #1dbfc1;
+    font-weight: 600; }
+  .horizontal-slider__container {
+    overflow: hidden;
+    margin-top: 22px; }
+    .horizontal-slider__container .scroller {
+      display: flex;
+      width: 4000px; }
+  .horizontal-slider__item {
+    min-width: 470px;
+    display: inline-block; }
+    .horizontal-slider__item_img img {
+      width: 100%; }
+    .horizontal-slider__item_text {
+      margin-top: -20px;
+      width: 80%;
+      margin: auto;
+      line-height: 24px;
+      font-weight: 500; }
 
 .shows {
   height: 1150px;
@@ -1022,7 +1024,7 @@ button {
   .holiday-calculator__form {
     background: url(../img/order/order-bg.png) no-repeat;
     width: 1005px;
-    height: 870px;
+    height: 747px;
     margin: auto;
     background-size: 100%;
     padding-top: 64px; }
@@ -1059,21 +1061,72 @@ button {
       width: 90%;
       letter-spacing: 0px; }
     .holiday-calculator__form .calculate-btn {
-      background: url(../img/calculator/calculate1.png) no-repeat;
+      background: url(../img/order/calculate2.png) no-repeat;
       width: 300px;
       height: 67px;
       margin-top: 9px;
       font-size: 24px; }
 
-.google-map {
-  width: 100%;
-  height: 800px;
-  margin-top: 30px; }
+.game-rooms .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0px 109px 0px 120px; }
+
+.game-rooms__title {
+  font-size: 22px;
+  width: 68%;
+  padding-right: 20px;
+  line-height: 29px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  margin-top: 34px;
+  padding: 0px 0 0px 53px; }
+
+.game-rooms__link {
+  width: 29%;
+  font-size: 24px;
+  line-height: 26px;
+  margin-top: 34px;
+  font-family: ExposureCTwo; }
+
+.game-rooms .horizontal-slider {
+  padding: 0px 14px 0px 167px; }
+  .game-rooms .horizontal-slider__container {
+    margin-top: 44px; }
+  .game-rooms .horizontal-slider__item {
+    position: relative;
+    margin-right: 20px;
+    width: 540px; }
+    .game-rooms .horizontal-slider__item_text {
+      margin: 12px 10px 0 3px;
+      font-size: 18px;
+      width: 100%; }
+    .game-rooms .horizontal-slider__item .item-border, .game-rooms .horizontal-slider__item:nth-child(3n + 1) .horizontal-slider__item_img:after, .game-rooms .horizontal-slider__item:nth-child(3n + 2) .horizontal-slider__item_img:after, .game-rooms .horizontal-slider__item:nth-child(3n +3) .horizontal-slider__item_img:after {
+      content: '';
+      background-size: contain !important;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0; }
+    .game-rooms .horizontal-slider__item:nth-child(3n + 1) .horizontal-slider__item_img:after {
+      background: url(../img/horizontal_slider2/slider_blue_border.png) no-repeat; }
+    .game-rooms .horizontal-slider__item:nth-child(3n + 2) .horizontal-slider__item_img:after {
+      background: url(../img/horizontal_slider2/slider-pink-border.png) no-repeat; }
+    .game-rooms .horizontal-slider__item:nth-child(3n +3) .horizontal-slider__item_img:after {
+      background: url(../img/horizontal_slider2/slider-violet-border.png) no-repeat; }
 
 .organization {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-top: 43px;
+  background: url(../img/bg-white2.png);
+  background-size: cover;
+  height: 500px; }
+  .organization .container {
+    padding: 100px 170px; }
   .organization__col {
     width: 48%; }
   .organization__tags {
@@ -1085,6 +1138,10 @@ button {
       border: 1px solid red;
       padding: 10px;
       border-radius: 20px; }
+
+.google-map {
+  width: 100%;
+  height: 800px; }
 
 .addresses .container {
   display: flex;
