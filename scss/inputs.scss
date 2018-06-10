@@ -143,32 +143,36 @@
             &[value="1"] {
                 ~#{$c}__toggle {
                     &>label:first-child {
-                        box-shadow: 0 0 20px -2px #1ebec4;
+                        box-shadow: 0 0 0 2px #1ebec4, 0 0 20px -2px #1ebec4;
                         border-color: #1ebec4;
-                        border-width: 2px;
+                        background: url(../img/calculator/checkmark_active.png) no-repeat;
                     }
                 }
             }
             &[value="0"] {
                 ~#{$c}__toggle {
                     &>label:last-child {
-                        box-shadow: 0 0 20px -2px #fe84a6;
+                        box-shadow: inset 0 0 0 2px #fe84a6, 0 0 20px -2px #fe84a6;
                         border-color: #fe84a6;
-                        border-width: 2px;
+                        background: url(../img/calculator/close_active.png) no-repeat;
                     }
                 }
             }
         }
     }
     &__toggle {
-        width: 125px;
+        width: 130px;
         display: flex;
         justify-content: space-between;
         &_yes {
             @extend .radio-control;
+            background: url(../img/calculator/checkmark.png) no-repeat;
+            background-position: center!important;
         }
         &_no {
             @extend .radio-control;
+            background: url(../img/calculator/close.png) no-repeat;
+            background-position: center!important;
         }
     }
 }
@@ -179,7 +183,7 @@
     min-width: 52px;
     max-width: 52px;
     height: 52px;
-    border: 1px solid #d7d7d7;
+    box-shadow: inset 0 0 0px 1px #d7d7d7;
     border-radius: 100%;
     cursor: pointer;
 }

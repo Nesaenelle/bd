@@ -52,7 +52,7 @@ button {
     position: relative;
     background-position: center center;
     margin-bottom: 107px;
-    z-index: 2;
+    z-index: 4;
     .feedback {
         margin: 62px auto 0;
     }
@@ -63,6 +63,7 @@ button {
         $c: &;
         display: flex;
         align-items: center;
+        position: relative;
         &:nth-child(1) {
             position: absolute;
             top: -155px;
@@ -74,6 +75,16 @@ button {
             #{$c}_number {
                 color: #f7a1b9;
             }
+            &:after {
+                background: url(../img/arrow1.png) no-repeat;
+                content: '';
+                position: absolute;
+                width: 108px;
+                height: 397px;
+                background-size: contain;
+                top: 81px;
+                left: -27px;
+            }
         }
         &:nth-child(2) {
             margin-top: 34px;
@@ -83,6 +94,16 @@ button {
                 margin-left: 12px;
                 line-height: 23px;
                 margin-right: 3px;
+            }
+            &:after {
+                background: url(../img/arrow2.png) no-repeat;
+                content: '';
+                position: absolute;
+                width: 130px;
+                height: 169px;
+                background-size: contain;
+                top: 94px;
+                left: -35px;
             }
         }
         &:nth-child(3) {
@@ -448,7 +469,7 @@ button {
         &_descr {
             font-size: 14px;
             width: 58%;
-            margin-top: 22px;
+            margin-top: 8px;
             letter-spacing: 0.2px;
         }
         &_image {
@@ -484,7 +505,7 @@ button {
         padding: 0px 61px 0px 53px;
     }
     &__link {
-        width: 29%; // color: #8765d1;
+        width: 30%; // color: #8765d1;
         font-size: 18px;
         line-height: 25px;
         margin-top: 39px;

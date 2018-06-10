@@ -24,7 +24,7 @@
         width: 847px;
         height: 100%;
         background-position: center -60px;
-        z-index: 1;
+        z-index: 3;
     }
     &__menu {}
     &__phone {
@@ -53,8 +53,10 @@
 
 
     .top-block {
-        background: #f0f8f9;
+        // background: #f0f8f9;
         height: 638px;
+        position: relative;
+        z-index: 2;
         .container {
             padding: 31px 166px 20px 140px;
         }
@@ -77,6 +79,75 @@
             line-height: 30px;
             padding-left: 2px;
             letter-spacing: 0.2px;
+        }
+    }
+
+    .particles {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        height: 100%;
+        left: 0;
+        z-index: 0;
+        &__item {
+            position: absolute;
+            background-size: contain!important;
+            background-repeat: no-repeat!important;
+            width: 60px;
+            height: 60px;
+            &:nth-child(1) {
+                // background: url(../img/main_paralax/par2.png);
+                bottom: 0;
+                left: 400px;
+            }
+            &:nth-child(2) {
+                background: url(../img/main_paralax/par8.png);
+                left: -465px;
+                right: 0;
+                bottom: 48px;
+                margin: auto;
+                width: 105px;
+                height: 105px;
+            }
+            &:nth-child(3) {
+                // background: url(../img/main_paralax/par3.png);
+                left: 0;
+                right: 0;
+                bottom: 100px;
+                margin: auto;
+            }
+            &:nth-child(4) {
+                background: url(../img/main_paralax/par6.png);
+                left: 0;
+                right: 177px;
+                margin: auto;
+                bottom: 144px;
+                width: 55px;
+                height: 55px;
+            }
+            &:nth-child(5) {
+                background: url(../img/main_paralax/par5.png);
+                right: 129px;
+                bottom: 230px;
+                width: 80px;
+                height: 80px;
+            }
+            &:nth-child(6) {
+                background: url(../img/main_paralax/par7.png);
+                right: 42px;
+                width: 65px;
+                bottom: 165px;
+                height: 65px;
+            }
+            &:nth-child(7) {
+                right: 0;
+                top: 330px;
+                left: 86px;
+                margin: auto;
+                background: url(../img/main_paralax/par4.png);
+                width: 70px;
+                height: 70px;
+            }
         }
     }
 }

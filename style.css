@@ -481,7 +481,7 @@ a {
   width: 847px;
   height: 100%;
   background-position: center -60px;
-  z-index: 1; }
+  z-index: 3; }
 
 .header__phone {
   position: absolute;
@@ -505,8 +505,9 @@ a {
     letter-spacing: -0.1px; }
 
 .header .top-block {
-  background: #f0f8f9;
-  height: 638px; }
+  height: 638px;
+  position: relative;
+  z-index: 2; }
   .header .top-block .container {
     padding: 31px 166px 20px 140px; }
   .header .top-block__title {
@@ -526,6 +527,64 @@ a {
     line-height: 30px;
     padding-left: 2px;
     letter-spacing: 0.2px; }
+
+.header .particles {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  left: 0;
+  z-index: 0; }
+  .header .particles__item {
+    position: absolute;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    width: 60px;
+    height: 60px; }
+    .header .particles__item:nth-child(1) {
+      bottom: 0;
+      left: 400px; }
+    .header .particles__item:nth-child(2) {
+      background: url(../img/main_paralax/par8.png);
+      left: -465px;
+      right: 0;
+      bottom: 48px;
+      margin: auto;
+      width: 105px;
+      height: 105px; }
+    .header .particles__item:nth-child(3) {
+      left: 0;
+      right: 0;
+      bottom: 100px;
+      margin: auto; }
+    .header .particles__item:nth-child(4) {
+      background: url(../img/main_paralax/par6.png);
+      left: 0;
+      right: 177px;
+      margin: auto;
+      bottom: 144px;
+      width: 55px;
+      height: 55px; }
+    .header .particles__item:nth-child(5) {
+      background: url(../img/main_paralax/par5.png);
+      right: 129px;
+      bottom: 230px;
+      width: 80px;
+      height: 80px; }
+    .header .particles__item:nth-child(6) {
+      background: url(../img/main_paralax/par7.png);
+      right: 42px;
+      width: 65px;
+      bottom: 165px;
+      height: 65px; }
+    .header .particles__item:nth-child(7) {
+      right: 0;
+      top: 330px;
+      left: 86px;
+      margin: auto;
+      background: url(../img/main_paralax/par4.png);
+      width: 70px;
+      height: 70px; }
 
 .header__menu {
   font-size: 0;
@@ -643,14 +702,15 @@ button {
   position: relative;
   background-position: center center;
   margin-bottom: 107px;
-  z-index: 2; }
+  z-index: 4; }
   .wizzard .feedback {
     margin: 62px auto 0; }
   .wizzard .container {
     padding: 24px 153px 20px 153px; }
   .wizzard__item {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    position: relative; }
     .wizzard__item:nth-child(1) {
       position: absolute;
       top: -155px; }
@@ -660,6 +720,15 @@ button {
       .wizzard__item:nth-child(1) .wizzard__item_text,
       .wizzard__item:nth-child(1) .wizzard__item_number {
         color: #f7a1b9; }
+      .wizzard__item:nth-child(1):after {
+        background: url(../img/arrow1.png) no-repeat;
+        content: '';
+        position: absolute;
+        width: 108px;
+        height: 397px;
+        background-size: contain;
+        top: 81px;
+        left: -27px; }
     .wizzard__item:nth-child(2) {
       margin-top: 34px;
       margin-left: 72px; }
@@ -668,6 +737,15 @@ button {
         margin-left: 12px;
         line-height: 23px;
         margin-right: 3px; }
+      .wizzard__item:nth-child(2):after {
+        background: url(../img/arrow2.png) no-repeat;
+        content: '';
+        position: absolute;
+        width: 130px;
+        height: 169px;
+        background-size: contain;
+        top: 94px;
+        left: -35px; }
     .wizzard__item:nth-child(3) {
       margin-top: 31px;
       margin-left: 176px; }
@@ -942,7 +1020,7 @@ button {
     .master-classes__item_descr {
       font-size: 14px;
       width: 58%;
-      margin-top: 22px;
+      margin-top: 8px;
       letter-spacing: 0.2px; }
     .master-classes__item_image {
       position: relative;
@@ -969,7 +1047,7 @@ button {
     margin-top: 39px;
     padding: 0px 61px 0px 53px; }
   .birthday-calculator__link {
-    width: 29%;
+    width: 30%;
     font-size: 18px;
     line-height: 25px;
     margin-top: 39px; }
@@ -1790,17 +1868,23 @@ button {
   .radio input {
     display: none; }
     .radio input:checked[value="1"] ~ .radio__toggle > label:first-child {
-      box-shadow: 0 0 20px -2px #1ebec4;
+      box-shadow: 0 0 0 2px #1ebec4, 0 0 20px -2px #1ebec4;
       border-color: #1ebec4;
-      border-width: 2px; }
+      background: url(../img/calculator/checkmark_active.png) no-repeat; }
     .radio input:checked[value="0"] ~ .radio__toggle > label:last-child {
-      box-shadow: 0 0 20px -2px #fe84a6;
+      box-shadow: inset 0 0 0 2px #fe84a6, 0 0 20px -2px #fe84a6;
       border-color: #fe84a6;
-      border-width: 2px; }
+      background: url(../img/calculator/close_active.png) no-repeat; }
   .radio__toggle {
-    width: 125px;
+    width: 130px;
     display: flex;
     justify-content: space-between; }
+    .radio__toggle_yes {
+      background: url(../img/calculator/checkmark.png) no-repeat;
+      background-position: center !important; }
+    .radio__toggle_no {
+      background: url(../img/calculator/close.png) no-repeat;
+      background-position: center !important; }
 
 .radio-control, .radio__toggle_yes, .radio__toggle_no {
   transition: 0.2s;
@@ -1808,7 +1892,7 @@ button {
   min-width: 52px;
   max-width: 52px;
   height: 52px;
-  border: 1px solid #d7d7d7;
+  box-shadow: inset 0 0 0px 1px #d7d7d7;
   border-radius: 100%;
   cursor: pointer; }
 
