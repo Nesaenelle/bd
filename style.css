@@ -1018,9 +1018,7 @@ button {
     padding-right: 20px;
     line-height: 29px;
     font-weight: 500;
-    /* letter-spacing: -0.3px; */
     margin-top: 0px;
-    /* padding: 0px 61px 0px 53px; */
     width: 70%;
     text-align: center;
     margin: 9px auto 0; }
@@ -1031,7 +1029,7 @@ button {
   .holiday-calculator__form {
     background: url(../img/order/order-bg.png) no-repeat;
     width: 1005px;
-    height: 747px;
+    height: 743px;
     margin: auto;
     background-size: 100%;
     padding-top: 64px; }
@@ -1109,14 +1107,6 @@ button {
       margin: 12px 10px 0 3px;
       font-size: 18px;
       width: 100%; }
-    .game-rooms .horizontal-slider__item .item-border, .game-rooms .horizontal-slider__item:nth-child(3n + 1) .horizontal-slider__item_img:after, .game-rooms .horizontal-slider__item:nth-child(3n + 2) .horizontal-slider__item_img:after, .game-rooms .horizontal-slider__item:nth-child(3n +3) .horizontal-slider__item_img:after, .game-rooms .horizontal-slider__item .cooking__food_item:nth-child(1) .cooking__food_item_img:after, .cooking__food_item:nth-child(1) .game-rooms .horizontal-slider__item .cooking__food_item_img:after, .game-rooms .horizontal-slider__item .cooking__food_item:nth-child(2) .cooking__food_item_img:after, .cooking__food_item:nth-child(2) .game-rooms .horizontal-slider__item .cooking__food_item_img:after, .game-rooms .horizontal-slider__item .cooking__food_item:nth-child(3) .cooking__food_item_img:after, .cooking__food_item:nth-child(3) .game-rooms .horizontal-slider__item .cooking__food_item_img:after {
-      content: '';
-      background-size: contain !important;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      left: 0;
-      top: 0; }
     .game-rooms .horizontal-slider__item:nth-child(3n + 1) .horizontal-slider__item_img:after {
       background: url(../img/horizontal_slider2/slider_blue_border.png) no-repeat; }
     .game-rooms .horizontal-slider__item:nth-child(3n + 2) .horizontal-slider__item_img:after {
@@ -1271,7 +1261,9 @@ button {
     padding: 0px 15px 0 37px;
     width: 71%; }
     .cooking__bottom .cooking__title b {
-      font-size: 22px; }
+      font-size: 24px;
+      text-decoration: underline;
+      font-family: ExposureCTwo; }
   .cooking__bottom .game-rooms__link {
     width: 28%;
     margin-top: 2px; }
@@ -1294,14 +1286,6 @@ button {
   width: 100%; }
   .cooking__food_item {
     width: calc(100% / 3 - 20px); }
-    .cooking__food_item .item-border, .cooking__food_item .game-rooms .horizontal-slider__item:nth-child(3n + 1) .horizontal-slider__item_img:after, .game-rooms .horizontal-slider__item:nth-child(3n + 1) .cooking__food_item .horizontal-slider__item_img:after, .cooking__food_item .game-rooms .horizontal-slider__item:nth-child(3n + 2) .horizontal-slider__item_img:after, .game-rooms .horizontal-slider__item:nth-child(3n + 2) .cooking__food_item .horizontal-slider__item_img:after, .cooking__food_item .game-rooms .horizontal-slider__item:nth-child(3n +3) .horizontal-slider__item_img:after, .game-rooms .horizontal-slider__item:nth-child(3n +3) .cooking__food_item .horizontal-slider__item_img:after, .cooking__food_item:nth-child(1) .cooking__food_item_img:after, .cooking__food_item:nth-child(2) .cooking__food_item_img:after, .cooking__food_item:nth-child(3) .cooking__food_item_img:after, .cooking-adult .cooking__food_item:nth-child(1) .cooking__food_item_img:after, .cooking-adult .cooking__food_item:nth-child(2) .cooking__food_item_img:after, .cooking-adult .cooking__food_item:nth-child(3) .cooking__food_item_img:after {
-      content: '';
-      background-size: contain !important;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      left: 0;
-      top: 0; }
     .cooking__food_item:nth-child(1) .cooking__food_item_img:after {
       background: url(../img/food/kid_food/kid_pointer1.png) no-repeat; }
     .cooking__food_item:nth-child(2) .cooking__food_item_img:after {
@@ -1310,9 +1294,8 @@ button {
       background: url(../img/food/kid_food/kid_pointer3.png) no-repeat; }
     .cooking__food_item_img {
       position: relative;
-      height: 100%;
       height: 380px;
-      max-width: 370px; }
+      width: 380px; }
       .cooking__food_item_img > div {
         position: absolute;
         top: 0;
@@ -1320,8 +1303,6 @@ button {
         left: 0;
         right: 0;
         margin: auto;
-        width: calc(100% - 30px);
-        height: calc(100% - 30px);
         border-radius: 100%;
         background-position: center !important;
         background-repeat: no-repeat !important; }
@@ -1330,26 +1311,161 @@ button {
       font-size: 14px;
       text-align: center; }
 
-.cooking-adult {
-  padding: 200px 0 0 0;
+.cooking-adult .feedback {
+  margin-top: -270px; }
+
+.cooking-adult .container {
+  padding: 0 155px; }
+
+.cooking-adult .cooking__title b {
+  font-size: 24px;
+  text-decoration: underline;
+  font-family: ExposureCTwo; }
+
+.cooking-adult__top {
+  height: 1100px;
   background: url(../img/bg-aqua2.svg);
+  background-size: cover;
   background-position: -20px 0;
   background-repeat-y: no-repeat;
   position: relative;
-  z-index: 1;
-  height: 1000px;
+  padding: 200px 0 150px 0;
   margin-top: 120px; }
-  .cooking-adult .feedback {
-    margin-top: -300px; }
-  .cooking-adult .cooking__food_item:nth-child(1) .cooking__food_item_img:after {
+  .cooking-adult__top .cooking__food_item:nth-child(1) .cooking__food_item_img:after {
     background: url(../img/food/round_pointer1.png) no-repeat; }
-  .cooking-adult .cooking__food_item:nth-child(2) .cooking__food_item_img:after {
+  .cooking-adult__top .cooking__food_item:nth-child(2) .cooking__food_item_img:after {
     background: url(../img/food/round_pointer2.png) no-repeat; }
-  .cooking-adult .cooking__food_item:nth-child(3) .cooking__food_item_img:after {
+  .cooking-adult__top .cooking__food_item:nth-child(3) .cooking__food_item_img:after {
     background: url(../img/food/round_pointer3.png) no-repeat; }
+  .cooking-adult__top .cooking__title {
+    margin-top: 68px; }
+
+.cooking-adult__bottom .cooking__title {
+  margin-top: 33px; }
+
+.mood {
+  margin-top: 93px; }
+  .mood .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0px 170px; }
+  .mood__title {
+    font-size: 22px;
+    width: 72%;
+    padding-right: 20px;
+    line-height: 31px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    margin-top: 39px; }
+  .mood__link {
+    width: 28%;
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 39px; }
+    .mood__link b {
+      font-size: 36px;
+      font-weight: 500;
+      margin-bottom: 10px;
+      letter-spacing: 0.7px;
+      display: block;
+      color: #1ebec4;
+      font-family: ExposureCTwo; }
+  .mood__img {
+    margin-top: 50px;
+    width: 100%;
+    position: relative; }
+    .mood__img:after {
+      content: '';
+      background: url(../img/mood/mood_border.png) no-repeat;
+      background-size: cover; }
+    .mood__img_text {
+      margin: 6px 0px 0px 0px;
+      font-size: 14px;
+      letter-spacing: 0.1px; }
+    .mood__img img {
+      width: 100%; }
+
+.gifts {
+  margin-top: 64px;
+  height: 1395px;
+  background: url(../img/bg-pink1.svg);
+  background-size: cover;
+  background-position: -20px 240px;
+  background-repeat-y: no-repeat;
+  position: relative; }
+  .gifts:after {
+    content: '';
+    bottom: -35px;
+    width: 100%;
+    position: absolute;
+    height: 233px;
+    background: url(../img/finish-line.svg) no-repeat;
+    background-size: cover; }
+  .gifts .feedback {
+    color: #f9c7d5;
+    height: 488px; }
+    .gifts .feedback__image {
+      width: 53%; }
+    .gifts .feedback__message {
+      width: 47%;
+      padding: 75px 39px 50px 50px; }
+      .gifts .feedback__message_user {
+        margin-top: 50px; }
+  .gifts .container {
+    padding: 0px 170px;
+    position: relative;
+    height: 100%; }
+    .gifts .container__flex {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+  .gifts__title {
+    font-size: 22px;
+    width: 72%;
+    padding-right: 20px;
+    line-height: 31px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    margin-top: 72px;
+    position: relative;
+    z-index: 2; }
+  .gifts__link {
+    width: 27%;
+    font-size: 24px;
+    line-height: 25px;
+    margin-top: 77px;
+    font-family: ExposureCTwo;
+    color: #fff;
+    position: relative;
+    z-index: 2; }
+  .gifts__bottom-text {
+    width: 254px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 365px;
+    line-height: 18px;
+    font-size: 14px;
+    letter-spacing: 0.4px; }
+  .gifts__bg_girl {
+    width: 800px;
+    height: 715px;
+    position: absolute;
+    bottom: 0;
+    left: -70px;
+    background: url(../img/girl-bg.png) no-repeat; }
+  .gifts__bg_boy {
+    width: 700px;
+    height: 715px;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+    background: url(../img/boy-bg.png) no-repeat; }
 
 .faq {
-  margin-top: 500px; }
+  margin-top: 0; }
   .faq .container {
     padding: 0px 166px; }
   .faq__item {
@@ -1374,6 +1490,15 @@ button {
 
 .black {
   color: #000; }
+
+.item-border, .game-rooms .horizontal-slider__item:nth-child(3n + 1) .horizontal-slider__item_img:after, .game-rooms .horizontal-slider__item:nth-child(3n + 2) .horizontal-slider__item_img:after, .game-rooms .horizontal-slider__item:nth-child(3n +3) .horizontal-slider__item_img:after, .cooking__food_item:nth-child(1) .cooking__food_item_img:after, .cooking__food_item:nth-child(2) .cooking__food_item_img:after, .cooking__food_item:nth-child(3) .cooking__food_item_img:after, .cooking-adult__top .cooking__food_item:nth-child(1) .cooking__food_item_img:after, .cooking-adult__top .cooking__food_item:nth-child(2) .cooking__food_item_img:after, .cooking-adult__top .cooking__food_item:nth-child(3) .cooking__food_item_img:after, .mood__img:after {
+  content: '';
+  background-size: contain !important;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0; }
 
 .slider {
   height: 268px;
