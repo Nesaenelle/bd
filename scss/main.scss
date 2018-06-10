@@ -128,6 +128,8 @@ button {
     justify-content: space-between; // overflow: hidden;
     position: relative;
     $c: &;
+    background: #fff;
+    border-radius: 35px 35px 35px 35px;
     &.aqua {
         #{$c}__message {
             background: #82f6f5;
@@ -964,9 +966,6 @@ button {
                 display: block;
             }
         }
-        .feedback{
-            margin-top: 40px;
-        }
     }
     &__food {
         display: flex;
@@ -1010,10 +1009,23 @@ button {
                 position: relative; // padding: 10px;
                 height: 100%;
                 height: 380px;
-                background-position: center!important;
-                background-repeat: no-repeat!important; // img {
+                max-width: 370px;
+
                 //     width: 100%;
                 // }
+                > div {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    width: calc(100% - 30px);
+                    height: calc(100% - 30px);
+                    border-radius: 100%;
+                    background-position: center!important;
+                    background-repeat: no-repeat!important; // img {
+                }
             }
             &_text {
                 margin-top: 15px;
@@ -1024,6 +1036,46 @@ button {
     }
 }
 
+
+.cooking-adult {
+    padding: 200px 0 0 0;
+    background: url(../img/bg-aqua2.svg);
+    background-position: -20px 0;
+    background-repeat-y: no-repeat;
+    position: relative;
+    z-index: 1;
+    height: 1000px;
+    margin-top: 120px;
+    .feedback{
+        margin-top:  -300px;
+    }
+    .container {
+
+    }
+
+    .cooking__food {
+        &_item {
+            &:nth-child(1) .cooking__food_item_img {
+                &:after {
+                    @extend .item-border;
+                    background: url(../img/food/round_pointer1.png) no-repeat;
+                }
+            }
+            &:nth-child(2) .cooking__food_item_img {
+                &:after {
+                    @extend .item-border;
+                    background: url(../img/food/round_pointer2.png) no-repeat;
+                }
+            }
+            &:nth-child(3) .cooking__food_item_img {
+                &:after {
+                    @extend .item-border;
+                    background: url(../img/food/round_pointer3.png) no-repeat;
+                }
+            }
+        }
+    }
+}
 
 .faq {
     margin-top: 500px;
