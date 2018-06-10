@@ -62,20 +62,20 @@
 // }());
 
 
-// function isScrolledIntoView(elem, offsetVal) {
-//     var docViewTop = window.pageYOffset;
-//     var docViewBottom = docViewTop + window.innerHeight;
-//     var elemTop = offset(elem).top;
-//     var elemBottom = elemTop + elem.clientHeight;
-//     return docViewTop >= elemTop - (offsetVal || 200) /*- window.innerHeight*/ ; // /((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-// }
+function isScrolledIntoView(elem, offsetVal) {
+    var docViewTop = window.pageYOffset;
+    var docViewBottom = docViewTop + window.innerHeight;
+    var elemTop = offset(elem).top;
+    var elemBottom = elemTop + elem.clientHeight;
+    return docViewTop >= elemTop - (offsetVal || 200) /*- window.innerHeight*/ ; // /((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
 
-// function offset(el) {
-//     var rect = el.getBoundingClientRect(),
-//         scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-//         scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//     return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
-// }
+function offset(el) {
+    var rect = el.getBoundingClientRect(),
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+}
 
 // function isInViewport(el) {
 //     var top = el.offsetTop;
@@ -97,27 +97,41 @@
 //     );
 // };
 
-// (function() {
-//     var tabs = document.querySelectorAll('[data-navigation]');
+(function() {
+    var tabs = document.querySelectorAll('[data-navigation]');
+    var links = document.querySelectorAll('[data-navigation-link]');
 
-//     window.addEventListener('scroll', function() {
-//         tabs.forEach(function(elem) {
-//             // if (isInViewport(elem)) {
-//             if (isScrolledIntoView(elem)) {
-//                 var id = elem.getAttribute('data-navigation');
+    window.addEventListener('scroll', function() {
+        tabs.forEach(function(elem) {
+            // if (isInViewport(elem)) {
+            if (isScrolledIntoView(elem)) {
+                var id = elem.getAttribute('data-navigation');
 
-//                 var links = document.querySelectorAll('[data-navigation-link');
-//                 links.forEach(function(link) {
-//                     if (link.getAttribute('data-navigation-link') === id) {
-//                         link.classList.add('active');
-//                     } else {
-//                         link.classList.remove('active');
-//                     }
-//                 });
-//             }
-//         });
-//     }, false);
-// }());
+                var links = document.querySelectorAll('[data-navigation-link');
+                links.forEach(function(link) {
+                    if (link.getAttribute('data-navigation-link') === id) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+        });
+    }, false);
+
+    var interval;
+    links.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            var id = this.getAttribute('data-navigation-link');
+            var elem = document.querySelector('[data-navigation="' + id + '"]');
+            if (elem) {
+                window.scroll({ top: offset(elem).top - 100, left: 0, behavior: 'smooth' });
+            }
+        }, false);
+    })
+
+}());
 
 
 // (function() {
@@ -277,8 +291,26 @@
 
 }());
 
+(function() {
+    var header = document.querySelector('.header__menu');
+    check();
+    window.addEventListener('scroll', function() {
+        check();
+    }, false);
+
+    function check() {
+        if (window.scrollY > 50) {
+            document.body.classList.add('fixed-header');
+            header.classList.add('slideInDown');
+
+        } else {
+            document.body.classList.remove('fixed-header');
+            header.classList.remove('slideInDown');
+        }
+    }
+}());
+
 $(document).ready(function() {
     $('.date-mask').mask("00.00.0000", { placeholder: "__.__.____" });
     $('.phone-mask').mask("+7(000) 000-00-00", { placeholder: "+7(000) 000-00-00" });
 });
-

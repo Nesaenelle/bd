@@ -14,29 +14,40 @@
 </head>
 
 <body>
+    <div data-navigation="birthdays"></div>
+    <div class="header__menu animated">
+        <div class="container">        
+            <a href="#" class="logo" data-navigation-link="birthdays"><img src="img/logo.png" alt=""></a>
+            <nav>
+                <ul>
+                    <li class="active" data-navigation-link="birthdays"><a href="">Дни рождения</a></li>
+                    <li data-navigation-link="master"><a href="">Мастер классы</a></li>
+                    <li data-navigation-link="corporate"><a href="">Корпоративы</a></li>
+                    <li data-navigation-link="animators"><a href="">Аниматоры</a></li>
+                    <li class="header__menu_dropdown">
+                        <a href="">Меню</a>
+                        <ul>
+                            <li data-navigation-link="kids"><a href="#">Детское</a></li>
+                            <li data-navigation-link="adult"><a href="#">Взрослое</a></li>
+                            <li data-navigation-link="banquet"><a href="#">Банкетное</a></li>
+                            <li data-navigation-link="cake"><a href="#">Торты</a></li>
+                        </ul>
+                    </li>
+                    <li data-navigation-link="shares"><a href="">Акции</a></li>
+                    <li data-navigation-link="contacts"><a href="">Контакты</a></li>
+                    <li data-navigation-link="about"><a href="">О нас</a></li>
+                </ul>
+            </nav>
+            <div class="header__phone">
+                <div class="header__phone_number">+7 499 216-73-64</div>
+                <div class="header__phone_text">Перезвоним через 5 минут
+                    <br>ежедневно с 9:00 до 20:00</div>
+            </div>
+        </div>
+    </div>
     <header class="header">
         <div class="container">
             <div class="header__kid-bg"></div>
-            <div class="header__menu">
-                <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
-                <nav>
-                    <ul>
-                        <li class="active"><a href="">Дни рождения</a></li>
-                        <li><a href="">Мастер классы</a></li>
-                        <li><a href="">Корпоративы</a></li>
-                        <li><a href="">Аниматоры</a></li>
-                        <li><a href="">Меню</a></li>
-                        <li><a href="">Акции</a></li>
-                        <li><a href="">Контакты</a></li>
-                        <li><a href="">О нас</a></li>
-                    </ul>
-                </nav>
-                <div class="header__phone">
-                    <div class="header__phone_number">+7 499 216-73-64</div>
-                    <div class="header__phone_text">Перезвоним через 5 минут
-                        <br>ежедневно с 9:00 до 20:00</div>
-                </div>
-            </div>
             <div class="top-block">
                 <div class="container">
                     <h1 class="top-block__title">Детское каф<span></span>е <br>для Дня рождения</h1>
@@ -50,12 +61,12 @@
     <main>
         <div class="wizzard">
             <div class="container">
-                <div class="wizzard__item">
+                <div class="wizzard__item" data-navigation-link="contacts">
                     <span class="wizzard__item_number">1</span>
                     <div class="wizzard__item_text">Выберите
                         <br>ближайшее кафе</div>
                 </div>
-                <div class="wizzard__item">
+                <div class="wizzard__item"  data-navigation-link="order">
                     <span class="wizzard__item_number">2</span>
                     <div class="wizzard__item_text">Расскажите
                         <br>о своих
@@ -63,7 +74,7 @@
                     <div class="wizzard__item_descr">Менеджер подберет программу
                         <br>и составит меню, декоратор украсит стол, аниматор развлечет гостей праздника.</div>
                 </div>
-                <div class="wizzard__item">
+                <div class="wizzard__item"  data-navigation-link="order">
                     <span class="wizzard__item_number">3</span>
                     <div class="wizzard__item_text">Пригласите
                         <br>гостей
@@ -138,10 +149,10 @@
                         </div>
                     </div>
                 </div>
-                <button class="calculate-btn">Рассчитать цену праздника</button>
+                <button class="calculate-btn" data-navigation-link="calculator">Рассчитать цену праздника</button>
             </div>
         </div>
-        <div class="shows">
+        <div class="shows" data-navigation="animators">
             <div class="container">
                 <div class="section-title white">Аниматоры проводят шоу
                     <br>и мастер-классы</div>
@@ -178,7 +189,7 @@
                 </div>
             </div>
         </div>
-        <div class="master-classes">
+        <div class="master-classes" data-navigation="master">
             <div class="container">
                 <div class="master-classes__item">
                     <div class="master-classes__item_title">Кроме шоу аниматоры организуют мастер-классы, на которых дети учатся новому: вместе готовят шоколад и конфеты, выпечку, учатся рисовать маслом, делать фигурки из бумаги и шить одежду для кукол. Дарим шоколадный мастер-класс в подарок в шести кафе.</div>
@@ -205,7 +216,7 @@
                 </div>
             </div>
         </div>
-        <div class="birthday-calculator">
+        <div class="birthday-calculator" data-navigation="calculator">
             <div class="section-title violet">Стоимость детского
                 <br>Дня Рождения</div>
             <div class="container">
@@ -343,7 +354,7 @@
         <div class="holiday-calculator">
             <div class="container">
                 <div class="holiday-calculator__container">
-                    <div class="holiday-calculator__form">
+                    <div class="holiday-calculator__form" data-navigation="order">
                         <div class="section-title aqua">Заказать праздник</div>
                         <div class="holiday-calculator__title">Ответим на все ваши вопросы, поможем определиться
                             <br>с выбором развлечений и меню</div>
@@ -468,7 +479,7 @@
                 </div>
             </div>
         </div>
-        <div id="map" class="google-map"></div>
+        <div id="map" class="google-map" data-navigation="contacts"></div>
         <div class="addresses">
             <div class="container">
                 <div class="addresses__col">
@@ -560,7 +571,7 @@
             </div>
         </div>
         <div class="cooking">
-            <div class="cooking__top">
+            <div class="cooking__top" data-navigation="cake">
                 <div class="section-title white">Приготовим необычный торт</div>
                 <div class="container">
                     <div class="cooking__title">В детском кафе для Дня рождения мы готовим торты на праздники на основе фирменных тортов Шоколадницы: «Наполеона» с подрумяненным слоеным тестом и заварным кремом с натуральной ванилью или шоколадной «Праги» с бисквитными коржами, пропитанными шоколадным кремом.
@@ -612,7 +623,7 @@
                             <div class="cooking__food_item_text">Куриный шашлычок</div>
                         </div>
                     </div>
-                    <div class="cooking__title black">
+                    <div class="cooking__title black" data-navigation="kids">
                         <b class="violet">Детское меню</b> в наличии в пяти детских кафе для Дня рождения. В остальных заведениях мы подберем угощения для детей из общего меню: блинчики, оладьи, паровые котлетки, крем-суп, сливочную пасту с курицей и пармезаном или омлеты с овощами.
                         <div>Все блюда оформляем так, чтобы еда вызывала восторг,
                             <br>а не brтолько насыщала. Готовим из свежих и натуральных
@@ -646,7 +657,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="cooking__title black">
+                    <div class="cooking__title black" data-navigation="adult">
                         <b class="white">Взрослое меню</b> представлено в каждом заведении. Поможем подобрать меню в домашнем стиле: блинчики с семгой, салат «Оливье» с курицей и бифштекс из говядины. Предложим и современное меню: клаб сендвич, теплый салат с ростбифом и бланкет из лосося.
                     </div>
                     <div class="cooking__food">
@@ -673,7 +684,7 @@
             </div>
             <div class="cooking-adult__bottom">
                 <div class="container">
-                    <div class="cooking__title black">
+                    <div class="cooking__title black" data-navigation="banquet"> 
                         <b class="violet">Банкетное меню</b> предлагаем в каждой «Шоколаднице». Для вашего праздника накроем и украсим отдельный стол, комнату или целое кафе. В кафе в «Меге» Химки и на Ходынском бульваре организуем банкет до 150 человек.
                     </div>
                     <div class="cooking__food">
@@ -892,6 +903,7 @@
     </script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
     <script src="js/all.js"></script>
 </body>
 
