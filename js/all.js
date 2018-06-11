@@ -125,7 +125,7 @@ function isInViewport(el) {
             var valX = deltaX * parseFloat(item.getAttribute('data-paralax')) ;
             var valY = deltaY * parseFloat(item.getAttribute('data-paralax')) ;
             // console.log(valX);
-            item.style.transform = 'translate(' + valX + 'px, ' + valY + 'px)';
+            // item.style.transform = 'translate(' + valX + 'px, ' + valY + 'px)';
 
         });
     }, false);
