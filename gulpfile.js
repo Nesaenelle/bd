@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var server = require('gulp-server-livereload');
-
+let cleanCSS = require('gulp-clean-css');
 //style paths
 var sassFiles = 'scss/style.scss',
     cssDest = './';
@@ -9,6 +9,7 @@ var sassFiles = 'scss/style.scss',
 gulp.task('styles', function(){
     gulp.src(sassFiles)
         .pipe(sass().on('error', sass.logError))
+        .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest(cssDest));
 });
 
