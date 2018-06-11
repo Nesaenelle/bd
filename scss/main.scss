@@ -528,6 +528,23 @@ button {
         height: 870px;
         background-size: 100%;
         margin-top: 24px;
+        position: relative;
+        .particles {
+            &__item{
+                position: absolute;
+                background-size: contain!important;
+                background-repeat: no-repeat!important;
+                width: 60px;
+                height: 60px;
+                &:nth-child(1) {
+                    background: url(../img/calculator/calc_par5.png);
+                    right: 0;
+                    top: 74px;
+                    width: 90px;
+                    height: 90px;
+                }
+            }
+        }
         &_calculated {
             padding: 132px 143px;
             &_message {

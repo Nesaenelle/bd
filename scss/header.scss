@@ -96,9 +96,14 @@
             width: 60px;
             height: 60px;
             &:nth-child(1) {
-                // background: url(../img/main_paralax/par2.png);
+                background: url(../img/main_paralax/par2.png);
                 bottom: 0;
                 left: 400px;
+                top: -74px;
+                margin: auto;
+                left: 27px;
+                width: 90px;
+                height: 90px;
             }
             &:nth-child(2) {
                 background: url(../img/main_paralax/par8.png);
@@ -110,11 +115,13 @@
                 height: 105px;
             }
             &:nth-child(3) {
-                // background: url(../img/main_paralax/par3.png);
-                left: 0;
+                background: url(../img/main_paralax/par1.png);
+                left: -107px;
                 right: 0;
-                bottom: 100px;
+                top: 0;
                 margin: auto;
+                width: 100px;
+                height: 100px;
             }
             &:nth-child(4) {
                 background: url(../img/main_paralax/par6.png);
