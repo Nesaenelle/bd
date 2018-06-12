@@ -1,23 +1,33 @@
 .footer {
     margin-top: 25px;
     position: relative;
-    justify-content: space-between;
-    display: flex;
+    .container {
+
+        justify-content: space-between;
+        display: flex;
+        position: relative;
+    }
     &__phone {
-        width: 330px;
-        padding: 118px 15px 0 26px;
+        width: 550px;
+        padding: 118px 50px 0 0px;
         height: 200px;
         background: url(../img/number_footer.png) no-repeat;
-        background-position: right 11px;
+        background-position: 0 10px;
         font-size: 16px;
         background-size: cover;
+        text-align: right;
         &_number {
             font-size: 30px;
+
+            font-family: ExposureCTwo;
+            color: #333;
             font-weight: 800;
         }
         &_text {
             font-size: 12px;
             padding-left: 10px;
+            color: #333;
+            letter-spacing: -.1px;
         }
     }
     &__socials {

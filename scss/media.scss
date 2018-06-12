@@ -1,268 +1,1189 @@
 /* MOBILES */
+
 .desktop {
     display: block;
 }
+
 .mobile {
     display: none;
 }
-@media screen and (max-width: 980px) {
+
+@media screen and (max-width: 1280px) {
     .desktop {
         display: none;
     }
     .mobile {
         display: block;
     }
-
-    header {
-
-        nav{
-            display: none;
-        }
-
-        .header__burger {
-            display: block;
-        }
-        .header__burger__dropdown.opened, .header__burger__dropdown.opened nav {
-            display: block;
-        }
-    }
-    main {
-        margin-top: 148px;
-    }
-    .first-block {
-        .container {
-            display: block;
-        }
-        &__left {
-            width: 80%;
-            margin: auto;
-            text-align: center;
-        }
-        &__right {
-            width: 80%;
-            margin: auto;
-            text-align: center;
-        }
-        form {
-            // width: %;
-            margin: 33px auto;
-        }
-        iframe {
-            margin-top: 12px;
-        }
-    }
-
-    .about-block {
-        &__left {
-            width: 100%;
-            margin: auto;
-            text-align: center;
-        }
-        &__right {
-            width: 100%;
-            margin: auto;
-            text-align: center;
-        }
-        &__images {
-            padding: 0 40px;
-        }
-        &__images__item {
-            height: 273px;
-            transform: none!important;
-            padding: 10px 10px;
-            img {
-                min-width: 100px;
-                max-width: 150px;
-            }
-            &:after {
-                height: 100px;
-            }
-            &__text {
-                padding: 0 20px;
-                height: 100px;
-            }
-        }
-    }
-    .features-block {
-        margin-top: 40px;
-        &__images {
-            padding: 0 40px;
-        }
-    }
-    .features-block__images__item {
-        &:nth-child(7) {
-            opacity: 0;
-        }
-        &:last-child {
-            opacity: 0;
-        }
-    }
-    .feedback-block {
-        margin-top: 40px;
-    }
-
-    .slider {
+    .header__phone {
         // display: none;
-    }
-
-    .bottom-form .container>div .big-title {
-        width: 100%;
-        padding: 0;
-        text-align: center;
-        font-size: 40px;
-        line-height: 40px;
-        position: static;
-    }
-    .bottom-form .container>div form {
-        margin: 35px auto 0;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    header {
-        height: 39px;
-        .logo {
-            width: 140px;
+        width: 270px;
+        padding-left: 30px;
+        &_number {
+            font-size: 20px;
         }
-        .header__burger__icon {
-
-            width: 16px;
-            height: 16px;
-        }
-        .header__burger {
-            margin-right: 10px;
-            &__dropdown {
-                top: 39px;
-            }
+        &_text {
+            font-size: 10px;
         }
     }
-
-    main {
-        margin-top: 80px;
+    .footer__phone {
+        &_number {
+            font-size: 20px;
+        }
+        &_text {
+            font-size: 10px;
+        }
     }
-    a.mobile {
+    .footer__phone {
+        width: 350px;
+        background-position: right 10px;
+    }
+    .particles,
+    .outer-particles {
         display: none;
     }
-    .big-title {
-        font-size: 30px;
-        line-height: 1;
-    }
-    .first-block .container {
-        padding: 0;
-    }
-    .first-block .big-title{
-        padding: 0 20px;
-    }
-    .first-block .discription-text {
-        font-size: 18px;
-        line-height: 1;
-        padding: 0 20px;
-    }
-    .first-block__left {
-        width: 100%;
-    }
-    .first-block__right {
-        width: 100%;
-    }
-    .first-block iframe {
-        margin-top: 0;
-    }
-    .first-block form {
-        flex-wrap: wrap;
-        input {
-            width: 100%;
-        }
-        .btn {
-            width: 100%;
-        }
-    }
-    .about-block {
-        margin-top: 50px;
-    }
-    .features-block {
-        margin-top: 10px;
-    }
-    .features-block__images {
-        padding: 0 40px;
-        &__item {
-            width: 100%;
-        }
-    }
-    .slider__item__descr {
-        font-size: 18px;
-        line-height: 18px;
-        width: 90%;
+    .header .particles {
+        display: block;
     }
 
-    .about-block__images {
-        padding: 0px 40px;
-        &__item {
-            width: 100%;
-            img {
-                width: 70%;
+    .header .top-block {
+        // display: none;
+    }
+    .header__menu nav {
+        display: none;
+    }
+    .header .top-block .container {
+        padding: 60px 0px 60px 0;
+    }
+    .header .top-block__title {
+        font-size: 48px;
+        line-height: 50px;
+    }
+
+    .header__kid-bg {
+        background: url(../img/kid_bg.png) no-repeat;
+        right: 0;
+        position: absolute;
+        /* top: 0; */
+        width: 100%;
+        height: 100%;
+        background-position: center bottom;
+        z-index: 2;
+        background-size: contain;
+        bottom: -20px;
+        top: auto;
+    }
+    .feedback {
+        &__star {
+            right: 0!important;
+        }
+        &__message_text {
+            br {
+                display: none;
             }
         }
     }
-    .feedback-block .medium-title {
-        margin-bottom: 40px;
-        font-size: 30px;
-    }
-    .features-block__images__item {
-        &:nth-child(7) {
-            opacity: 0;
-            display: none;
-        }
-        &:last-child {
-            opacity: 0;
+    .section-title {
+        font-size: 32px;
+        br {
             display: none;
         }
     }
-    .slider {
-        height: 230px;
+    .horizontal-slider {
+        margin-top: 40px; // display: none;
+        .calculate-btn {
+            background-size: contain;
+            background-position: center;
+            padding: 0px 20px;
+        }
     }
-    .slider__item {
-        padding: 0 10px;
+    .wizzard {
+        height: auto;
+        margin-bottom: 0; // display: none;
+        .container {
+
+            padding: 60px 20px 60px 20px;
+        }
     }
-    .feedback-block .container {
-        height: 433px;
+    .wizzard__item:nth-child(1) {
+        position: absolute;
+        top: -120px;
+        left: 60px;
+        &:after {
+            width: 74px;
+            height: 362px;
+            top: 81px;
+            left: -10px;
+        }
     }
-    .bottom-form .container {
-        height: 416px;
-        padding: 0 40px;
+    .wizzard__item:nth-child(2) {
+        margin-left: 100px;
+        &:after {
+            width: 115px;
+            height: 164px;
+            top: 106px;
+            left: -35px;
+        }
     }
-    .bottom-form .container>div .big-title {
-        font-size: 24px;
-        line-height: 1;
+    .wizzard__item:nth-child(3) {
+        margin-left: 180px;
     }
-    .bottom-form .container>div form {
-        margin: 50px auto 0;
+    .wizzard__item_text {
+        font-size: 14px;
+        margin-right: 20px!important;
+        br {
+            display: none;
+        }
+    }
+    .wizzard__item_descr {
+        font-size: 16px;
+        br {
+            display: none;
+        }
     }
 
-    footer {
+    .calculate-btn {
+        font-size: 20px;
+    }
+
+    .shows {
+        // display: none;
         height: auto;
-        .container {
-            flex-wrap: wrap;
-            justify-content: center;
-            flex-direction: column-reverse;
+        padding: 150px 20px 50px 20px;
+        background-position: center;
+        .section-title {
+            color: #fff;
         }
-        .footer-center {
+        &__title {
+            padding: 0;
+        }
+        .container {
+            padding: 17px 0px 20px 0px;
+        }
+        &__container {
+            padding: 0;
+            justify-content: center;
+            &_item {
+                margin-top: 20px;
+            }
+        }
+        .shows__container_item:nth-child(1) .shows__container_item_img:after,
+        .shows__container_item:nth-child(2) .shows__container_item_img:after {
             display: none;
         }
-        .footer-socials {
+    }
+
+    .master-classes {
+        // display: none;
+        margin-top: 40px;
+        .master-classes .container {
+            padding: 0px 20px;
+        }
+        .master-classes__item_descr {
             width: 100%;
-            margin-top: 30px;
+            br {
+                display: none;
+            }
+        }
+        .master-classes__item_title {
+            font-size: 20px;
+        }
+        .container {
+            padding: 0 20px;
+        }
+        .master-classes__item:nth-child(1) .master-classes__item_image:after {
+            display: none;
+        }
+        .master-classes__item:nth-child(1):after {
+            display: none;
+        }
+        .master-classes__item:nth-child(2) .master-classes__item_image:after {
+            display: none;
+        }
+    }
+
+    .birthday-calculator {
+        // display: none;
+        margin-top: 60px;
+        .section-title {
+            padding: 0 20px;
+        }
+        .container {
+            padding: 0px 20px;
+        }
+
+        .birthday-calculator__title {
+            padding: 0px 20px;
+        }
+        .birthday-calculator__container {
+            flex-wrap: wrap;
             justify-content: center;
-            img {
-                &:first-child {
-                    margin-left: 0;
+            .birthday-calculator__form {
+                width: 100%;
+                form {
+                    padding: 108px 27px 100px 57px;
+                    .radio label,
+                    .input label {
+                        font-size: 16px;
+                    }
+                }
+            }
+            .birthday-calculator__form-info {
+                width: 100%;
+                img {
+                    margin: 0 auto 0;
+                }
+            }
+            .birthday-calculator__form-info_descr {
+                margin: 10px auto 0;
+                width: 100%;
+                text-align: center;
+                br {
+                    display: none;
+                }
+                &:last-child {
+                    &:after {
+                        content: none;
+                    }
                 }
             }
         }
-        .copyright {
+    } // .white {
+    //     color: initial;
+    // }
+    .examples {
+        // display: none;
+        .section-title {
+            color: #8765d1;
+        }
+        .container {
+            padding: 0px 50px;
+        }
+        &__container {
+            justify-content: center;
+        }
+        &:after {
+            content: none;
+        }
+        &__item {
+            // width: 48%;
+            &_images {
+                justify-content: center;
+                &_img {
+                    margin: 5px;
+                }
+            }
+            &_price {
+                font-size: 28px;
+                text-align: center;
+                color: #000;
+            }
+            &_text {
+                text-align: center;
+            }
+        }
+        &__title {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .game-rooms {
+        // display: none;
+        .container {
+            padding: 0 20px;
+        }
+        &__title {
+            padding: 0;
+        }
+        &__title {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .organization {
+        // display: none;
+        background: none;
+        .container {
+            padding: 0 20px;
+        }
+        &__tags {
+            flex-wrap: wrap;
+            justify-content: center;
+            &_item {
+                margin: 10px 10px;
+            }
+        }
+    }
+    .google-map {
+        // display: none;
+        margin-top: 40px;
+    }
+    .addresses {
+        // display: none;
+        .container {
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+        .addresses__col {
+            width: 100%;
+            &:last-child {
+                width: 100%;
+            }
+        }
+        &__title {
+            width: 100%;
+            br {
+                display: none;
+            }
+        }
+    }
+    .cooking {
+        // display: none;
+        &__top {
+            height: auto; // height: 1650px;
+            &:after {
+                content: none;
+            }
+            * {
+                color: #000;
+            }
+            .section-title {
+                margin-top: 20px;
+                color: #8765d1;
+                padding: 0 20px;
+            }
+            .container {
+                padding: 20px 20px 0 20px;
+            }
+            .cooking__link {
+                width: 100%;
+                margin-top: 20px;
+                &_text {
+                    color: #1ebec4;
+                }
+                br {
+                    display: none;
+                }
+            }
+            .cake-boy {
+                display: none;
+            }
+            .cooking__link_text {
+                text-align: center;
+                margin-bottom: 20px;
+                a {
+                    color: #1ebec4;
+                }
+            }
+            &_images {
+                width: 100%;
+                margin: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                &_item {
+                    justify-content: center;
+
+                    &:nth-child(1),
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        margin: 0;
+                        margin-bottom: 50px;
+                    }
+                    &_text {
+
+                        position: static;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        &__title {
+            width: 100%;
+            >div {
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        &__food {
+            flex-wrap: wrap; 
+            justify-content: center;
+            &_item {
+                margin-bottom: 40px;
+                // width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                &_text {
+                    width: 100%;
+                }
+            }
+        }
+        &__bottom {
+            margin: 0;
+            .cooking__title {
+                // width: 100%;
+            }
+            .cooking__link {
+                // width: 100%;
+                // text-align: center;
+                // margin-top: 40px;
+            }
+            .container {
+                padding: 0px 20px;
+            }
+            .game-rooms__link {
+                // width: 100%;
+                // margin-top: 20px;
+                // text-align: center;
+            }
+        }
+    }
+
+    .cooking-adult {
+        // display: none;
+        &__top {
+            padding: 0 20px;
+            height: auto;
+            margin-top: 40px;
+            .container {
+                padding: 0;
+            }
+            .feedback {
+                height: auto;
+                margin-top: 0;
+            }
+            .cooking__title {
+                padding: 0;
+            }
+        }
+        &__bottom {
+            .container {
+                padding: 0 20px;
+            }
+            .cooking__title {
+                padding: 0;
+                width: 100%;
+            }
+        }
+    }
+
+    .mood {
+        // display: none;
+        margin-top: 40px;
+        .container {
+            padding: 0 20px;
+        }
+        &__title {
+            br {
+                display: none;
+            }
+        }
+    }
+
+
+
+    .gifts {
+        // display: none;
+        .container {
+            padding: 0 20px;
+        }
+
+        &__bg_girl {
+            width: 500px;
+            height: 715px;
+            background-size: contain;
+            bottom: 0;
+            background-position: 0 bottom;
+            z-index: 0; // left: 0;
+        }
+        &__bg_boy {
+            width: 400px;
+            height: 715px;
+            right: 0;
+            background-size: contain;
+            bottom: 100px;
+            background-position: 0 bottom;
+            z-index: 0;
+        }
+    }
+    .holiday-calculator {
+        margin-top: 0;
+    }
+    .holiday-calculator__title {
+        font-size: 18px;
+        br {
+            display: none;
+        }
+    }
+
+    .holiday-calculator__form {
+        padding-top: 40px; // background: none;
+        form {
+            width: 100%;
+            .input {
+                margin-bottom: 40px;
+            } // padding: 31px 0px 20px 0px;
+        }
+        .input-descr {
+            font-size: 14px;
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .faq {
+        .container {
+            padding: 0 20px;
+        }
+        &__item {
+            &_text {
+                width: 100%;
+            }
+        }
+    }
+    .footer {
+        .container {
+            padding: 0;
+        }
+    }
+
+    .input.dropdown .dropdown-container {
+        width: 420px;
+        right: 0;
+        left: auto;
+        border-radius: 10px 0px 10px 10px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .show {
+        background: none;
+    }
+    .feedback {
+        width: 100%;
+        &__message {
+            padding: 49px 26px 38px 26px;
+            &_text {
+                font-size: 14px;
+                line-height: 20px;
+                overflow: hidden;
+                max-height: 200px;
+            }
+        }
+    }
+
+    .wizzard {
+        .feedback {
+            position: relative;
+            top: 50px;
+        }
+    }
+
+    .holiday-calculator__form {
+        padding-top: 0px;
+        background: none;
+        height: auto;
+        form {
+            width: 100%;
+
+            padding: 31px 0px 20px 0px;
+        }
+        .input-descr {
+            font-size: 14px;
+            br {
+                display: none;
+            }
+        }
+    }
+    .birthday-calculator {
+        .birthday-calculator__container {
+            .birthday-calculator__form {
+                // background: none;
+                // height: auto;
+                form {
+                    width: 70%;
+                    margin: auto; // padding: 0px 20px;
+                    .radio,
+                    .input {
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }
+                    .radio__toggle_no,
+                    .radio__toggle_yes {
+                        width: 40px;
+                        min-width: 40px;
+                        max-width: 40px;
+                        height: 40px;
+                        background-size: 50%;
+                    }
+                }
+            }
+            .birthday-calculator__form-info {
+                margin-top: 40px;
+            }
+        }
+    }
+
+    .birthday-calculator__form_calculated {
+        &_total {
+            font-size: 80px;
+        }
+        &_message {
+            font-size: 24px;
+        }
+        &_phone-number {
+            font-size: 32px;
+            margin-top: 60px;
+        }
+    }
+    .cooking__food_item {
+        margin-bottom: 70px;
+    }
+    .examples {
+        &__item {
+            width: 48%;
+            margin-bottom: 30px;
+            &_images {
+                justify-content: center;
+            }
+            &_price {
+                font-size: 28px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .gifts__bottom-text {
+        margin-top: 60px;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .header .top-block__descr {
+        width: 100%;
+    }
+    .wizzard .container {
+        padding: 40px 20px;
+    }
+    .wizzard__item {
+        flex-wrap: wrap;
+    }
+    .wizzard__item:nth-child(1) {
+        position: absolute;
+        top: -120px;
+        left: 20px;
+        margin-top: 0;
+        &:after {
+            content: none;
+        }
+    }
+    .wizzard__item:nth-child(2) {
+        margin-left: 0; // margin-top: 40px;
+        &:after {
+            content: none;
+        }
+    }
+
+    .wizzard__item:nth-child(3) {
+        margin-left: 0; // margin-top: 40px;
+        &:after {
+            content: none;
+        }
+    }
+
+    .wizzard__item_descr {
+        margin-top: 0px;
+    }
+    .horizontal-slider .calculate-btn {
+        line-height: 16px;
+        font-size: 16px;
+    }
+    .feedback {
+        // margin-bottom: 30px;
+        height: auto;
+        &__image {
+            width: 100%!important;
+            min-height: 200px;
+            border-radius: 35px 35px 0 0;
+        }
+        &__message {
+            width: 100%!important;
+            min-height: 200px;
+            max-height: 300px;
+            border-radius: 0 0 35px 35px; // padding: 35px 39px 36px 50px!important;
+            &_user {
+                flex-wrap: wrap;
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+    .shows .feedback__message {
+        padding: 30px;
+    }
+    .cooking-adult .feedback__message {
+        padding: 30px;
+        &_user {
+            // span {
+            //     margin-left: 5px;
+            //     display: block;
+            // }
+        }
+    }
+    .holiday-calculator__form {
+        form {
+            .input-descr {
+                width: 100%;
+            }
+        }
+        .calculate-btn {
+            margin-top: 30px;
+        }
+    }
+    .birthday-calculator__form {
+        height: 700px;
+    }
+    .birthday-calculator .birthday-calculator__container .birthday-calculator__form form {
+        padding: 68px 27px 60px 42px;
+        .radio,
+        .input {
+            width: 100%; // margin-bottom: 15px;
+        }
+        .input label,
+        .radio label {
+            font-size: 14px;
+        }
+        .input input {
+            height: 35px;
+        }
+        .radio__toggle {
+            width: 100px;
+        }
+
+        .calculate-btn {
+            margin-top: 0;
+            width: 250px;
+            height: 57px;
+        }
+    }
+    .birthday-calculator__form_calculated {
+        padding: 60px 120px;
+        &_total {
+            font-size: 64px;
+        }
+        &_message {
+            font-size: 22px;
+            line-height: 22px;
+            margin-top: 15px;
+        }
+        &_phone-number {
+            font-size: 28px;
+            margin-top: 40px;
+        }
+    }
+    .addresses {
+        padding-bottom: 30px;
+    }
+    .cooking {
+
+        &__top {
+            margin-top: 20px;
+            height: auto;
+            &:after {
+                content: none;
+            }
+            * {
+                color: #000;
+            }
+        }
+
+        .section-title {
+            color: #8765d1;
+        }
+        .cooking__top .cooking__link_text {
+            color: #1ebec4;
+        }
+    }
+
+    .gifts .feedback__message {
+        padding: 35px;
+    }
+
+    .footer__phone {
+        width: 250px;
+        padding: 118px 50px 0 0px;
+        background-position-x: -300px;
+        &_number {
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 580px) {
+    // .holiday-calculator__form {
+    //     form {
+    //         .input-descr {
+    //             width: 100%;
+    //         }
+    //     }
+    //     .calculate-btn {
+    //         margin-top: 30px;
+    //     }
+    // }
+
+    .cooking__bottom .cooking__title {
+            padding: 0 15px;
+    }
+    .birthday-calculator__form {
+        height: 620px;
+    }
+    .birthday-calculator .birthday-calculator__container .birthday-calculator__form form {
+        padding: 50px 27px 60px 42px;
+        .radio,
+        .input {
+            width: 100%;
+            margin-bottom: 15px;
+        } // .input label, .radio label {
+        //     font-size: 14px;
+        // }
+        // .radio__toggle {
+        //     width: 100px;
+        // }
+        .radio__toggle_no,
+        .radio__toggle_yes {
+            width: 30px;
+            min-width: 30px;
+            max-width: 30px;
+            height: 30px;
+            background-size: 50%;
+        }
+        .calculate-btn {
+            margin-top: 0;
+            width: 200px;
+            height: 45px;
+        }
+    }
+
+    .birthday-calculator__form_calculated {
+        padding: 40px 80px;
+        &_total {
+            font-size: 48px;
+        }
+        &_message {
+            font-size: 18px;
+        }
+        &_phone-number {
+            font-size: 22px;
+            margin-top: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section-title {
+        line-height: 26px;
+        font-size: 28px;
+    }
+    .header .top-block__title span {
+        padding: 0 3px;
+    }
+    .logo {
+        img {
+            width: 100px;
+        }
+    }
+
+    .header .top-block__title {
+        font-size: 28px;
+        line-height: 26px;
+        text-align: center;
+        text-shadow: 1px 1px 7px #000;
+        letter-spacing: 1px;
+    }
+    .header .top-block__descr {
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: 20px;
+        text-shadow: 1px 1px 7px #fff;
+        text-align: center;
+        br {
+            display: none;
+        }
+    }
+    .header__phone {
+        top: -20px;
+        padding-top: 30px;
+    }
+
+    .horizontal-slider {
+        .section-title {
+            width: 100%;
+        }
+    }
+
+    .shows {
+
+        &__title,
+        &__descr {
+            width: 100%;
+            font-size: 18px;
+            margin-top: 0;
+            padding: 0;
+            br {
+                display: none;
+            }
+        }
+    }
+    .master-classes {
+        .master-classes__item_title,
+        .master-classes__item_link {
+            width: 100%;
+            font-size: 18px;
+            margin-top: 0;
+            padding: 0;
+            br {
+                display: none;
+            }
+        }
+        .master-classes__item_link {
+            margin-top: 20px;
+        }
+    }
+
+    .birthday-calculator {
+        .birthday-calculator__form {
+            background: none;
+            height: auto;
+        }
+        .birthday-calculator__title,
+        .birthday-calculator__link {
+            width: 100%;
+            padding: 0;
+            font-size: 18px; // margin-top: 0;
+            padding: 0;
+        }
+        .birthday-calculator__container .birthday-calculator__form form {
+            padding: 0;
+            width: 100%;
+            .calculate-btn {
+                margin-top: 20px;
+            }
+        }
+    }
+
+
+    .birthday-calculator__form_calculated {
+        padding: 0;
+        &_estimate, &_message, &_phone-number, &_phone-text, &_total{
+            padding: 0;
+            text-align: center;
+        }
+    }
+
+
+    .examples .container {
+        padding: 0 20px;
+        .examples__title {
+            font-size: 18px;
+        }
+    }
+
+    .game-rooms {
+        .game-rooms__title,
+        .game-rooms__link {
+            width: 100%;
+            padding: 0;
+            font-size: 18px;
+        }
+
+        .game-rooms__link {
+            text-align: center;
+        }
+    }
+
+    .organization {
+        &__col {
+            width: 100%;
+            font-size: 18px;
+        }
+        &__tags {
+            &_item {
+                text-align: center;
+            }
+        }
+    }
+
+    .cooking {
+        &__top {
+            .cooking__title {
+                font-size: 18px;
+            }
+        }
+        &__bottom .cooking__title {
+            padding: 0;
+            font-size: 18px;
+        }
+        .cooking__title {
+            width: 100%;
+        }
+        .cooking__link {
+            width: 100%;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .container {
+            padding: 20px;
+        }
+        .game-rooms__link {
             width: 100%;
             margin-top: 20px;
             text-align: center;
-            margin-bottom: 30px;
         }
+        .cooking__top_images_item {
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .cooking__food {
+        &_item {
+            &_img {
+                width: 300px;
+                height: 300px;
+            }
+        }
+    }
+    .cooking__food_item_img>div {
+        background-size: contain!important;
+    }
+
+    .cooking-adult__top .cooking__title,
+    .cooking-adult__bottom .cooking__title {
+
+        font-size: 18px;
+    }
+    .mood {
+        .section-title {
+            padding: 0 20px;
+        }
+        .mood__title,
+        .mood__link {
+            width: 100%;
+            padding: 0;
+            font-size: 18px;
+            br {
+                display: none;
+            }
+        }
+    } // .shows {
+    //     .section-title {
+    //         margin-top: 80px;
+    //     }
+    // }
+    .gifts {
+        &:after {
+            content: none;
+        }
+        &__title {
+            font-size: 18px;
+            width: 100%;
+        }
+        &__link {
+            text-align: center;
+            width: 100%;
+        }
+        &__bgs {
+            width: 100%;
+            overflow: hidden;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            /* display: none; */
+            left: 0;
+        } // height: auto;
+        &__bg_girl {
+            width: 100%;
+        }
+        &__bg_boy {
+            bottom: 120px;
+            width: 100%;
+            right: -70px;
+        }
+        .feedback__message {
+            padding: 30px!important;
+        }
+        .gifts__bottom-text {
+            text-align: center;
+            color: #fff;
+            margin-top: 50px;
+            text-shadow: 1px 1px 7px #000;
+            text-align: center;
+            font-size: 18px;
+        }
+        .feedback__message_user {
+            margin-top: 20px;
+        }
+    }
+    .holiday-calculator__title {
+        width: 100%;
+        padding: 0;
+    }
+    .holiday-calculator__form {
+        margin-top: 20px;
+        width: 100%;
+        form {
+            .input {
+                width: 100%;
+                &:nth-child(even) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .addresses .addresses__col_item {
+        width: 100%;
+        &.metro {
+            width: 100%;
+        }
+    }
+    .faq__item_title {
+        font-size: 20px;
+    }
+    .faq__item_text {
+        font-size: 18px;
+    }
+
+    .footer__socials {
+        width: 65px;
+        text-align: center;
+        justify-content: center;
+        &_item {
+            width: 35px;
+            height: 35px;
+            background-size: contain!important;
+            margin-bottom: 10px;
+        }
+        &_text {
+            text-align: center;
+        }
+    }
+
+    .input.dropdown .dropdown-container {
+        width: 100%;
+        left: 0;
+
+        border-radius: 0 0px 10px 10px;
     }
 }

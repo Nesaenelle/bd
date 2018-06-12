@@ -47,9 +47,8 @@
 }
 
 .underline {
-    &:hover {
-        text-decoration: underline;
-    }
+
+    text-decoration: underline;
 }
 
 .colx2 {
@@ -88,6 +87,8 @@
 .nowrap {
     white-space: nowrap;
 }
+
+
 /* MARGINS */
 
 @for $i from 0 through 20 {
@@ -109,6 +110,7 @@
         padding-left: $i * 5 + px!important;
     }
 }
+
 
 /* WIDTH */
 

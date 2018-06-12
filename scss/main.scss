@@ -1,7 +1,8 @@
+$min-width: 300px;
 body {
     font-family: Montserrat;
     background: #f0f8f9;
-    min-width: 1280px;
+    min-width: 280px; // overflow-x: hidden;
 }
 
 button {
@@ -50,6 +51,7 @@ button {
     height: 739px;
     margin-top: -87px;
     position: relative;
+    background-size: cover;
     background-position: center center;
     margin-bottom: 107px;
     z-index: 4;
@@ -64,6 +66,11 @@ button {
         display: flex;
         align-items: center;
         position: relative;
+        &:hover {
+            #{$c}_text {
+                text-decoration: underline;
+            }
+        }
         &:nth-child(1) {
             position: absolute;
             top: -155px;
@@ -151,6 +158,7 @@ button {
     justify-content: space-between; // overflow: hidden;
     position: relative;
     $c: &;
+    flex-wrap: wrap;
     background: #fff;
     border-radius: 35px 35px 35px 35px;
     &.aqua {
@@ -175,8 +183,8 @@ button {
         width: 45%;
         overflow: hidden;
         border-radius: 35px 0 0 35px;
-        background-size: cover!important;
-        background-position: top!important;
+        background-size: cover!important; // background-position: top!important;
+        background-position: center!important;
         img {
             width: 100%;
         }
@@ -197,19 +205,20 @@ button {
             margin-top: 18px;
             font-size: 14px;
             display: flex;
-            align-items: center;
-            flex-wrap: wrap;
+            align-items: center; // flex-wrap: wrap;
             font-weight: 500;
             color: #000;
+            .icon {
+                margin-right: 6px;
+            }
             &_name {
-                margin-left: 6px;
                 color: #000;
                 text-decoration: underline;
+                margin-right: 5px;
             }
             &_extra {
                 color: #000;
                 width: 100%;
-                margin-left: 6px;
             }
         }
     }
@@ -232,16 +241,17 @@ button {
 
     &__container {
         // height: 580px;
-        overflow: hidden;
-        margin-top: 22px;
+        // overflow: hidden;
+        // margin-top: 22px;
+        // max-height: 400px;
         .scroller {
-            display: flex;
-            width: 4000px;
+            // display: flex; // width: 4000px;
+            // min-width: 100%;
         }
     }
 
     &__item {
-        min-width: 470px;
+        // min-width: $min-width;
         display: inline-block;
         &_img {
             img {
@@ -263,6 +273,11 @@ button {
     background: url(../img/bg-aqua2.svg);
     background-size: cover;
     padding: 150px;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
     .feedback {
         margin: 53px auto;
         height: 310px;
@@ -302,6 +317,7 @@ button {
         padding-right: 22px;
         &_item {
             $c: &;
+            width: 48%;
             &:nth-child(1) {
                 #{$c}_img {
 
@@ -469,6 +485,10 @@ button {
             color: #8765d1;
             font-size: 24px;
             line-height: 25px;
+            a {
+                text-decoration: underline;
+                color: #8765d1;
+            }
         }
         &_descr {
             font-size: 14px;
@@ -497,6 +517,55 @@ button {
         justify-content: space-between;
         flex-wrap: wrap;
         padding: 0px 80px;
+        position: relative;
+    }
+    .outer-particles {
+        &__item {
+            position: absolute;
+            background-size: contain!important;
+            background-repeat: no-repeat!important;
+            width: 60px;
+            height: 60px;
+            &:nth-child(1) {
+                background: url(../img/calculator/calc_par1.png);
+                left: 37px;
+                top: -116px;
+                width: 130px;
+                height: 130px;
+                z-index: -1;
+            }
+            &:nth-child(2) {
+                background: url(../img/calculator/calc_par3.png);
+                right: 37px;
+                top: -173px;
+                width: 190px;
+                height: 190px;
+            }
+            &:nth-child(3) {
+                background: url(../img/calculator/calc_par4.png);
+                right: 137px;
+                top: 162px;
+                width: 75px;
+                height: 75px;
+                z-index: -1;
+            }
+            &:nth-child(4) {
+                background: url(../img/calculator/calc_par6.png);
+                right: 0px;
+                bottom: 302px;
+                width: 150px;
+                height: 150px;
+            }
+            &:nth-child(5) {
+                background: url(../img/calculator/calc_par8.png);
+                right: -16px;
+                left: 247px;
+                margin: auto;
+                bottom: 33px;
+                width: 120px;
+                height: 120px;
+            }
+        }
     }
 
     &__title {
@@ -534,6 +603,7 @@ button {
         background-size: 100%;
         margin-top: 24px;
         position: relative;
+        max-width: 770px;
         .particles {
             &__item {
                 position: absolute;
@@ -611,6 +681,7 @@ button {
             height: 67px;
             margin-top: 24px;
             font-size: 24px;
+            background-size: contain;
         }
     }
     &__form-info {
@@ -618,6 +689,8 @@ button {
         // justify-content: center;
         img {
             margin: 69px auto 0;
+            width: 100%;
+            max-width: 460px;
             display: block;
         }
         &_descr {
@@ -739,52 +812,53 @@ button {
                 background-size: contain!important;
                 background-repeat: no-repeat!important;
                 width: 60px;
-                height: 60px; // &:nth-child(1) {
-                //     background: url(../img/main_paralax/par2.png);
-                //     bottom: 0;
-                //     left: 400px;
-                //     top: -74px;
-                //     margin: auto;
-                //     left: 27px;
-                //     width: 90px;
-                //     height: 90px;
-                // }
-                // &:nth-child(2) {
-                //     background: url(../img/main_paralax/par8.png);
-                //     left: -465px;
-                //     right: 0;
-                //     bottom: 48px;
-                //     margin: auto;
-                //     width: 105px;
-                //     height: 105px;
-                // }
-                // &:nth-child(3) {
-                //     background: url(../img/main_paralax/par1.png);
-                //     left: -107px;
-                //     right: 0;
-                //     top: 0;
-                //     margin: auto;
-                //     width: 100px;
-                //     height: 100px;
-                // }
-                // &:nth-child(4) {
-                //     background: url(../img/main_paralax/par6.png);
-                //     left: 0;
-                //     right: 177px;
-                //     margin: auto;
-                //     bottom: 144px;
-                //     width: 55px;
-                //     height: 55px;
-                // }
+                height: 60px;
+                &:nth-child(1) {
+                    background: url(../img/order/order-par3.png);
+                    bottom: 0;
+                    left: 400px;
+                    top: 367px;
+                    margin: auto;
+                    left: 200px;
+                    width: 150px;
+                    height: 150px;
+                }
+                &:nth-child(2) {
+                    // background: url(../img/order/order-par8.png);
+                    // left: -465px;
+                    // right: 0;
+                    // bottom: 48px;
+                    // margin: auto;
+                    // width: 105px;
+                    // height: 105px;
+                }
+                &:nth-child(3) {
+                    background: url(../img/order/order-par6.png);
+                    left: 41px;
+                    margin: auto;
+                    bottom: 189px;
+                    width: 140px;
+                    height: 140px;
+                    z-index: -20;
+                }
+                &:nth-child(4) {
+                    background: url(../img/order/order-par5.png);
+                    left: 84px;
+                    margin: auto;
+                    top: -27px;
+                    width: 180px;
+                    height: 180px;
+                    z-index: -20;
+                }
                 &:nth-child(5) {
-                    background: url(../img/main_paralax/par5.png);
-                    right: 200px;
-                    top: 10px;
-                    width: 80px;
-                    height: 80px;
+                    background: url(../img/order/order-par1.png);
+                    right: 176px;
+                    top: 14px;
+                    width: 100px;
+                    height: 100px;
                 }
                 &:nth-child(6) {
-                    background: url(../img/main_paralax/par7.png);
+                    background: url(../img/order/order-par4.png);
                     left: 102px;
                     width: 57px;
                     top: 213px;
@@ -795,9 +869,16 @@ button {
                     top: 296px;
                     /* left: 86px; */
                     /* margin: auto; */
-                    background: url(../img/main_paralax/par4.png);
+                    background: url(../img/order/order-par2.png);
                     width: 70px;
                     height: 70px;
+                }
+                &:nth-child(8) {
+                    right: 147px;
+                    bottom: 103px;
+                    background: url(../img/order/order-par7.png);
+                    width: 150px;
+                    height: 150px;
                 }
             }
         }
@@ -809,6 +890,7 @@ button {
         margin: auto;
         background-size: 100%;
         padding-top: 64px;
+        position: relative;
         form {
             margin: auto;
             padding: 31px 100px 20px 109px;
@@ -884,17 +966,23 @@ button {
         line-height: 26px;
         margin-top: 34px;
         font-family: ExposureCTwo;
+        a {
+            text-decoration: underline;
+            color: #8765d1;
+        }
     }
     .horizontal-slider {
         padding: 0px 14px 0px 167px;
         &__container {
             margin-top: 44px;
+            max-width: 100%;
         }
         &__item {
             // $c: &;
             position: relative;
-            margin-right: 20px;
-            width: 540px;
+            margin-right: 20px; // width: 540px;
+            // min-width: 540px;
+            max-width: 100%;
             &_text {
                 margin: 12px 10px 0 3px;
                 font-size: 18px;
@@ -934,7 +1022,7 @@ button {
 .organization {
     margin-top: 72px;
     background: url(../img/bg-white2.png);
-    background-size: cover;
+    background-size: 150%;
     .container {
         padding: 90px 170px 35px 170px;
         flex-wrap: wrap;
@@ -955,12 +1043,13 @@ button {
         width: 100%;
         &_item {
             border: 1px solid #1ebec4;
-            padding: 8px 15px;
+            padding: 8px 10px;
             border-radius: 30px;
             font-size: 18px;
             cursor: pointer;
             letter-spacing: 0px;
             font-weight: 500;
+            margin: 0 5px;
             &.active {
                 border-color: #8765d1;
                 box-shadow: 0 3px 20px -4px #8765d1;
@@ -1006,6 +1095,12 @@ button {
         font-weight: 500;
         font-size: 18px;
         line-height: 30px;
+        a {
+            color: #000;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
         &_metro {
             font-weight: 500;
             font-size: 18px;
@@ -1068,6 +1163,8 @@ button {
         font-size: 22px;
         color: #fff;
         line-height: 30px;
+        position: relative;
+        z-index: 1;
         >div {
             margin-top: 20px;
         }
@@ -1085,18 +1182,20 @@ button {
             font-size: 22px;
             font-family: ExposureCTwo;
             letter-spacing: 0.9px;
+            a {
+                text-decoration: underline;
+                color: #fff;
+            }
         }
     }
     &__top {
-        padding: 0 0 0 0;
-        // background: url(../img/bg-purple.svg), #fff;
+        padding: 0 0 0 0; // background: url(../img/bg-purple.svg), #fff;
         background-size: cover;
         background-position: -20px 0;
         background-repeat-y: no-repeat;
         position: relative;
         z-index: 1;
-        height: 1330px;
-        // &:before {
+        height: 1400px; // &:before {
         //     content: '';
         //     position: absolute;
         //     bottom: 200px;
@@ -1105,16 +1204,96 @@ button {
         //     height: 200px;
         //     z-index: 0;
         // }
+        .cake-boy {
+            position: absolute;
+            bottom: 0;
+            background: url(../img/cake_boy.png);
+            width: 700px;
+            height: 1000px;
+            left: 50px;
+            background-size: cover;
+            &__text {
+                position: absolute;
+                bottom: -35px;
+                font-size: 14px;
+                text-align: center;
+                width: 80%;
+                transform: rotate(-2deg);
+            }
+        }
+        .particles {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            height: 100%;
+            left: 0;
+            z-index: 10;
+            &__item {
+                position: absolute;
+                background-size: contain!important;
+                background-repeat: no-repeat!important;
+                width: 60px;
+                height: 60px;
+                &:nth-child(1) {
+                    background: url(../img/make_cake/make_cake_par1.png);
+                    bottom: 0;
+                    left: 400px;
+                    top: -100px;
+                    /* margin: auto; */
+                    left: 165px;
+                    width: 130px;
+                    height: 130px;
+                    z-index: -1;
+                }
+                &:nth-child(2) {
+                    background: url(../img/make_cake/make_cake_par2.png);
+                    bottom: 0;
+                    /* left: 400px; */
+                    top: -105px;
+                    /* margin: auto; */
+                    right: 80px;
+                    width: 100px;
+                    height: 100px;
+                }
+                &:nth-child(3) {
+                    background: url(../img/make_cake/make_cake_par3.png);
+                    bottom: 0;
+                    /* left: 400px; */
+                    top: 248px;
+                    /* margin: auto; */
+                    right: 0px;
+                    width: 200px;
+                    height: 200px;
+                }
+                &:nth-child(4) {
+                    background: url(../img/make_cake/make_cake_par4.png);
+                    bottom: 0;
+                    left: 400px;
+                    bottom: 231px;
+                    margin: auto;
+                    left: 33px;
+                    width: 100px;
+                    height: 100px;
+                }
+                &:nth-child(5) {
+                    background: url(../img/make_cake/make_cake_par5.png);
+                    bottom: 236px;
+                    right: 36px;
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
         &:after {
             content: '';
             position: absolute;
 
-            bottom: 235px;
-            background: url(../img/bg-purple.svg);
+            bottom: 320px;
+            background: url(../img/bg-purple.png);
             background-size: cover;
             background-position: center;
             width: 100%;
-            height: 1400px;
+            height: 100%; //1400px;
             z-index: -1;
         }
         .container {
@@ -1136,6 +1315,8 @@ button {
                 display: flex;
                 justify-content: flex-end;
                 width: 100%;
+                position: relative;
+                z-index: 1;
             }
             &_item {
                 display: flex;
@@ -1177,11 +1358,10 @@ button {
         }
     }
     &__bottom {
-        background: #f0f8f9;
-        // padding-top: 200px;
+        background: #f0f8f9; // padding-top: 200px;
         margin-top: -200px;
         .container {
-            padding: 90px 130px 35px 130px;
+            padding: 0px 130px 35px 130px;
             flex-wrap: wrap;
             display: flex;
             justify-content: space-between;
@@ -1224,7 +1404,8 @@ button {
         width: 100%;
         padding: 0px 10px;
         &_item {
-            // width: calc(100% / 3 - 20px);
+            max-height: 400px;
+            max-width: 400px; // width: calc(100% / 3 - 20px);
             &:nth-child(1) .cooking__food_item_img {
                 &:after {
                     background-position: center center!important;
@@ -1456,7 +1637,7 @@ button {
         }
     }
     .container {
-
+        // overflow: hidden;
         padding: 0px 170px;
         position: relative;
         height: 100%;
@@ -1499,6 +1680,8 @@ button {
         line-height: 18px;
         font-size: 14px;
         letter-spacing: 0.4px;
+        position: relative;
+        z-index: 1;
     }
     &__bg {
         // position: absolute;
@@ -1526,6 +1709,7 @@ button {
     margin-top: 0;
     .container {
         padding: 0px 166px;
+        position: relative;
     }
     &__item {
         margin-top: 34px;
@@ -1538,6 +1722,66 @@ button {
             font-size: 22px;
             letter-spacing: 0.2px;
             line-height: 30px;
+        }
+    }
+
+    .particles {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        height: 100%;
+        left: 0;
+        z-index: -1;
+        &__item {
+            position: absolute;
+            background-size: contain!important;
+            background-repeat: no-repeat!important;
+            width: 60px;
+            height: 60px;
+            &:nth-child(1) {
+                background: url(../img/question_footer/question_par1.png);
+                bottom: 0;
+                top: 367px;
+                width: 150px;
+                height: 150px;
+                right: 200px;
+                top: 100px;
+            }
+            &:nth-child(2) {
+                background: url(../img/question_footer/question_par2.png);
+                left: 41px;
+                margin: auto;
+                bottom: 225px;
+                width: 140px;
+                height: 140px;
+                z-index: -20;
+            }
+            &:nth-child(3) {
+                background: url(../img/question_footer/question_par3.png);
+                right: 50px;
+                bottom: 100px;
+                top: 0;
+                width: 120px;
+                height: 120px;
+                margin: auto;
+            }
+            &:nth-child(4) {
+                background: url(../img/question_footer/question_par4.png);
+                right: 250px;
+                bottom: 100px;
+                width: 80px;
+                height: 80px;
+            }
+            &:nth-child(5) {
+                background: url(../img/question_footer/question_par5.png);
+                left: 102px;
+                width: 120px;
+                bottom: -200px;
+                height: 120px;
+                margin: auto;
+                right: 0;
+                left: 0;
+            }
         }
     }
 }

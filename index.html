@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <title>Birthday</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="jquery.pagepiling.css"> -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800&amp;subset=cyrillic" rel="stylesheet"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <div data-navigation="birthdays"></div>
     <div class="header__menu animated">
-        <div class="container">        
+        <div class="container">
             <a href="#" class="logo" data-navigation-link="birthdays"><img src="img/logo.png" alt=""></a>
             <nav>
                 <ul>
@@ -21,7 +22,7 @@
                     <li data-navigation-link="corporate"><a href="">Корпоративы</a></li>
                     <li data-navigation-link="animators"><a href="">Аниматоры</a></li>
                     <li class="header__menu_dropdown">
-                        <a href="">Меню</a>
+                        <a>Меню</a>
                         <ul>
                             <li data-navigation-link="kids"><a href="#">Детское</a></li>
                             <li data-navigation-link="adult"><a href="#">Взрослое</a></li>
@@ -60,6 +61,7 @@
                 <div class="particles__item" data-paralax="0.9"></div>
                 <div class="particles__item" data-paralax="-1.1"></div>
                 <div class="particles__item" data-paralax="1.3"></div>
+                <div class="particles__item" data-paralax="0.5"></div>
             </div>
         </div>
     </header>
@@ -71,7 +73,7 @@
                     <div class="wizzard__item_text">Выберите
                         <br>ближайшее кафе</div>
                 </div>
-                <div class="wizzard__item"  data-navigation-link="order">
+                <div class="wizzard__item" data-navigation-link="order">
                     <span class="wizzard__item_number">2</span>
                     <div class="wizzard__item_text">Расскажите
                         <br>о своих
@@ -79,7 +81,7 @@
                     <div class="wizzard__item_descr">Менеджер подберет программу
                         <br>и составит меню, декоратор украсит стол, аниматор развлечет гостей праздника.</div>
                 </div>
-                <div class="wizzard__item"  data-navigation-link="order">
+                <div class="wizzard__item" data-navigation-link="order">
                     <span class="wizzard__item_number">3</span>
                     <div class="wizzard__item_text">Пригласите
                         <br>гостей
@@ -89,7 +91,8 @@
                         <br>от детей или играют вместе с ними.</div>
                 </div>
                 <div class="feedback">
-                    <div class="feedback__image"><img src="img/screen_shot.png" alt=""></div>
+                    <div class="feedback__image" style="background: url(../img/screen_shot.png)">
+                        <!-- <img src="img/screen_shot.png" alt=""> --></div>
                     <div class="feedback__message">
                         <div class="feedback__star"></div>
                         <div class="feedback__message_text"> Закончился праздник в «Шоколаднице»
@@ -99,7 +102,7 @@
                             <br>семейный праздник! </div>
                         <div class="feedback__message_user">
                             <i class="icon icon-inst"></i>
-                            <a href="" class="feedback__message_user_name">Анна Дорофеева</a>, мама 5-летнего Максим
+                            <a href="" class="feedback__message_user_name">Анна Дорофеева, </a> <span> мама 5-летнего Максима</span>
                         </div>
                     </div>
                 </div>
@@ -110,8 +113,8 @@
                 <div class="section-title aqua">
                     Веселим, развлекаем и угощаем детей, пока взрослые отдыхают
                 </div>
-                <div class="horizontal-slider__container">
-                    <div class="scroller">
+                <div class="horizontal-slider__container swipe">
+                    <div class="scroller-1 scroller">
                         <div class="horizontal-slider__item">
                             <div class="horizontal-slider__item_img"><img src="img/candydog.png" alt=""></div>
                             <div class="horizontal-slider__item_text">Угощаем детей их любимыми блюдами из полезных ингредиентов. Пюре и котлеты с овощами оформляем в виде совы, а сосиски в тесте печем в виде таксы.
@@ -154,14 +157,14 @@
                         </div>
                     </div>
                 </div>
-                <button class="calculate-btn" data-navigation-link="calculator">Рассчитать цену праздника</button>
+                <button class="calculate-btn" data-navigation-link="calculator"></button>
             </div>
         </div>
         <div class="shows" data-navigation="animators">
             <div class="container">
                 <div class="section-title white">Аниматоры проводят шоу
                     <br>и мастер-классы</div>
-                <div class="flex j-c-s-b">
+                <div class="shows__container">
                     <div class="shows__title">Мы поможем выбрать программу праздника: расспросим вас, что нравится ребенку и его гостям, какой лимит времени и бюджет. У нас есть праздники для рыцарей, ковбоев, сказочных принцесс, научных экспериментаторов, будущих поваров и ученых.</div>
                     <div class="shows__descr">Для детей
                         <br>от 2 до 12 лет</div>
@@ -177,7 +180,8 @@
                     </div>
                 </div>
                 <div class="feedback aqua">
-                    <div class="feedback__image"><img src="img/screen_shot.png" alt=""></div>
+                    <div class="feedback__image" style="background: url(../img/bright_party.png)">
+                        <!-- <img src="img/screen_shot.png" alt=""> --></div>
                     <div class="feedback__message">
                         <div class="feedback__star yellow"></div>
                         <div class="feedback__message_text">Яркий мексиканский праздник
@@ -198,8 +202,8 @@
             <div class="container">
                 <div class="master-classes__item">
                     <div class="master-classes__item_title">Кроме шоу аниматоры организуют мастер-классы, на которых дети учатся новому: вместе готовят шоколад и конфеты, выпечку, учатся рисовать маслом, делать фигурки из бумаги и шить одежду для кукол. Дарим шоколадный мастер-класс в подарок в шести кафе.</div>
-                    <div class="master-classes__item_link">Все наши программы
-                        <br>анимации</div>
+                    <div class="master-classes__item_link"><a href="">Все наши программы
+                        <br>анимации</a></div>
                     <div class="master-classes__item_image"><img src="img/camping.png" alt=""></div>
                     <div class="master-classes__item_descr">На дне рождения Любы дети готовились к походу: учились разжигать костер, ориентироваться по компасу и ставить палатку
                     </div>
@@ -210,11 +214,13 @@
                         <br>до 12 000 ₽
                     </div>
                     <div class="master-classes__item_image"><img src="img/coock.png" alt=""></div>
-                    <div class="master-classes__item_descr">Восьмилетний Сережа любит готовить. Для него мы организовали <br>мастер-класс по приготовлению тирамису</div>
+                    <div class="master-classes__item_descr">Восьмилетний Сережа любит готовить. Для него мы организовали
+                        <br>мастер-класс по приготовлению тирамису</div>
                 </div>
                 <div class="master-classes__item">
                     <div class="master-classes__item_title">Кроме шоу аниматоры организуют мастер-классы, на которых дети учатся новому: вместе готовят шоколад и конфеты, выпечку, учатся рисовать маслом, делать фигурки из бумаги и шить одежду для кукол. Дарим шоколадный мастер-класс в подарок в шести кафе.</div>
-                    <div class="master-classes__item_link">Все мастер-классы <br>на выбор
+                    <div class="master-classes__item_link"><a href="">Все мастер-классы
+                        <br>на выбор</a>
                     </div>
                     <div class="master-classes__item_image"><img src="img/shokokids.png" alt=""></div>
                     <div class="master-classes__item_descr">Девочки играют в познавательном уголке «Шоколадницы» на Ходынском бульваре</div>
@@ -232,23 +238,29 @@
                     <br>для брони. Мы вернем деньги
                     <br>при ее отмене за 3 дня
                 </div>
+                <div class="outer-particles">
+                    <div class="outer-particles__item" data-paralax="0.5"></div>
+                    <div class="outer-particles__item" data-paralax="-0.5"></div>
+                    <div class="outer-particles__item" data-paralax="0.5"></div>
+                    <div class="outer-particles__item" data-paralax="0.5"></div>
+                </div>
                 <div class="birthday-calculator__container">
                     <div class="birthday-calculator__form" data-holiday-calculator>
                         <div class="particles">
                             <div class="particles__item" data-paralax="0.5"></div>
                             <div class="particles__item" data-paralax="-0.5"></div>
                         </div>
-                        <form action="" data-holiday-calculator-init>
+                        <form data-holiday-calculator-init>
                             <div class="input">
-                                <label for="">Кол-во детей </label>
+                                <label>Кол-во детей </label>
                                 <input type="number" value="12" required>
                             </div>
                             <div class="input">
-                                <label for="">Кол-во взрослых</label>
+                                <label>Кол-во взрослых</label>
                                 <input type="number" value="5" required>
                             </div>
                             <div class="radio">
-                                <label for="">Анимационная программа
+                                <label>Анимационная программа
                                 </label>
                                 <input type="radio" id="anim_prog_yes" name="radio-anim" value="1">
                                 <input type="radio" id="anim_prog_no" name="radio-anim" value="0">
@@ -258,7 +270,7 @@
                                 </div>
                             </div>
                             <div class="radio">
-                                <label for="">Мастер-класс</label>
+                                <label>Мастер-класс</label>
                                 <input type="radio" id="master_yes" name="radio-master" value="1">
                                 <input type="radio" id="master_no" name="radio-master" value="0">
                                 <div class="radio__toggle">
@@ -267,7 +279,7 @@
                                 </div>
                             </div>
                             <div class="radio">
-                                <label for="">Торт на заказ</label>
+                                <label>Торт на заказ</label>
                                 <input type="radio" id="cake_yes" name="radio-cake" value="1">
                                 <input type="radio" id="cake_no" name="radio-cake" value="0">
                                 <div class="radio__toggle">
@@ -276,7 +288,7 @@
                                 </div>
                             </div>
                             <div class="radio">
-                                <label for="">Аквагрим
+                                <label>Аквагрим
                                 </label>
                                 <input type="radio" id="aqua_yes" name="radio-aqua" value="1">
                                 <input type="radio" id="aqua_no" name="radio-aqua" value="0">
@@ -286,7 +298,7 @@
                                 </div>
                             </div>
                             <div class="radio">
-                                <label for="">Украшение стола</label>
+                                <label>Украшение стола</label>
                                 <input type="radio" id="decoradion_yes" name="radio-decoradion" value="1">
                                 <input type="radio" id="decoradion_no" name="radio-decoradion" value="0">
                                 <div class="radio__toggle">
@@ -294,7 +306,7 @@
                                     <label for="decoradion_no" class="radio__toggle_no"></label>
                                 </div>
                             </div>
-                            <button type="submit" class="calculate-btn">Рассчитать</button>
+                            <button type="submit" class="calculate-btn"></button>
                             <!-- <div>Нажимая кнопку Заказать, вы подтверждаете, что ознакомились с Условиями обработки персональных данных и принимаете их</div> -->
                         </form>
                         <div class="birthday-calculator__form_calculated hidden" data-holiday-calculator-calculated>
@@ -371,26 +383,27 @@
                         <div class="particles__item" data-paralax="0.9"></div>
                         <div class="particles__item" data-paralax="-1.1"></div>
                         <div class="particles__item" data-paralax="1.3"></div>
+                        <div class="particles__item" data-paralax="0.5"></div>
                     </div>
                     <div class="holiday-calculator__form" data-navigation="order">
                         <div class="section-title aqua">Заказать праздник</div>
                         <div class="holiday-calculator__title">Ответим на все ваши вопросы, поможем определиться
                             <br>с выбором развлечений и меню</div>
-                        <form action="">
+                        <form>
                             <div class="input">
-                                <label for="">Имя </label>
+                                <label>Имя </label>
                                 <input type="text" required>
                             </div>
                             <div class="input">
-                                <label for="">Дата праздника</label>
+                                <label>Дата праздника</label>
                                 <input type="text" class="date-mask" required>
                             </div>
                             <div class="input">
-                                <label for="">Телефон</label>
+                                <label>Телефон</label>
                                 <input type="text" class="phone-mask" required>
                             </div>
                             <div class="input dropdown">
-                                <label for="">Кафе</label>
+                                <label>Кафе</label>
                                 <input type="text" placeholder="Выбрать" class="dropdown-value" required>
                                 <div class="dropdown-container">
                                     <ul>
@@ -420,7 +433,7 @@
                                 </div>
                             </div>
                             <div class="input">
-                                <label for="">Эл. адрес</label>
+                                <label>Эл. адрес</label>
                                 <input type="text">
                             </div>
                             <div class="input-descr">
@@ -444,16 +457,37 @@
                     <br>ребенку не надоест.
                 </div>
                 <div class="game-rooms__link violet">
-                    Авиапарк
-                    <br>Маршала Жукова
-                    <br>Боровское шоссе
-                    <br>Жулебино
-                    <br>Химки
+                    <a href="">Авиапарк</a>
+                    <br><a href="">Маршала Жукова</a>
+                    <br><a href="">Боровское шоссе</a>
+                    <br><a href="">Жулебино</a>
+                    <br><a href="">Химки</a>
                 </div>
             </div>
             <div class="container horizontal-slider">
                 <div class="horizontal-slider__container">
-                    <div class="scroller">
+                    <div class="scroller-2 scroller">
+                        <div class="horizontal-slider__item">
+                            <div class="horizontal-slider__item_img"><img src="img/horizontal_slider2/slider_blue_photo.png" alt=""></div>
+                            <div class="horizontal-slider__item_text">
+                                <div><b>Классическое кафе</b></div>
+                                В каждой «Шоколаднице» мы можем украсить стол и подобрать меню. Предлагаем забронировать отдельный зал или кафе целиком. Выбирайте кафе рядом с домом
+                            </div>
+                        </div>
+                        <div class="horizontal-slider__item">
+                            <div class="horizontal-slider__item_img"><img src="img/horizontal_slider2/slider-pink-photo.png" alt=""></div>
+                            <div class="horizontal-slider__item_text">
+                                <div><b>Жулебинский бульвар </b></div>
+                                В кафе есть все, чтобы занять малышей: сухой бассейн с горкой, игрушки, наборы для рисования, бизиборды, телевизор с мультиками
+                            </div>
+                        </div>
+                        <div class="horizontal-slider__item">
+                            <div class="horizontal-slider__item_img"><img src="img/horizontal_slider2/slider-violet-photo.png" alt=""></div>
+                            <div class="horizontal-slider__item_text">
+                                <div><b> Классическое кафе</b></div>
+                                В каждой «Шоколаднице» мы можем украсить стол и подобрать меню. Предлагаем забронировать отдельный зал или кафе целиком. Выбирайте кафе рядом с домом
+                            </div>
+                        </div>
                         <div class="horizontal-slider__item">
                             <div class="horizontal-slider__item_img"><img src="img/horizontal_slider2/slider_blue_photo.png" alt=""></div>
                             <div class="horizontal-slider__item_text">
@@ -504,16 +538,17 @@
                     <div class="addresses__title">С игровыми площадками
                         <br> и детским меню</div>
                     <div class="addresses__col_item">
-                        <div class="addresses__address">Жулебинскй бульвар д. 10/6</div>
-                        <div class="addresses__address">Ходынский бульвар, дом 4 ТЦ Авиапарк</div>
+                        <div class="addresses__address"><a href="#">Жулебинскй бульвар д. 10/6</a></div>
+                        <div class="addresses__address"><a href="#">Ходынский бульвар,
+                            <br>дом 4 ТЦ Авиапарк</a></div>
                         <br>
-                        <div class="addresses__address">Пр. Маршала Жукова </div>
-                        <div class="addresses__address">г. Химки, ТЦ “Мега”, 2 этаж</div>
-                        <div class="addresses__address">Боровское шоссе</div>
-                        <!-- <div class="addresses__address">Жулебинскй бульвар д. 10/6</div> -->
-                        <!--         <div class="addresses__address">Жулебинскй бульвар д. 10/6</div>
-                        <div class="addresses__address">Жулебинскй бульвар д. 10/6</div>
-                        <div class="addresses__address">Жулебинскй бульвар д. 10/6</div> -->
+                        <div class="addresses__address"><a href="#">Пр. Маршала Жукова </a></div>
+                        <div class="addresses__address"><a href="#">г. Химки, ТЦ “Мега”, 2 этаж</a></div>
+                        <div class="addresses__address"><a href="#">Боровское шоссе</a></div>
+                        <!-- <div class="addresses__address"><a href="#">Жулебинскй бульвар д. 10/6</di</a>v> -->
+                        <!--         <div class="addresses__address"><a href="#">Жулебинскй бульвар д. 10/6</a></div>
+                        <div class="addresses__address"><a href="#">Жулебинскй бульвар д. 10/6</a></div>
+                        <div class="addresses__address"><a href="#">Жулебинскй бульвар д. 10/6</di</a>v> -->
                     </div>
                     <div class="addresses__col_item metro">
                         <div class="addresses__address_metro violet"> м. Жулебино</div>
@@ -523,18 +558,18 @@
                     </div>
                     <div class="addresses__title mt-35">Классические</div>
                     <div class="addresses__col_item">
-                        <div class="addresses__address">Алтуфьевское шоссе</div>
-                        <div class="addresses__address">Лубянка</div>
-                        <div class="addresses__address">Измайловская площадь</div>
-                        <div class="addresses__address"> ул. Ярцевская</div>
-                        <div class="addresses__address">ул. Шереметьевская</div>
-                        <div class="addresses__address">Марьино</div>
-                        <div class="addresses__address">Ленинский проспект</div>
-                        <div class="addresses__address">Войковская</div>
-                        <div class="addresses__address">Проезд Дежнёва</div>
-                        <div class="addresses__address"> Щелковское шоссе</div>
-                        <div class="addresses__address"> ул. Молодежная в Химках</div>
-                        <div class="addresses__address"> Октябрьский проспект</div>
+                        <div class="addresses__address"><a href="#">Алтуфьевское шоссе</a></div>
+                        <div class="addresses__address"><a href="#">Лубянка</a></div>
+                        <div class="addresses__address"><a href="#">Измайловская площадь</a></div>
+                        <div class="addresses__address"><a href="#"> ул. Ярцевская</a></div>
+                        <div class="addresses__address"><a href="#">ул. Шереметьевская</a></div>
+                        <div class="addresses__address"><a href="#">Марьино</a></div>
+                        <div class="addresses__address"><a href="#">Ленинский проспект</a></div>
+                        <div class="addresses__address"><a href="#">Войковская</a></div>
+                        <div class="addresses__address"><a href="#">Проезд Дежнёва</a></div>
+                        <div class="addresses__address"><a href="#"> Щелковское шоссе</a></div>
+                        <div class="addresses__address"><a href="#"> ул. Молодежная в Химках</a></div>
+                        <div class="addresses__address"><a href="#"> Октябрьский проспект</a></div>
                     </div>
                     <div class="addresses__col_item metro">
                         <div class="addresses__address_metro grey">м. Алтуфьево</div>
@@ -550,22 +585,22 @@
                 <div class="addresses__col">
                     <div class="addresses__title">С отдельным залом</div>
                     <div class="addresses__col_item">
-                        <div class="addresses__address">ул. Народного ополчения</div>
-                        <div class="addresses__address">Ленинская Слобода</div>
-                        <div class="addresses__address">ул. Кантемировская </div>
-                        <div class="addresses__address">Проспект Мира</div>
-                        <div class="addresses__address">ул. Профсоюзная</div>
-                        <div class="addresses__address">ул. Миклухо-Маклая</div>
-                        <div class="addresses__address">ул. Мясницкая</div>
-                        <div class="addresses__address">Рублевское шоссе</div>
-                        <div class="addresses__address">Измайловское шоссе</div>
-                        <div class="addresses__address">ул. Сергия Радонежского</div>
-                        <div class="addresses__address">Проспект Вернадского</div>
-                        <div class="addresses__address">Красная Пресня</div>
-                        <div class="addresses__address">Кудринская площадь</div>
-                        <div class="addresses__address">Бауманская</div>
-                        <div class="addresses__address">ул. Люсиновская</div>
-                        <div class="addresses__address">ул. Скобелевская</div>
+                        <div class="addresses__address"><a href="#">ул. Народного ополчения</a></div>
+                        <div class="addresses__address"><a href="#">Ленинская Слобода</a></div>
+                        <div class="addresses__address"><a href="#">ул. Кантемировская </a></div>
+                        <div class="addresses__address"><a href="#">Проспект Мира</a></div>
+                        <div class="addresses__address"><a href="#">ул. Профсоюзная</a></div>
+                        <div class="addresses__address"><a href="#">ул. Миклухо-Маклая</a></div>
+                        <div class="addresses__address"><a href="#">ул. Мясницкая</a></div>
+                        <div class="addresses__address"><a href="#">Рублевское шоссе</a></div>
+                        <div class="addresses__address"><a href="#">Измайловское шоссе</a></div>
+                        <div class="addresses__address"><a href="#">ул. Сергия Радонежского</a></div>
+                        <div class="addresses__address"><a href="#">Проспект Вернадского</a></div>
+                        <div class="addresses__address"><a href="#">Красная Пресня</a></div>
+                        <div class="addresses__address"><a href="#">Кудринская площадь</a></div>
+                        <div class="addresses__address"><a href="#">Бауманская</a></div>
+                        <div class="addresses__address"><a href="#">ул. Люсиновская</a></div>
+                        <div class="addresses__address"><a href="#">ул. Скобелевская</a></div>
                     </div>
                     <div class="addresses__col_item metro">
                         <div class="addresses__address_metro green">м. Автозаводская</div>
@@ -601,15 +636,29 @@
                         <br>ингредиентов: свежих
                         <br> яиц и фермерского
                         <br>масла
-                        <div class="cooking__link_text">Все детские торты
-                            <br>на заказ</div>
+                        <div class="cooking__link_text"><a href="">Все детские торты
+                            <br>на заказ</a></div>
                     </div>
-                    <div class="cooking__top_images_container">                    
+                    <div class="cooking__top_images_container">
                         <div class="cooking__top_images">
-                            <div class="cooking__top_images_item"><img src="img/make_cake/cake_girl.png" alt=""><div class="cooking__top_images_item_text">Балерина</div></div>
-                            <div class="cooking__top_images_item"><img src="img/make_cake/cake_car.png" alt=""><div class="cooking__top_images_item_text">Автопарк</div></div>
-                            <div class="cooking__top_images_item"><img src="img/make_cake/cake_lego.png" alt=""><div class="cooking__top_images_item_text">Конструктор</div></div>
+                            <div class="cooking__top_images_item"><img src="img/make_cake/cake_girl.png" alt="">
+                                <div class="cooking__top_images_item_text">Балерина</div>
+                            </div>
+                            <div class="cooking__top_images_item"><img src="img/make_cake/cake_car.png" alt="">
+                                <div class="cooking__top_images_item_text">Автопарк</div>
+                            </div>
+                            <div class="cooking__top_images_item"><img src="img/make_cake/cake_lego.png" alt="">
+                                <div class="cooking__top_images_item_text">Конструктор</div>
+                            </div>
                         </div>
+                    </div>
+                    <div class="cake-boy"><span class="cake-boy__text">Украшаем торт свечами и фейерверками. <br> От фейерверков дети в восторге</span></div>
+                    <div class="particles">
+                        <div class="particles__item" data-paralax="0.3"></div>
+                        <div class="particles__item" data-paralax="-0.3"></div>
+                        <div class="particles__item" data-paralax="0.5"></div>
+                        <div class="particles__item" data-paralax="-0.7"></div>
+                        <div class="particles__item" data-paralax="0.5"></div>
                     </div>
                 </div>
             </div>
@@ -656,11 +705,15 @@
                             <br>и фермерских хозяйств.</div>
                     </div>
                     <div class="game-rooms__link violet">
-                        Авиапарк
-                        <br>Маршала Жукова
-                        <br>Боровское шоссе
-                        <br>Жулебино
-                        <br>Химки
+                        <a href="">Авиапарк</a>
+                        <a href="">
+                            <br>Маршала Жукова</a>
+                        <a href="">
+                            <br>Боровское шоссе</a>
+                        <a href="">
+                            <br>Жулебино</a>
+                        <a href="">
+                            <br>Химки</a>
                     </div>
                 </div>
             </div>
@@ -677,7 +730,7 @@
                             <div class="feedback__message_user">
                                 <i class="icon icon-inst"></i>
                                 <div>
-                                    <a href="" class="feedback__message_user_name">Любовь Истомина</a>, мама Яси
+                                    <a href="" class="feedback__message_user_name">Любовь Истомина,</a><span>мама Яси</span>
                                 </div>
                             </div>
                         </div>
@@ -690,26 +743,29 @@
                             <div class="cooking__food_item_img">
                                 <div style="background: url(img/food/food1.png)"></div>
                             </div>
-                            <div class="cooking__food_item_text">Классические и вегетарианские <br>пасты на выбор</div>
+                            <div class="cooking__food_item_text">Классические и вегетарианские
+                                <br>пасты на выбор</div>
                         </div>
                         <div class="cooking__food_item">
                             <div class="cooking__food_item_img">
                                 <div style="background: url(img/food/food2.png)"></div>
                             </div>
-                            <div class="cooking__food_item_text">Холодные, теплые и фитнес <br>салаты со свежайшей зеленью</div>
+                            <div class="cooking__food_item_text">Холодные, теплые и фитнес
+                                <br>салаты со свежайшей зеленью</div>
                         </div>
                         <div class="cooking__food_item">
                             <div class="cooking__food_item_img">
                                 <div style="background: url(img/food/food3.png)"></div>
                             </div>
-                            <div class="cooking__food_item_text">Готовим любимый салат «Оливье»<br> в любое время года</div>
+                            <div class="cooking__food_item_text">Готовим любимый салат «Оливье»
+                                <br> в любое время года</div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="cooking-adult__bottom">
                 <div class="container">
-                    <div class="cooking__title black" data-navigation="banquet"> 
+                    <div class="cooking__title black" data-navigation="banquet">
                         <b class="violet">Банкетное меню</b> предлагаем в каждой «Шоколаднице». Для вашего праздника накроем и украсим отдельный стол, комнату или целое кафе. В кафе в «Меге» Химки и на Ходынском бульваре организуем банкет до 150 человек.
                     </div>
                     <div class="cooking__food">
@@ -750,7 +806,7 @@
                     <br> в общем зале кафе. Под возраст и пожелания ребенка выберем
                     <br>тематическую скатерть. Гостей нарядим в праздничные колпаки
                     <br> и светящиеся браслеты, каждому вручим шарик. Каждый
-                    <br>ребенок прочувствует атмосферу праздника и получит внимание
+                    <br> ребенок прочувствует атмосферу праздника и получит внимание
                     <br>официантов и аниматоров. </div>
                 <div class="mood__link"><b>1900 ₽</b> Стоит набор украшений
                     <br>для 10 человек.
@@ -773,7 +829,7 @@
                         <div class="feedback__message_user">
                             <i class="icon icon-inst"></i>
                             <div>
-                                <a href="" class="feedback__message_user_name">Оксана Зазеленская,</a>,
+                                <a href="" class="feedback__message_user_name">Оксана Зазеленская</a>,
                                 <div class="feedback__message_user_extra"> мама двоих детей</div>
                             </div>
                         </div>
@@ -792,8 +848,10 @@
                     <br> или создадим новый по
                     <br>желанию маленького гостя
                 </div>
-                <div class="gifts__bg_boy"></div>
-                <div class="gifts__bg_girl"></div>
+                <div class="gifts__bgs">
+                    <div class="gifts__bg_boy"></div>
+                    <div class="gifts__bg_girl"></div>
+                </div>
             </div>
         </div>
         <div class="holiday-calculator">
@@ -805,25 +863,35 @@
                     <br>при ее отмене за 3 дня
                 </div> -->
                 <div class="holiday-calculator__container">
+                    <div class="particles">
+                        <div class="particles__item" data-paralax="0.3"></div>
+                        <div class="particles__item" data-paralax="-0.3"></div>
+                        <div class="particles__item" data-paralax="0.5"></div>
+                        <div class="particles__item" data-paralax="-0.7"></div>
+                        <div class="particles__item" data-paralax="0.9"></div>
+                        <div class="particles__item" data-paralax="-1.1"></div>
+                        <div class="particles__item" data-paralax="1.3"></div>
+                        <div class="particles__item" data-paralax="0.5"></div>
+                    </div>
                     <div class="holiday-calculator__form">
                         <div class="section-title aqua">Заказать праздник</div>
                         <div class="holiday-calculator__title">Ответим на все ваши вопросы, поможем определиться
                             <br>с выбором развлечений и меню</div>
-                        <form action="">
+                        <form>
                             <div class="input">
-                                <label for="">Имя </label>
+                                <label>Имя </label>
                                 <input type="text" required>
                             </div>
                             <div class="input">
-                                <label for="">Дата праздника</label>
+                                <label>Дата праздника</label>
                                 <input type="text" class="date-mask" required>
                             </div>
                             <div class="input">
-                                <label for="">Телефон</label>
+                                <label>Телефон</label>
                                 <input type="text" class="phone-mask" required>
                             </div>
                             <div class="input dropdown">
-                                <label for="">Кафе</label>
+                                <label>Кафе</label>
                                 <input type="text" placeholder="Выбрать" class="dropdown-value" required>
                                 <div class="dropdown-container">
                                     <ul>
@@ -853,7 +921,7 @@
                                 </div>
                             </div>
                             <div class="input">
-                                <label for="">Эл. адрес</label>
+                                <label>Эл. адрес</label>
                                 <input type="text">
                             </div>
                             <div class="input-descr">
@@ -888,30 +956,37 @@
                     <div class="faq__item_title">Можно ли прийти со своим фотографом? </div>
                     <div class="faq__item_text"> Конечно, можно. Мы будем рады тому, что после праздника у вас останутся красивые фотографии. </div>
                 </div>
+
+                <div class="particles">
+                    <div class="particles__item" data-paralax="0.4"></div>
+                    <div class="particles__item" data-paralax="-0.4"></div>
+                    <div class="particles__item" data-paralax="0.6"></div>
+                    <div class="particles__item" data-paralax="-0.8"></div>
+                    <div class="particles__item" data-paralax="0.9"></div>
+                </div>
             </div>
-        </div>
         </div>
     </main>
     <footer class="footer">
-        <!-- <div class="container"> -->
-        <div class="footer__phone">
-            <div class="header__phone_number">+7 499 216-73-64</div>
-            <div class="header__phone_text">Перезвоним через 5 минут
-                <br>ежедневно с 9:00 до 20:00</div>
+        <div class="container">
+            <div class="footer__phone">
+                <div class="footer__phone_number">+7 499 216-73-64</div>
+                <div class="footer__phone_text">Перезвоним через 5 минут
+                    <br>ежедневно с 9:00 до 20:00</div>
+            </div>
+            <div class="footer__socials">
+                <a href="">
+                    <div class="footer__socials_item inst"></div>
+                </a>
+                <a href="">
+                    <div class="footer__socials_item fb"></div>
+                </a>
+                <a href="">
+                    <div class="footer__socials_item vk"></div>
+                </a>
+                <div class="footer__socials_text">Мы в соцсети</div>
+            </div>
         </div>
-        <div class="footer__socials">
-            <a href="">
-                <div class="footer__socials_item inst"></div>
-            </a>
-            <a href="">
-                <div class="footer__socials_item fb"></div>
-            </a>
-            <a href="">
-                <div class="footer__socials_item vk"></div>
-            </a>
-            <div class="footer__socials_text">Мы в соцсети</div>
-        </div>
-        <!-- </div> -->
     </footer>
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
     <script>
@@ -926,9 +1001,11 @@
         });
     }
     </script>
+    <link rel="stylesheet" type="text/css" href="slick.css" />
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
     <script src="js/smoothscroll.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/all.js"></script>
 </body>
 
