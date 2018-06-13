@@ -100,3 +100,9 @@
     font-style: normal;
 }
 
+@font-face { font-family: 'ALR';  src: local('ALSRubl'), url('fonts/ALSRubl.woff') format('woff');     font-weight: 800;}
+
+.rubl {
+    font-family: 'ALR';
+     font-weight: 800;
+}
