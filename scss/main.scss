@@ -20,7 +20,7 @@ button {
     width: 100%;
     max-width: 550px;
     height: 102px;
-    background: url(../img/calculate_button.png) no-repeat;
+    background: url(img/calculate_button.png) no-repeat;
     margin: 50px auto 0;
     background-position: center;
     display: block;
@@ -47,7 +47,7 @@ button {
 
 
 .wizzard {
-    background: url(../img/bg-aqua1.svg);
+    background: url(img/bg-aqua1.svg);
     height: 739px;
     margin-top: -87px;
     position: relative;
@@ -83,7 +83,7 @@ button {
                 color: #f7a1b9;
             }
             &:after {
-                background: url(../img/arrow1.png) no-repeat;
+                background: url(img/arrow1.png) no-repeat;
                 content: '';
                 position: absolute;
                 width: 108px;
@@ -103,7 +103,7 @@ button {
                 margin-right: 3px;
             }
             &:after {
-                background: url(../img/arrow2.png) no-repeat;
+                background: url(img/arrow2.png) no-repeat;
                 content: '';
                 position: absolute;
                 width: 130px;
@@ -167,14 +167,14 @@ button {
         }
     }
     &__star {
-        background: url(../img/star2.png);
+        background: url(img/star2.png);
         position: absolute;
         top: -32px;
         right: -32px;
         width: 110px;
         height: 110px;
         &.yellow {
-            background: url(../img/star1.png);
+            background: url(img/star1.png);
             top: -37px;
             right: -37px;
         }
@@ -248,6 +248,12 @@ button {
             // display: flex; // width: 4000px;
             // min-width: 100%;
         }
+        // &.absolute {
+        //     position: fixed;
+        //     left: 0;
+        //     top: 0;
+        //     z-index: 999;
+        // }
     }
 
     &__item {
@@ -270,7 +276,7 @@ button {
 .shows {
     height: 1150px;
     margin-top: 0;
-    background: url(../img/bg-aqua2.svg);
+    background: url(img/bg-aqua2.svg);
     background-size: cover;
     padding: 150px;
     &__container {
@@ -323,7 +329,7 @@ button {
 
                     &:before {
                         content: '';
-                        background: url(../img/border1.png) no-repeat;
+                        background: url(img/border1.png) no-repeat;
                         background-size: contain;
                         position: absolute;
                         width: 100%;
@@ -333,7 +339,7 @@ button {
                     }
                     &:after {
                         content: '';
-                        background: url(../img/books.png) no-repeat;
+                        background: url(img/books.png) no-repeat;
                         background-size: contain;
                         position: absolute;
                         width: 150px;
@@ -348,7 +354,7 @@ button {
 
                     &:before {
                         content: '';
-                        background: url(../img/border2.png) no-repeat;
+                        background: url(img/border2.png) no-repeat;
                         background-size: contain;
                         position: absolute;
                         width: 100%;
@@ -358,7 +364,7 @@ button {
                     }
                     &:after {
                         content: '';
-                        background: url(../img/hat.png) no-repeat;
+                        background: url(img/hat.png) no-repeat;
                         background-size: contain;
                         position: absolute;
                         width: 175px;
@@ -402,7 +408,7 @@ button {
         &:nth-child(1) {
             &:after {
                 content: '';
-                background: url(../img/tent.png) no-repeat;
+                background: url(img/tent.png) no-repeat;
                 background-size: contain;
                 position: absolute;
                 width: 238px;
@@ -413,7 +419,7 @@ button {
             #{$c}_image {
                 &:before {
                     content: '';
-                    background: url(../img/border3.png) no-repeat;
+                    background: url(img/border3.png) no-repeat;
                     background-size: contain;
                     position: absolute;
                     width: 100%;
@@ -423,7 +429,7 @@ button {
                 }
                 &:after {
                     content: '';
-                    background: url(../img/compas.png) no-repeat;
+                    background: url(img/compas.png) no-repeat;
                     background-size: contain;
                     position: absolute;
                     width: 240px;
@@ -437,7 +443,7 @@ button {
             #{$c}_image {
                 &:before {
                     content: '';
-                    background: url(../img/border4.png) no-repeat;
+                    background: url(img/border4.png) no-repeat;
                     background-size: contain;
                     position: absolute;
                     width: 100%;
@@ -447,7 +453,7 @@ button {
                 }
                 &:after {
                     content: '';
-                    background: url(../img/crockery.png) no-repeat;
+                    background: url(img/crockery.png) no-repeat;
                     background-size: contain;
                     position: absolute;
                     width: 250px;
@@ -461,7 +467,7 @@ button {
             #{$c}_image {
                 &:before {
                     content: '';
-                    background: url(../img/border5.png) no-repeat;
+                    background: url(img/border5.png) no-repeat;
                     background-size: contain;
                     position: absolute;
                     width: 100%;
@@ -527,7 +533,7 @@ button {
             width: 60px;
             height: 60px;
             &:nth-child(1) {
-                background: url(../img/calculator/calc_par1.png);
+                background: url(img/calculator/calc_par1.png);
                 left: 37px;
                 top: -116px;
                 width: 130px;
@@ -535,14 +541,14 @@ button {
                 z-index: -1;
             }
             &:nth-child(2) {
-                background: url(../img/calculator/calc_par3.png);
+                background: url(img/calculator/calc_par3.png);
                 right: 37px;
                 top: -173px;
                 width: 190px;
                 height: 190px;
             }
             &:nth-child(3) {
-                background: url(../img/calculator/calc_par4.png);
+                background: url(img/calculator/calc_par4.png);
                 right: 137px;
                 top: 162px;
                 width: 75px;
@@ -550,14 +556,14 @@ button {
                 z-index: -1;
             }
             &:nth-child(4) {
-                background: url(../img/calculator/calc_par6.png);
+                background: url(img/calculator/calc_par6.png);
                 right: 0px;
                 bottom: 302px;
                 width: 150px;
                 height: 150px;
             }
             &:nth-child(5) {
-                background: url(../img/calculator/calc_par8.png);
+                background: url(img/calculator/calc_par8.png);
                 right: -16px;
                 left: 247px;
                 margin: auto;
@@ -597,7 +603,7 @@ button {
         width: 100%;
     }
     &__form {
-        background: url(../img/calculator/bg-calculator.png) no-repeat;
+        background: url(img/calculator/bg-calculator.png) no-repeat;
         width: 770px;
         height: 870px;
         background-size: 100%;
@@ -612,14 +618,14 @@ button {
                 width: 60px;
                 height: 60px;
                 &:nth-child(1) {
-                    background: url(../img/calculator/calc_par5.png);
+                    background: url(img/calculator/calc_par5.png);
                     right: 37px;
                     top: 35px;
                     width: 100px;
                     height: 100px;
                 }
                 &:nth-child(2) {
-                    background: url(../img/calculator/calc_par7.png);
+                    background: url(img/calculator/calc_par7.png);
                     left: 20px;
                     bottom: 182px;
                     width: 95px;
@@ -676,7 +682,7 @@ button {
             }
         }
         .calculate-btn {
-            background: url(../img/calculator/calculate1.png) no-repeat;
+            background: url(img/calculator/calculate1.png) no-repeat;
             width: 300px;
             height: 67px;
             margin-top: 24px;
@@ -706,7 +712,7 @@ button {
             &:last-child {
                 margin: 148px auto 0;
                 &:after {
-                    background: url(../img/arrow3.png) no-repeat;
+                    background: url(img/arrow3.png) no-repeat;
                     content: '';
                     position: absolute;
                     width: 360px;
@@ -721,7 +727,7 @@ button {
 }
 
 .examples {
-    // background: url(../img/bg-yellow.png);
+    // background: url(img/bg-yellow.png);
     // background-size: cover;
     // background-position: center;
     padding: 93px 0;
@@ -730,7 +736,7 @@ button {
         content: '';
         position: absolute;
         bottom: -30px;
-        background: url(../img/bg-yellow.png);
+        background: url(img/bg-yellow.png);
         background-size: cover;
         background-position: center;
         width: 100%;
@@ -814,7 +820,7 @@ button {
                 width: 60px;
                 height: 60px;
                 &:nth-child(1) {
-                    background: url(../img/order/order-par3.png);
+                    background: url(img/order/order-par3.png);
                     bottom: 0;
                     left: 400px;
                     top: 367px;
@@ -824,7 +830,7 @@ button {
                     height: 150px;
                 }
                 &:nth-child(2) {
-                    // background: url(../img/order/order-par8.png);
+                    // background: url(img/order/order-par8.png);
                     // left: -465px;
                     // right: 0;
                     // bottom: 48px;
@@ -833,7 +839,7 @@ button {
                     // height: 105px;
                 }
                 &:nth-child(3) {
-                    background: url(../img/order/order-par6.png);
+                    background: url(img/order/order-par6.png);
                     left: 41px;
                     margin: auto;
                     bottom: 189px;
@@ -842,7 +848,7 @@ button {
                     z-index: -20;
                 }
                 &:nth-child(4) {
-                    background: url(../img/order/order-par5.png);
+                    background: url(img/order/order-par5.png);
                     left: 84px;
                     margin: auto;
                     top: -27px;
@@ -851,14 +857,14 @@ button {
                     z-index: -20;
                 }
                 &:nth-child(5) {
-                    background: url(../img/order/order-par1.png);
+                    background: url(img/order/order-par1.png);
                     right: 176px;
                     top: 14px;
                     width: 100px;
                     height: 100px;
                 }
                 &:nth-child(6) {
-                    background: url(../img/order/order-par4.png);
+                    background: url(img/order/order-par4.png);
                     left: 102px;
                     width: 57px;
                     top: 213px;
@@ -869,14 +875,14 @@ button {
                     top: 296px;
                     /* left: 86px; */
                     /* margin: auto; */
-                    background: url(../img/order/order-par2.png);
+                    background: url(img/order/order-par2.png);
                     width: 70px;
                     height: 70px;
                 }
                 &:nth-child(8) {
                     right: 147px;
                     bottom: 103px;
-                    background: url(../img/order/order-par7.png);
+                    background: url(img/order/order-par7.png);
                     width: 150px;
                     height: 150px;
                 }
@@ -884,7 +890,7 @@ button {
         }
     }
     &__form {
-        background: url(../img/order/order-bg.png) no-repeat;
+        background: url(img/order/order-bg.png) no-repeat;
         width: 1005px;
         height: 743px;
         margin: auto;
@@ -932,7 +938,7 @@ button {
             letter-spacing: 0px;
         }
         .calculate-btn {
-            background: url(../img/order/calculate2.png) no-repeat;
+            background: url(img/order/calculate2.png) no-repeat;
             width: 300px;
             height: 67px;
             margin-top: 9px;
@@ -994,7 +1000,7 @@ button {
                 .horizontal-slider__item_img {
                     &:after {
                         @extend .item-border;
-                        background: url(../img/horizontal_slider2/slider_blue_border.png) no-repeat;
+                        background: url(img/horizontal_slider2/slider_blue_border.png) no-repeat;
                     }
                 }
             }
@@ -1002,7 +1008,7 @@ button {
                 .horizontal-slider__item_img {
                     &:after {
                         @extend .item-border;
-                        background: url(../img/horizontal_slider2/slider-pink-border.png) no-repeat;
+                        background: url(img/horizontal_slider2/slider-pink-border.png) no-repeat;
                     }
                 }
             }
@@ -1010,7 +1016,7 @@ button {
                 .horizontal-slider__item_img {
                     &:after {
                         @extend .item-border;
-                        background: url(../img/horizontal_slider2/slider-violet-border.png) no-repeat;
+                        background: url(img/horizontal_slider2/slider-violet-border.png) no-repeat;
                     }
                 }
             }
@@ -1021,7 +1027,7 @@ button {
 
 .organization {
     margin-top: 72px;
-    background: url(../img/bg-white2.png);
+    background: url(img/bg-white2.png);
     background-size: 150%;
     .container {
         padding: 90px 170px 35px 170px;
@@ -1189,7 +1195,7 @@ button {
         }
     }
     &__top {
-        padding: 0 0 0 0; // background: url(../img/bg-purple.svg), #fff;
+        padding: 0 0 0 0; // background: url(img/bg-purple.svg), #fff;
         background-size: cover;
         background-position: -20px 0;
         background-repeat-y: no-repeat;
@@ -1207,7 +1213,7 @@ button {
         .cake-boy {
             position: absolute;
             bottom: 0;
-            background: url(../img/cake_boy.png);
+            background: url(img/cake_boy.png);
             width: 700px;
             height: 1000px;
             left: 50px;
@@ -1235,7 +1241,7 @@ button {
                 width: 60px;
                 height: 60px;
                 &:nth-child(1) {
-                    background: url(../img/make_cake/make_cake_par1.png);
+                    background: url(img/make_cake/make_cake_par1.png);
                     bottom: 0;
                     left: 400px;
                     top: -100px;
@@ -1246,7 +1252,7 @@ button {
                     z-index: -1;
                 }
                 &:nth-child(2) {
-                    background: url(../img/make_cake/make_cake_par2.png);
+                    background: url(img/make_cake/make_cake_par2.png);
                     bottom: 0;
                     /* left: 400px; */
                     top: -105px;
@@ -1256,7 +1262,7 @@ button {
                     height: 100px;
                 }
                 &:nth-child(3) {
-                    background: url(../img/make_cake/make_cake_par3.png);
+                    background: url(img/make_cake/make_cake_par3.png);
                     bottom: 0;
                     /* left: 400px; */
                     top: 248px;
@@ -1266,7 +1272,7 @@ button {
                     height: 200px;
                 }
                 &:nth-child(4) {
-                    background: url(../img/make_cake/make_cake_par4.png);
+                    background: url(img/make_cake/make_cake_par4.png);
                     bottom: 0;
                     left: 400px;
                     bottom: 231px;
@@ -1276,7 +1282,7 @@ button {
                     height: 100px;
                 }
                 &:nth-child(5) {
-                    background: url(../img/make_cake/make_cake_par5.png);
+                    background: url(img/make_cake/make_cake_par5.png);
                     bottom: 236px;
                     right: 36px;
                     width: 100px;
@@ -1289,7 +1295,7 @@ button {
             position: absolute;
 
             bottom: 320px;
-            background: url(../img/bg-purple.png);
+            background: url(img/bg-purple.png);
             background-size: cover;
             background-position: center;
             width: 100%;
@@ -1410,21 +1416,21 @@ button {
                 &:after {
                     background-position: center center!important;
                     @extend .item-border;
-                    background: url(../img/food/kid_food/kid_pointer1.png) no-repeat;
+                    background: url(img/food/kid_food/kid_pointer1.png) no-repeat;
                 }
             }
             &:nth-child(2) .cooking__food_item_img {
                 &:after {
                     background-position: center center!important;
                     @extend .item-border;
-                    background: url(../img/food/kid_food/kid_pointer2.png) no-repeat;
+                    background: url(img/food/kid_food/kid_pointer2.png) no-repeat;
                 }
             }
             &:nth-child(3) .cooking__food_item_img {
                 &:after {
                     background-position: center center!important;
                     @extend .item-border;
-                    background: url(../img/food/kid_food/kid_pointer3.png) no-repeat;
+                    background: url(img/food/kid_food/kid_pointer3.png) no-repeat;
                 }
             }
 
@@ -1483,24 +1489,24 @@ button {
     .cooking__food_item {
         &:nth-child(1) .cooking__food_item_img {
             &:after {
-                background: url(../img/food/banquet/banq_pointer1.png) no-repeat;
+                background: url(img/food/banquet/banq_pointer1.png) no-repeat;
             }
         }
         &:nth-child(2) .cooking__food_item_img {
             &:after {
-                background: url(../img/food/banquet/banq_pointer2.png) no-repeat;
+                background: url(img/food/banquet/banq_pointer2.png) no-repeat;
             }
         }
         &:nth-child(3) .cooking__food_item_img {
             &:after {
-                background: url(../img/food/banquet/banq_pointer3.png) no-repeat;
+                background: url(img/food/banquet/banq_pointer3.png) no-repeat;
             }
         }
     }
 
     &__top {
         height: 1120px;
-        background: url(../img/bg-aqua2.svg);
+        background: url(img/bg-aqua2.svg);
         background-size: cover;
         background-position: center;
         background-repeat-y: no-repeat;
@@ -1512,19 +1518,19 @@ button {
                 &:nth-child(1) .cooking__food_item_img {
                     &:after {
                         @extend .item-border;
-                        background: url(../img/food/round_pointer1.png) no-repeat;
+                        background: url(img/food/round_pointer1.png) no-repeat;
                     }
                 }
                 &:nth-child(2) .cooking__food_item_img {
                     &:after {
                         @extend .item-border;
-                        background: url(../img/food/round_pointer2.png) no-repeat;
+                        background: url(img/food/round_pointer2.png) no-repeat;
                     }
                 }
                 &:nth-child(3) .cooking__food_item_img {
                     &:after {
                         @extend .item-border;
-                        background: url(../img/food/round_pointer3.png) no-repeat;
+                        background: url(img/food/round_pointer3.png) no-repeat;
                     }
                 }
             }
@@ -1586,7 +1592,7 @@ button {
         &:after {
             content: '';
             @extend .item-border;
-            background: url(../img/mood/mood_border.png) no-repeat;
+            background: url(img/mood/mood_border.png) no-repeat;
             background-size: cover;
         }
         &_text {
@@ -1604,7 +1610,7 @@ button {
 .gifts {
     margin-top: 64px;
     height: 1395px;
-    background: url(../img/bg-pink1.svg);
+    background: url(img/bg-pink1.svg);
     background-size: cover;
     background-position: -20px 240px;
     background-repeat-y: no-repeat;
@@ -1615,7 +1621,7 @@ button {
         width: 100%;
         position: absolute;
         height: 233px;
-        background: url(../img/finish-line.svg) no-repeat;
+        background: url(img/finish-line.svg) no-repeat;
         background-size: cover;
     }
     .feedback {
@@ -1691,7 +1697,7 @@ button {
             position: absolute;
             bottom: 0;
             left: -70px;
-            background: url(../img/girl-bg.png) no-repeat;
+            background: url(img/girl-bg.png) no-repeat;
         }
         &_boy {
             width: 700px;
@@ -1699,7 +1705,7 @@ button {
             position: absolute;
             bottom: 0;
             right: 100px;
-            background: url(../img/boy-bg.png) no-repeat;
+            background: url(img/boy-bg.png) no-repeat;
         }
     }
 }
@@ -1739,7 +1745,7 @@ button {
             width: 60px;
             height: 60px;
             &:nth-child(1) {
-                background: url(../img/question_footer/question_par1.png);
+                background: url(img/question_footer/question_par1.png);
                 bottom: 0;
                 top: 367px;
                 width: 150px;
@@ -1748,7 +1754,7 @@ button {
                 top: 100px;
             }
             &:nth-child(2) {
-                background: url(../img/question_footer/question_par2.png);
+                background: url(img/question_footer/question_par2.png);
                 left: 41px;
                 margin: auto;
                 bottom: 225px;
@@ -1757,7 +1763,7 @@ button {
                 z-index: -20;
             }
             &:nth-child(3) {
-                background: url(../img/question_footer/question_par3.png);
+                background: url(img/question_footer/question_par3.png);
                 right: 50px;
                 bottom: 100px;
                 top: 0;
@@ -1766,14 +1772,14 @@ button {
                 margin: auto;
             }
             &:nth-child(4) {
-                background: url(../img/question_footer/question_par4.png);
+                background: url(img/question_footer/question_par4.png);
                 right: 250px;
                 bottom: 100px;
                 width: 80px;
                 height: 80px;
             }
             &:nth-child(5) {
-                background: url(../img/question_footer/question_par5.png);
+                background: url(img/question_footer/question_par5.png);
                 left: 102px;
                 width: 120px;
                 bottom: -200px;

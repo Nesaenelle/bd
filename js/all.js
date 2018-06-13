@@ -96,6 +96,24 @@ function isInViewport(el) {
 
 }());
 
+// (function() {
+//     var scrollerCont = document.querySelector('[data-scroller]');
+//     var items = scrollerCont.querySelectorAll('[data-scroller-item]');
+//     var width = items[0].offsetWidth;
+//     var scroller = scrollerCont.querySelector('.scroller');
+//     scroller.style.width = width * items.length + 'px';
+
+
+//     window.addEventListener('scroll', function(e) {
+//         if (isScrolledIntoView(scrollerCont)) {
+//             scrollerCont.classList.add('fixed');
+//         } else {
+//              scrollerCont.classList.remove('fixed');
+//         }
+//     });
+
+// }());
+
 $('.scroller-1').slick({
     arrows: false,
     infinite: true,
@@ -154,17 +172,6 @@ setTimeout(function(){
     }, false);
 }, 500);
 
-
-
-
-// $('.scroller-2').slick({
-//     slidesToShow: 2,
-//     // slidesToScroll: 1,
-//     autoplay: true,
-//     arrows: false,
-//     autoplay: true,
-//     autoplaySpeed: 2000,
-// });
 
 
 (function() {

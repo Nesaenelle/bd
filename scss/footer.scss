@@ -11,7 +11,7 @@
         width: 550px;
         padding: 118px 50px 0 0px;
         height: 200px;
-        background: url(../img/number_footer.png) no-repeat;
+        background: url(img/number_footer.png) no-repeat;
         background-position: 0 10px;
         font-size: 16px;
         background-size: cover;
@@ -48,14 +48,14 @@
             width: 66px;
             height: 66px;
             &.fb {
-                background: url(../img/facebook_footer.png) no-repeat;
+                background: url(img/facebook_footer.png) no-repeat;
             }
             &.inst {
-                background: url(../img/instagram_footer.png) no-repeat;
+                background: url(img/instagram_footer.png) no-repeat;
             }
 
             &.vk {
-                background: url(../img/vkontakte_footer.png) no-repeat;
+                background: url(img/vkontakte_footer.png) no-repeat;
             }
         }
     }
