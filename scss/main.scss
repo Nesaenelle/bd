@@ -1,4 +1,4 @@
-$min-width: 300px;
+$min-width: 500px;
 body {
     font-family: Montserrat;
     background: #f0f8f9;
@@ -241,22 +241,43 @@ button {
 
     &__container {
         // height: 580px;
-        // overflow: hidden;
+        overflow: hidden;
         // margin-top: 22px;
         // max-height: 400px;
+        $c: &;
         .scroller {
-            // display: flex; // width: 4000px;
+            display: flex; // width: 4000px;
             // min-width: 100%;
-        } // &.absolute {
-        //     position: fixed;
-        //     left: 0;
-        //     top: 0;
-        //     z-index: 999;
-        // }
+        } 
+        &.fixed {
+            // height: 3000px;
+            #{$c}_wrapper {
+              position: fixed;
+              left: 0;
+              top: 0;
+              z-index: 999;
+              width: 100%!important;
+              margin: auto!important;
+              overflow: hidden;
+              right: 0;  
+            }
+        }
+        &.absolute {
+            #{$c}_wrapper {
+              position: absolute;
+              left: 0;
+              top: 0;
+              z-index: 999;
+              width: 100%!important;
+              margin: auto!important;
+              overflow: hidden;
+              right: 0;  
+            }
+        }
     }
 
     &__item {
-        // min-width: $min-width;
+        min-width: $min-width;
         display: inline-block;
         &_img {
             img {
