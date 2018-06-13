@@ -122,9 +122,9 @@ function isInViewport(el) {
 
 
         if (window.outerWidth <= 480) {
-            scrollerCont.style.height = height - (type === '1' ? 0 : 600) + 'px';
+            scrollerCont.style.height = height - (type === '1' ? 0 : 100) + 'px';
         } else {
-            scrollerCont.style.height = height - (type === '1' ? 400 : 900) + 'px';
+            scrollerCont.style.height = height - (type === '1' ? 100 : 500) + 'px';
         }
 
         window.addEventListener('scroll', function(e) {
