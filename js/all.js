@@ -122,7 +122,7 @@ function isInViewport(el) {
 
 
         if (window.outerWidth <= 480) {
-            scrollerCont.style.height = height - (type === '1' ? -150 : 0) + 'px';
+            scrollerCont.style.height = height - (type === '1' ? 0 : 600) + 'px';
         } else {
             scrollerCont.style.height = height - (type === '1' ? 400 : 900) + 'px';
         }

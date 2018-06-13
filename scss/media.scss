@@ -895,10 +895,14 @@
 }
 
 @media screen and (max-width: 480px) {
-    // .horizontal-slider__item {
-    //     width: 100%;
-    //     min-width: 280px;
-    // }
+    .horizontal-slider__item {
+        width: 100%;
+        min-width: 280px;
+        &_text{
+            line-height: 16px;
+            font-size: 14px;
+        }
+    }
     .section-title {
         line-height: 26px;
         font-size: 28px;
