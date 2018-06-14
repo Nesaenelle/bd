@@ -85,9 +85,13 @@
     }
     .section-title {
         font-size: 32px;
+        line-height: 32px;
         br {
             display: none;
         }
+    }
+    .horizontal-slider .section-title {
+        width: 90%;
     }
     .horizontal-slider {
         margin-top: 40px; // display: none;
@@ -144,6 +148,8 @@
 
     .calculate-btn {
         font-size: 20px;
+        margin-top: 0px;
+        height: 80px;
     }
 
     .shows {
@@ -412,11 +418,10 @@
         }
 
         &__food {
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             justify-content: center;
             &_item {
-                margin-bottom: 40px;
-                // width: 100%;
+                margin-bottom: 40px; // width: 100%;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
@@ -712,6 +717,8 @@
     .horizontal-slider .calculate-btn {
         line-height: 16px;
         font-size: 16px;
+        margin-top: 5px;
+        height: 60px;
     }
     .feedback {
         // margin-bottom: 30px;
@@ -833,6 +840,11 @@
             font-size: 20px;
         }
     }
+
+    .horizontal-slider__item {
+        width: 400px;
+        min-width: 400px;
+    }
 }
 
 @media screen and (max-width: 580px) {
@@ -846,9 +858,8 @@
     //         margin-top: 30px;
     //     }
     // }
-
     .cooking__bottom .cooking__title {
-            padding: 0 15px;
+        padding: 0 15px;
     }
     .birthday-calculator__form {
         height: 620px;
@@ -859,7 +870,7 @@
         .input {
             width: 100%;
             margin-bottom: 15px;
-        } 
+        }
         .radio__toggle_no,
         .radio__toggle_yes {
             width: 30px;
@@ -888,21 +899,25 @@
             margin-top: 40px;
         }
     }
-
-    // .horizontal-slider__item {
-    //     width: 400px;
-    // }
+    .horizontal-slider__item {
+        width: 400px;
+        min-width: 400px;
+    }
 }
 
 @media screen and (max-width: 480px) {
     .horizontal-slider__item {
         width: 100%;
-        min-width: 280px;
-        &_text{
+        min-width: 250px;
+        &_text {
             line-height: 16px;
-            font-size: 14px;
+            font-size: 12px;
         }
     }
+    .horizontal-slider.secondary .horizontal-slider__item {
+        min-width: 350px;
+    }
+
     .section-title {
         line-height: 26px;
         font-size: 28px;
@@ -997,7 +1012,11 @@
 
     .birthday-calculator__form_calculated {
         padding: 0;
-        &_estimate, &_message, &_phone-number, &_phone-text, &_total{
+        &_estimate,
+        &_message,
+        &_phone-number,
+        &_phone-text,
+        &_total {
             padding: 0;
             text-align: center;
         }

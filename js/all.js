@@ -102,50 +102,69 @@ function isInViewport(el) {
 (function() {
     var scrollerConts = document.querySelectorAll('[data-scroller]');
 
+    var Events = function() {
+        this.coll = [];
+        this.on = function(func) {
+            this.coll.push(func)
+        }
+        this.trigger = function(e) {
+            this.coll.forEach(function(func) {
+                func(e);
+            })
+        }
+    };
 
-    scrollerConts.forEach(function(scrollerCont) {
-        var type = scrollerCont.getAttribute('data-scroller');
+    var fn = new Events();
 
-        var offsetVal = window.outerWidth <= 480 ? 100 : 200;
-        var items = scrollerCont.querySelectorAll('[data-scroller-item]');
+    scrollerConts.forEach(function(scrollerCont, index) {
+        var offsetVal = 100;
+        var id = scrollerCont.getAttribute('data-scroller');
+        var items = scrollerCont.querySelectorAll('[data-scroller-item="'+id+'"]');
         var wrapper = scrollerCont.querySelector('.horizontal-slider__container_wrapper');
         var itemWidth = items[0].clientWidth;
         var itemHeight = items[0].clientHeight;
         var scroller = scrollerCont.querySelector('.scroller');
         var width = itemWidth * items.length;
-        var height = itemWidth * items.length;
-
-        var startPoint = offset(scrollerCont).top - offsetVal;
-        var newOff = (window.outerWidth - itemWidth) / 2;
-
-        scroller.style.width = width + 'px';
 
 
-        if (window.outerWidth <= 480) {
-            scrollerCont.style.height = height - (type === '1' ? 0 : 100) + 'px';
-        } else {
-            scrollerCont.style.height = height - (type === '1' ? 100 : 500) + 'px';
-        }
+        scroller.style.width = itemWidth * items.length + 'px';
 
-        window.addEventListener('scroll', function(e) {
+        scrollerCont.style.height = wrapper.clientHeight + width +'px';
 
-            if (isScrolledIntoView(scrollerCont, offsetVal) && window.pageYOffset < (startPoint + height - window.outerWidth + newOff)) {
+
+        fn.on(function(e) {
+            var startPoint = offset(scrollerCont).top - offsetVal;
+            var fullHeight = (startPoint + width /*- window.outerWidth*/);
+
+            if (isScrolledIntoView(scrollerCont, offsetVal) && window.pageYOffset < fullHeight) {
+                var procent = (window.pageYOffset - startPoint) / (fullHeight - startPoint);
+                procent = procent < 0 ? 0 : procent;
+
+                var step = width - window.outerWidth + (index ? 20 * items.length : offsetVal / 2);
+
                 scrollerCont.classList.add('fixed');
                 scrollerCont.classList.remove('absolute');
-                var transX = -window.pageYOffset + startPoint + 'px';
+                var transX = -step * procent + 'px';
                 scroller.style.transform = 'translate(' + transX + ')';
                 wrapper.style.top = offsetVal + 'px';
-            } else if (isScrolledIntoView(scrollerCont, offsetVal) && window.pageYOffset <= (startPoint + height)) {
+            } else if (isScrolledIntoView(scrollerCont, offsetVal) && window.pageYOffset >= fullHeight) {
                 scrollerCont.classList.add('absolute');
                 scrollerCont.classList.remove('fixed');
-                wrapper.style.top = offsetVal + height + 'px';
+                wrapper.style.top = width + 'px';
+
             } else {
                 wrapper.style.top = 0 + 'px';
                 scrollerCont.classList.remove('absolute');
                 scrollerCont.classList.remove('fixed');
                 scroller.style.transform = 'translate(' + 0 + 'px)';
             }
-        });
+
+                    scrollerCont.style.height = wrapper.clientHeight + width +'px';
+        })
+    });
+
+    window.addEventListener('scroll', function(e) {
+        fn.trigger(e);
     });
 }());
 

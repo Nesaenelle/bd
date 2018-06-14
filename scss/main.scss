@@ -1,4 +1,4 @@
-$min-width: 500px;
+$min-width: 450px;
 body {
     font-family: Montserrat;
     background: #f0f8f9;
@@ -241,37 +241,44 @@ button {
 
     &__container {
         // height: 580px;
-        overflow: hidden;
+
         // margin-top: 22px;
         // max-height: 400px;
+        position: relative;
         $c: &;
+        &_wrapper {
+            position: relative;
+            overflow: hidden; 
+            // display: flex;
+        }
         .scroller {
             display: flex; // width: 4000px;
             // min-width: 100%;
-        } 
+            width: 100%;
+        }
         &.fixed {
             // height: 3000px;
-            #{$c}_wrapper {
-              position: fixed;
-              left: 0;
-              top: 0;
-              z-index: 999;
-              width: 100%!important;
-              margin: auto!important;
-              overflow: hidden;
-              right: 0;  
+            > #{$c}_wrapper {
+                position: fixed;
+                left: 0;
+                top: 0;
+                z-index: 999;
+                margin: auto;
+                width: 100%!important; // margin: auto!important;
+                // overflow: hidden; 
+                right: 0;  
             }
         }
         &.absolute {
-            #{$c}_wrapper {
-              position: absolute;
-              left: 0;
-              top: 0;
-              z-index: 999;
-              width: 100%!important;
-              margin: auto!important;
-              overflow: hidden;
-              right: 0;  
+            > #{$c}_wrapper {
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 999;
+                margin: auto;
+                width: 100%!important; // margin: auto!important;
+                // overflow: hidden; 
+                right: 0;  
             }
         }
     }
@@ -279,6 +286,8 @@ button {
     &__item {
         min-width: $min-width;
         display: inline-block;
+        // height: 520px;
+        overflow: hidden;
         &_img {
             img {
                 width: 100%; // max-width: 600px;
@@ -296,13 +305,20 @@ button {
         .horizontal-slider__container {
             margin-top: 44px;
             max-width: 100%;
+            // width: 99%;
+            // margin: auto;
         }
         .horizontal-slider__item {
             // $c: &;
             position: relative;
-            margin-right: 20px; // width: 540px;
+          //  margin-right: 20px; // width: 540px;
             // min-width: 540px;
-            max-width: 100%;
+            max-width: 100%; // margin: 0 10px;
+            // padding: 0 10px;
+            margin-right: 20px;
+            &:last-child {
+                margin-right: 0;
+            }
             &_text {
                 // margin: 12px 10px 0 3px;
                 // font-size: 18px;
@@ -1042,7 +1058,6 @@ button {
             color: #8765d1;
         }
     }
-
 }
 
 
@@ -1528,7 +1543,7 @@ button {
 
     &__top {
         height: 1120px;
-        background: url(img/bg-aqua2.svg);
+        background-image: url(img/bg-aqua2.svg);
         background-size: cover;
         background-position: center;
         background-repeat-y: no-repeat;
@@ -1632,7 +1647,7 @@ button {
 .gifts {
     margin-top: 64px;
     height: 1395px;
-    background: url(img/bg-pink1.svg);
+    background: url(img/bg-pink1.svg) no-repeat;
     background-size: cover;
     background-position: -20px 240px;
     background-repeat-y: no-repeat;
