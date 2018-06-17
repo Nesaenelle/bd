@@ -146,6 +146,7 @@
                         box-shadow: 0 0 0 2px #1ebec4, 0 0 20px -2px #1ebec4;
                         border-color: #1ebec4;
                         background: url(img/calculator/checkmark_active.png) no-repeat;
+                        background-size: 50%;
                     }
                 }
             }
@@ -155,6 +156,7 @@
                         box-shadow: inset 0 0 0 2px #fe84a6, 0 0 20px -2px #fe84a6;
                         border-color: #fe84a6;
                         background: url(img/calculator/close_active.png) no-repeat;
+                        background-size: 50%;
                     }
                 }
             }
@@ -168,11 +170,13 @@
             @extend .radio-control;
             background: url(img/calculator/checkmark.png) no-repeat;
             background-position: center!important;
+            background-size: 50%;
         }
         &_no {
             @extend .radio-control;
             background: url(img/calculator/close.png) no-repeat;
             background-position: center!important;
+            background-size: 50%;
         }
     }
 }

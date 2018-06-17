@@ -8,6 +8,10 @@
     }
     .header__phone {
         opacity: 1;
+        background: #ffda46;
+        &_text {
+            text-shadow: none;
+        }
     }
 }
 
@@ -30,12 +34,12 @@
     &__menu {}
     &__phone {
         position: absolute;
-        right: -57px;
-        top: -4px;
-        width: 384px;
-        padding: 23px 20px 20px 37px;
-        height: 165px;
-        background: url(img/number.png) no-repeat;
+        right: -50px;
+        top: 0;
+        width: 340px;
+        padding: 10px 20px 20px 37px;
+        height: 100%;
+        transition: 0.2s;
         font-size: 16px;
         &_number {
             font-size: 30px;
@@ -45,6 +49,7 @@
             color: #333333;
         }
         &_text {
+            text-shadow: 1px 1px 14px #fff, 0 0 2em #fff;
             font-size: 12px;
             padding-left: 6px;
             color: #333333;
@@ -279,6 +284,145 @@
                     }
                 }
             }
+        }
+    }
+}
+
+
+.hamburger {
+
+    display: none;
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    bottom:0;
+    top: 20px;
+    margin: auto;
+    z-index: 10;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+    cursor: pointer;
+
+
+    &.active {
+        span {
+            background: none;
+            &:before {
+                top: 0px;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+            &:after {
+                top: 0px;
+                -webkit-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+        }
+
+        &+.dropdown-menu {
+            opacity: 1;
+            transform: translateY(0%);
+            visibility: visible;
+        }
+    }
+    span {
+        position: relative;
+        width: 100%;
+        height: 3px;
+        display: inline-block;
+        background: #333;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: all .2s linear;
+        -moz-transition: all .2s linear;
+        -ms-transition: all .2s linear;
+        -o-transition: all .2s linear;
+        transition: all .2s linear;
+        &:before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: #333;
+            position: absolute;
+            left: 0;
+            top: -8px;
+            -webkit-transition: all .2s linear;
+            -moz-transition: all .2s linear;
+            -ms-transition: all .2s linear;
+            -o-transition: all .2s linear;
+            transition: all .2s linear;
+        }
+        &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: #333;
+            position: absolute;
+            left: 0;
+            top: 8px;
+            -webkit-transition: all .2s linear;
+            -moz-transition: all .2s linear;
+            -ms-transition: all .2s linear;
+            -o-transition: all .2s linear;
+            transition: all .2s linear;
+        }
+    }
+}
+
+.dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    left: 0;
+    top: 0;
+    transform: translateY(-100%);
+    transition: 0.4s;
+    z-index: -1;
+    ul {
+        padding-top: 75px;
+        li {
+            position: relative;
+            a {
+                padding: 8px 10px;
+                display: block;
+                text-align: center;
+                color: #000;
+                font-size: 16px;
+            }
+            &:after {
+                height: 4px;
+                width: 60%;
+                content: '';
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                transition: 0.2s;
+            }
+            &.active {
+                a {
+                    color: #8765d1;
+                }
+                &:after {
+                    content: '';
+                    background: #8765d1!important;
+                }
+            }
+
         }
     }
 }

@@ -8,6 +8,32 @@
     display: none;
 }
 
+
+
+@media screen and (max-width: 1480px) {
+    .header__menu nav ul li {
+        margin: 6px 5px 10px 6px;
+        a {
+            font-size: 14px;
+        }
+    }
+
+    .shows {
+        padding: 150px 40px;
+    }
+
+    .header__phone {
+        right: 0;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .hamburger,
+    .dropdown-menu {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 1280px) {
     .desktop {
         display: none;
@@ -15,8 +41,15 @@
     .mobile {
         display: block;
     }
+    .header__menu .container {
+        justify-content: center;
+        align-items: center;
+    }
+    .hamburger {
+        display: block;
+    }
     .header__phone {
-        // display: none;
+        display: none;
         width: 270px;
         padding-left: 30px;
         &_number {
@@ -70,7 +103,7 @@
         background-position: center bottom;
         z-index: 2;
         background-size: contain;
-        bottom: -20px;
+        bottom: -80px;
         top: auto;
     }
     .feedback {
@@ -574,6 +607,11 @@
 }
 
 @media screen and (max-width: 900px) {
+
+    .header__kid-bg {
+        bottom: -200px; 
+        background-position: right;
+    }
     .show {
         background: none;
     }
@@ -589,7 +627,23 @@
             }
         }
     }
+    .wizzard__item:nth-child(1) {
+        position: static;
+        .wizzard__item_number,
+        {
+            color: #fff;
+        }
+        .wizzard__item_text {
+            color: #fff;
+            margin-left: 12px;
+        }
 
+
+        &:after {
+        top: 150px;
+        left: 13px;
+        }
+    }
     .wizzard {
         .feedback {
             position: relative;
@@ -676,9 +730,20 @@
         margin-top: 60px;
         color: #fff;
     }
+
+    .shows {
+        &__container_item {
+            width: 100%;
+            max-width: 600px;
+        }
+    }
 }
 
 @media screen and (max-width: 670px) {
+    .header__kid-bg {
+        bottom: -350px;
+        background-position: center;
+    }
     .header .top-block__descr {
         width: 100%;
     }
@@ -687,12 +752,8 @@
     }
     .wizzard__item {
         flex-wrap: wrap;
-    }
-    .wizzard__item:nth-child(1) {
-        position: absolute;
-        top: -120px;
-        left: 20px;
-        margin-top: 0;
+    } 
+     .wizzard__item:nth-child(1) {
         &:after {
             content: none;
         }
@@ -780,7 +841,7 @@
             height: 35px;
         }
         .radio__toggle {
-            width: 100px;
+            width: 120px;
         }
 
         .calculate-btn {
@@ -848,16 +909,6 @@
 }
 
 @media screen and (max-width: 580px) {
-    // .holiday-calculator__form {
-    //     form {
-    //         .input-descr {
-    //             width: 100%;
-    //         }
-    //     }
-    //     .calculate-btn {
-    //         margin-top: 30px;
-    //     }
-    // }
     .cooking__bottom .cooking__title {
         padding: 0 15px;
     }
@@ -869,14 +920,14 @@
         .radio,
         .input {
             width: 100%;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
         .radio__toggle_no,
         .radio__toggle_yes {
-            width: 30px;
-            min-width: 30px;
-            max-width: 30px;
-            height: 30px;
+            width: 38px;
+            min-width: 38px;
+            max-width: 38px;
+            height: 38px;
             background-size: 50%;
         }
         .calculate-btn {
@@ -906,6 +957,10 @@
 }
 
 @media screen and (max-width: 480px) {
+    .header__kid-bg {
+        bottom: -250px;
+        background-position: center;
+    }
     .horizontal-slider__item {
         width: 100%;
         min-width: 250px;
@@ -924,25 +979,24 @@
     }
     .header .top-block__title span {
         padding: 0 3px;
-    }
+    } 
     .logo {
         img {
-            width: 100px;
+            width: 180px;
         }
     }
-
     .header .top-block__title {
+        margin-top: 60px;
         font-size: 28px;
-        line-height: 26px;
+        line-height: 26px; 
         text-align: center;
-        text-shadow: 1px 1px 7px #000;
+        // text-shadow: 1px 1px 7px #000;
         letter-spacing: 1px;
     }
     .header .top-block__descr {
         font-size: 18px;
         line-height: 22px;
-        margin-top: 20px;
-        text-shadow: 1px 1px 7px #fff;
+        margin-top: 20px; // text-shadow: 1px 1px 7px #fff;
         text-align: center;
         br {
             display: none;
@@ -999,6 +1053,21 @@
             padding: 0;
             font-size: 18px; // margin-top: 0;
             padding: 0;
+        }
+        .birthday-calculator__container .birthday-calculator__form form {
+            .radio,
+            .input {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .input {
+               input {
+                 width: 110px;
+               }
+            }
+            .radio__toggle {
+                width: 110px;
+            }
         }
         .birthday-calculator__container .birthday-calculator__form form {
             padding: 0;
@@ -1124,7 +1193,7 @@
     // }
     .gifts {
         &:after {
-            content: none;
+            // content: none;
         }
         &__title {
             font-size: 18px;
@@ -1148,7 +1217,7 @@
         }
         &__bg_boy {
             bottom: 120px;
-            width: 100%;
+            width: 80%;
             right: -70px;
         }
         .feedback__message {

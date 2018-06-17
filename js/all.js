@@ -177,6 +177,9 @@ function isInViewport(el) {
             e.preventDefault();
             calculator.querySelector('[data-holiday-calculator-init]').classList.add('hidden');
             calculator.querySelector('[data-holiday-calculator-calculated]').classList.remove('hidden');
+
+
+            document.querySelector('.birthday-calculator__form-info_descr.last').classList.add('hidden');
         }, false);
     });
 }());
@@ -243,6 +246,31 @@ function isInViewport(el) {
         }
     }
 }());
+
+
+(function() {
+    var burger = document.querySelector('[data-burger]');
+    var menuContainer = document.querySelector('.dropdown-menu');
+
+    burger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (burger.classList.contains('active')) {
+            burger.classList.remove('active');
+        } else {
+            burger.classList.add('active');
+        }
+
+    }, false);
+
+    window.addEventListener('click', function(e) {
+        if (!menuContainer.contains(e.target)) {
+            burger.classList.remove('active');
+        }
+    }, false);
+
+}());
+
+
 
 $(document).ready(function() {
     $('.date-mask').mask("00.00.0000", { placeholder: "__.__.____" });

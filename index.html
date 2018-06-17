@@ -15,6 +15,24 @@
     <div class="header__menu animated">
         <div class="container">
             <a href="#" class="logo" data-navigation-link="birthdays"><img src="img/logo.png" alt=""></a>
+            <div class="hamburger" data-burger>
+                <span></span>
+            </div>
+            <div class="dropdown-menu">
+                <ul>
+                    <li class="active" data-navigation-link="birthdays"><a href="">Дни рождения</a></li>
+                    <li data-navigation-link="master"><a href="">Мастер классы</a></li>
+                    <li data-navigation-link="corporate"><a href="">Корпоративы</a></li>
+                    <li data-navigation-link="animators"><a href="">Аниматоры</a></li>
+                    <li data-navigation-link="kids"><a href="#">Детское</a></li>
+                    <li data-navigation-link="adult"><a href="#">Взрослое</a></li>
+                    <li data-navigation-link="banquet"><a href="#">Банкетное</a></li>
+                    <li data-navigation-link="cake"><a href="#">Торты</a></li>
+                    <li data-navigation-link="shares"><a href="">Акции</a></li>
+                    <li data-navigation-link="contacts"><a href="">Контакты</a></li>
+                    <li data-navigation-link="about"><a href="">О нас</a></li>
+                </ul>
+            </div>
             <nav>
                 <ul>
                     <li class="active" data-navigation-link="birthdays"><a href="">Дни рождения</a></li>
@@ -158,7 +176,6 @@
                         </div>
                     </div>
                     <button class="calculate-btn" data-navigation-link="calculator"></button>
-
                     <div class="shows" data-navigation="animators">
                         <div class="container">
                             <div class="section-title white">Аниматоры проводят шоу
@@ -320,7 +337,7 @@
                                 <div class="birthday-calculator__form-info">
                                     <img src="img/cake.png" alt="">
                                     <div class="birthday-calculator__form-info_descr">Если вы уже отмечали у нас день рождения или сделали заказ на 10 000 <span class="rubl">c</span>, мы дарим шоколадный торт весом 1 кг</div>
-                                    <div class="birthday-calculator__form-info_descr">Мы считаем среднюю цену
+                                    <div class="birthday-calculator__form-info_descr last">Мы считаем среднюю цену
                                         <br>на развлекательную
                                         <br>программу. Точную стоимость
                                         <br>скажет менеджер, когда
@@ -467,6 +484,7 @@
                     <div class="horizontal-slider secondary">
                         <div class="horizontal-slider__container" data-scroller="2">
                             <div class="horizontal-slider__container_wrapper">
+                                <div style="height: 100px;" class="desktop"></div>
                                 <div class="scroller">
                                     <div class="horizontal-slider__item" data-scroller-item="2">
                                         <div class="horizontal-slider__item_img"><img src="img/horizontal_slider2/slider_blue_photo.png" alt=""></div>
@@ -563,10 +581,10 @@
                                                 <div class="addresses__address"><a href="#">Жулебинскй бульвар д. 10/6</di</a>v> -->
                                             </div>
                                             <div class="addresses__col_item metro">
-                                                <div class="addresses__address_metro violet"> м. Жулебино</div>
-                                                <div class="addresses__address_metro yellow"> м.ЦСКА</div>
-                                                <div class="addresses__address_metro violet"> м. Полежаевская</div>
-                                                <div class="addresses__address_metro green">м. Динамо</div>
+                                                <div class="addresses__address_metro violet"> <a href="#">м. Жулебино</a></div>
+                                                <div class="addresses__address_metro yellow"><a href="#"> м.ЦСКА</a></div>
+                                                <div class="addresses__address_metro violet"><a href="#"> м. Полежаевская</a></div>
+                                                <div class="addresses__address_metro green"><a href="#">м. Динамо</a></div>
                                             </div>
                                             <div class="addresses__title mt-35">Классические</div>
                                             <div class="addresses__col_item">
@@ -584,14 +602,14 @@
                                                 <div class="addresses__address"><a href="#"> Октябрьский проспект</a></div>
                                             </div>
                                             <div class="addresses__col_item metro">
-                                                <div class="addresses__address_metro grey">м. Алтуфьево</div>
-                                                <div class="addresses__address_metro red">м. Лубянка</div>
-                                                <div class="addresses__address_metro blue"> м. Измайловская</div>
-                                                <div class="addresses__address_metro blue">м. Молодежная </div>
-                                                <div class="addresses__address_metro l-green"> м. Марьина Роща </div>
-                                                <div class="addresses__address_metro l-green">м. Марьино </div>
-                                                <div class="addresses__address_metro red">м. Университет </div>
-                                                <div class="addresses__address_metro d-green"> м. Войковская </div>
+                                                <div class="addresses__address_metro grey"><a href="#">м. Алтуфьево</a></div>
+                                                <div class="addresses__address_metro red"><a href="#">м. Лубянка</a></div>
+                                                <div class="addresses__address_metro blue"> <a href="#">м. Измайловская</a></div>
+                                                <div class="addresses__address_metro blue"><a href="#">м. Молодежная </a></div>
+                                                <div class="addresses__address_metro l-green"> <a href="#">м. Марьина Роща </a></div>
+                                                <div class="addresses__address_metro l-green"><a href="#">м. Марьино </a></div>
+                                                <div class="addresses__address_metro red"><a href="#">м. Университет </a></div>
+                                                <div class="addresses__address_metro d-green"> <a href="#">м. Войковская </a></div>
                                             </div>
                                         </div>
                                         <div class="addresses__col">
@@ -615,22 +633,22 @@
                                                 <div class="addresses__address"><a href="#">ул. Скобелевская</a></div>
                                             </div>
                                             <div class="addresses__col_item metro">
-                                                <div class="addresses__address_metro green">м. Автозаводская</div>
-                                                <div class="addresses__address_metro green">м. Кантемировская</div>
-                                                <div class="addresses__address_metro orange">м. Алексеевская</div>
-                                                <div class="addresses__address_metro orange">м. Беляево</div>
-                                                <div class="addresses__address_metro orange">м. Беляево</div>
-                                                <div class="addresses__address_metro orange">м. Тургеневская</div>
-                                                <div class="addresses__address_metro blue">м. Крылатское</div>
-                                                <div class="addresses__address_metro blue">м. Измайловская</div>
-                                                <div class="addresses__address_metro blue">м. Партизанская</div>
-                                                <div class="addresses__address_metro l-green">м. Римская</div>
-                                                <div class="addresses__address_metro red">м. Проспект Вернадского</div>
-                                                <div class="addresses__address_metro brown">м. Краснопресненская</div>
-                                                <div class="addresses__address_metro violet">м. Баррикадная</div>
-                                                <div class="addresses__address_metro blue">м. Бауманская</div>
-                                                <div class="addresses__address_metro grey">м. Серпуховская</div>
-                                                <div class="addresses__address_metro grey">м. Ул. Скобелевская</div>
+                                                <div class="addresses__address_metro green"><a href="#">м. Автозаводская</a></div>
+                                                <div class="addresses__address_metro green"><a href="#">м. Кантемировская</a></div>
+                                                <div class="addresses__address_metro orange"><a href="#">м. Алексеевская</a></div>
+                                                <div class="addresses__address_metro orange"><a href="#">м. Беляево</a></div>
+                                                <div class="addresses__address_metro orange"><a href="#">м. Беляево</a></div>
+                                                <div class="addresses__address_metro orange"><a href="#">м. Тургеневская</a></div>
+                                                <div class="addresses__address_metro blue"><a href="#">м. Крылатское</a></div>
+                                                <div class="addresses__address_metro blue"><a href="#">м. Измайловская</a></div>
+                                                <div class="addresses__address_metro blue"><a href="#">м. Партизанская</a></div>
+                                                <div class="addresses__address_metro l-green"><a href="#">м. Римская</a></div>
+                                                <div class="addresses__address_metro red"><a href="#">м. Проспект Вернадского</a></div>
+                                                <div class="addresses__address_metro brown"><a href="#">м. Краснопресненская</a></div>
+                                                <div class="addresses__address_metro violet"><a href="#">м. Баррикадная</a></div>
+                                                <div class="addresses__address_metro blue"><a href="#">м. Бауманская</a></div>
+                                                <div class="addresses__address_metro grey"><a href="#">м. Серпуховская</a></div>
+                                                <div class="addresses__address_metro grey"><a href="#">м. Ул. Скобелевская</a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -1001,14 +1019,11 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
             <!-- </div> -->
         </div>
-
     </main>
-
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
     <script>
     var map;

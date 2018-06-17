@@ -209,7 +209,7 @@ button {
             font-weight: 500;
             color: #000;
             .icon {
-                margin-right: 6px;
+                margin-right: 10px;
             }
             &_name {
                 color: #000;
@@ -241,15 +241,13 @@ button {
 
     &__container {
         // height: 580px;
-
         // margin-top: 22px;
         // max-height: 400px;
         position: relative;
         $c: &;
         &_wrapper {
             position: relative;
-            overflow: hidden; 
-            // display: flex;
+            overflow: hidden; // display: flex;
         }
         .scroller {
             display: flex; // width: 4000px;
@@ -258,7 +256,7 @@ button {
         }
         &.fixed {
             // height: 3000px;
-            > #{$c}_wrapper {
+            >#{$c}_wrapper {
                 position: fixed;
                 left: 0;
                 top: 0;
@@ -266,11 +264,11 @@ button {
                 margin: auto;
                 width: 100%!important; // margin: auto!important;
                 // overflow: hidden; 
-                right: 0;  
+                right: 0;
             }
         }
         &.absolute {
-            > #{$c}_wrapper {
+            >#{$c}_wrapper {
                 position: absolute;
                 left: 0;
                 top: 0;
@@ -278,15 +276,14 @@ button {
                 margin: auto;
                 width: 100%!important; // margin: auto!important;
                 // overflow: hidden; 
-                right: 0;  
+                right: 0;
             }
         }
     }
 
     &__item {
         min-width: $min-width;
-        display: inline-block;
-        // height: 520px;
+        display: inline-block; // height: 520px;
         overflow: hidden;
         &_img {
             img {
@@ -302,16 +299,17 @@ button {
     }
 
     &.secondary {
+        .section-title {
+            margin-top: 30px;
+        }
         .horizontal-slider__container {
             margin-top: 44px;
-            max-width: 100%;
-            // width: 99%;
+            max-width: 100%; // width: 99%;
             // margin: auto;
         }
         .horizontal-slider__item {
             // $c: &;
-            position: relative;
-          //  margin-right: 20px; // width: 540px;
+            position: relative; //  margin-right: 20px; // width: 540px;
             // min-width: 540px;
             max-width: 100%; // margin: 0 10px;
             // padding: 0 10px;
@@ -801,6 +799,7 @@ button {
                     background-size: contain;
                     top: -22px;
                     left: -354px;
+                    pointer-events: none;
                 }
             }
         }
@@ -817,7 +816,7 @@ button {
         content: '';
         position: absolute;
         bottom: -30px;
-        background: url(img/bg-yellow.png);
+        background: url(img/bg-yellow.svg);
         background-size: cover;
         background-position: center;
         width: 100%;
@@ -863,6 +862,7 @@ button {
         &_price {
             font-size: 36px;
             color: #fff;
+            margin-top: 5px;
             font-family: ExposureCTwo;
         }
     }
@@ -1063,8 +1063,8 @@ button {
 
 .organization {
     margin-top: 72px;
-    background: url(img/bg-white2.png);
-    background-size: 150%;
+    background: url(img/bg-white.svg);
+    background-size: cover;
     .container {
         padding: 90px 170px 35px 170px;
         flex-wrap: wrap;
@@ -1147,6 +1147,12 @@ button {
             font-weight: 500;
             font-size: 18px;
             margin-top: 10px;
+            a {
+                color: inherit;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
             &.violet {
                 color: #a3228d;
             }
