@@ -117,9 +117,9 @@ function isInViewport(el) {
     var fn = new Events();
 
     scrollerConts.forEach(function(scrollerCont, index) {
-        var offsetVal = 100;
+        var offsetVal = 60;
         var id = scrollerCont.getAttribute('data-scroller');
-        var items = scrollerCont.querySelectorAll('[data-scroller-item="'+id+'"]');
+        var items = scrollerCont.querySelectorAll('[data-scroller-item="' + id + '"]');
         var wrapper = scrollerCont.querySelector('.horizontal-slider__container_wrapper');
         var itemWidth = items[0].clientWidth;
         var itemHeight = items[0].clientHeight;
@@ -129,37 +129,39 @@ function isInViewport(el) {
 
         scroller.style.width = itemWidth * items.length + 'px';
 
-        scrollerCont.style.height = wrapper.clientHeight + width +'px';
+        scrollerCont.style.height = wrapper.clientHeight + width + 'px';
 
 
         fn.on(function(e) {
-            var startPoint = offset(scrollerCont).top - offsetVal;
-            var fullHeight = (startPoint + width /*- window.outerWidth*/);
+            if(window.innerWidth >= 768 && id === '1' || id === '2') {            
+                var startPoint = offset(scrollerCont).top - offsetVal;
+                var fullHeight = (startPoint + width /*- window.outerWidth*/ );
 
-            if (isScrolledIntoView(scrollerCont, offsetVal) && window.pageYOffset < fullHeight) {
-                var procent = (window.pageYOffset - startPoint) / (fullHeight - startPoint);
-                procent = procent < 0 ? 0 : procent;
+                if (isScrolledIntoView(scrollerCont, offsetVal) && window.pageYOffset < fullHeight) {
+                    var procent = (window.pageYOffset - startPoint) / (fullHeight - startPoint);
+                    procent = procent < 0 ? 0 : procent;
 
-                var step = width - window.outerWidth + (index ? 20 * items.length : offsetVal / 2);
+                    var step = width - window.outerWidth + (index ? 20 * items.length : offsetVal / 2);
 
-                scrollerCont.classList.add('fixed');
-                scrollerCont.classList.remove('absolute');
-                var transX = -step * procent + 'px';
-                scroller.style.transform = 'translate(' + transX + ')';
-                wrapper.style.top = offsetVal + 'px';
-            } else if (isScrolledIntoView(scrollerCont, offsetVal) && window.pageYOffset >= fullHeight) {
-                scrollerCont.classList.add('absolute');
-                scrollerCont.classList.remove('fixed');
-                wrapper.style.top = width + 'px';
+                    scrollerCont.classList.add('fixed');
+                    scrollerCont.classList.remove('absolute');
+                    var transX = -step * procent + 'px';
+                    scroller.style.transform = 'translate(' + transX + ')';
+                    wrapper.style.top = offsetVal + 'px';
+                } else if (isScrolledIntoView(scrollerCont, offsetVal) && window.pageYOffset >= fullHeight) {
+                    scrollerCont.classList.add('absolute');
+                    scrollerCont.classList.remove('fixed');
+                    wrapper.style.top = width + 'px';
 
-            } else {
-                wrapper.style.top = 0 + 'px';
-                scrollerCont.classList.remove('absolute');
-                scrollerCont.classList.remove('fixed');
-                scroller.style.transform = 'translate(' + 0 + 'px)';
+                } else {
+                    wrapper.style.top = 0 + 'px';
+                    scrollerCont.classList.remove('absolute');
+                    scrollerCont.classList.remove('fixed');
+                    scroller.style.transform = 'translate(' + 0 + 'px)';
+                }
+
+                scrollerCont.style.height = wrapper.clientHeight + width + 'px';
             }
-
-                    scrollerCont.style.height = wrapper.clientHeight + width +'px';
         })
     });
 
@@ -229,20 +231,29 @@ function isInViewport(el) {
 }());
 
 (function() {
+    var lastScrollTop = 0;
     var header = document.querySelector('.header__menu');
     check();
-    window.addEventListener('scroll', function() {
-        check();
+    window.addEventListener('scroll', function(e) {
+        check(e);
     }, false);
 
-    function check() {
+    function check(e) {
         if (window.scrollY > 50) {
-            document.body.classList.add('fixed-header');
-            header.classList.add('slideInDown');
+            var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+            header.classList.remove('on-top');
+            if (st < lastScrollTop) {
+                header.classList.add('is-visible');
+                header.classList.remove('is-hidden');
 
+            } else {
+                header.classList.remove('is-visible');
+                header.classList.add('is-hidden');
+            }
+            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
         } else {
-            document.body.classList.remove('fixed-header');
-            header.classList.remove('slideInDown');
+            header.classList.remove('is-visible');
+            header.classList.add('on-top');
         }
     }
 }());

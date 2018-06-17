@@ -1,23 +1,4 @@
-.fixed-header {
-    .header__menu {
-        position: fixed;
-        background: #fff;
-        top: 0;
-        box-shadow: 0 0 5px -2px #000;
-        z-index: 9999;
-    }
-    .header__phone {
-        opacity: 1;
-        background: #ffda46;
-        &_text {
-            text-shadow: none;
-        }
-    }
-}
-
-
 .header {
-    // padding-top: 87px;
     .container {
         position: relative;
     }
@@ -36,11 +17,21 @@
         position: absolute;
         right: -50px;
         top: 0;
-        width: 340px;
+        width: 385px;
         padding: 10px 20px 20px 37px;
-        height: 100%;
+        height: 160px;
+        background: url(img/number.png) no-repeat 0 -10px;
         transition: 0.2s;
-        font-size: 16px;
+        font-size: 16px; // #ffda46;
+        &_icon {
+            display: none;
+            position: absolute;
+            left: 20px;
+            bottom: 0;
+            top: 0;
+            height: 30px;
+            margin: auto;
+        }
         &_number {
             font-size: 30px;
             font-weight: 800;
@@ -49,7 +40,7 @@
             color: #333333;
         }
         &_text {
-            text-shadow: 1px 1px 14px #fff, 0 0 2em #fff;
+            // text-shadow: 1px 1px 14px #fff, 0 0 2em #fff;
             font-size: 12px;
             padding-left: 6px;
             color: #333333;
@@ -179,31 +170,45 @@
     font-size: 0;
     width: 100%;
     height: 87px;
-    position: fixed;
-    z-index: 999;
-    transition: 0.1s;
+    position: fixed; // position: absolute;
+    z-index: 9999;
+    transition: 0.5s;
     top: 0;
+    &.is-hidden {
+        top: -300px;
+        .dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            top: -50px;
+        }
+    }
+    &.is-visible {
+        position: fixed;
+        background: #fff;
+        background: #fff;
+        box-shadow: 0 0 5px -2px #000;
+        z-index: 9999; // width: 325px;
+        // padding: 10px 20px 20px 37px;
+        // height: 100%;
+        .header__phone {
+            width: 325px;
+            padding: 10px 20px 20px 37px;
+            height: 100%;
+            background: #ffda46;
+        }
+    }
+    &.on-top {
+        background: none;
+        box-shadow: none;
+    }
     .container {
         display: flex;
-        align-items: center; // justify-content: space-between;
+        align-items: center;
         position: relative;
         height: 100%;
     }
     &_dropdown {
-        position: relative; // &:after {
-        //     position: absolute;
-        //     top: 3px;
-        //     right: -12px;
-        //     content: '';
-        //     border: solid #333;
-        //     border-width: 0 1px 1px 0;
-        //     display: inline-block;
-        //     padding: 3px;
-        //     transform: rotate(45deg);
-        //     -webkit-transform: rotate(45deg);
-        //     transition: 0.1s;
-        //     left: auto;
-        // }
+        position: relative;
     }
     nav {
 
@@ -296,7 +301,7 @@
     height: 20px;
     position: absolute;
     right: 20px;
-    bottom:0;
+    bottom: 0;
     top: 20px;
     margin: auto;
     z-index: 10;
@@ -422,7 +427,6 @@
                     background: #8765d1!important;
                 }
             }
-
         }
     }
 }

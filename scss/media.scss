@@ -8,6 +8,14 @@
     display: none;
 }
 
+@media screen and (max-height: 700px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+}
 
 
 @media screen and (max-width: 1480px) {
@@ -25,7 +33,12 @@
     .header__phone {
         right: 0;
     }
+
+    .examples .container {
+        padding: 0 130px;
+    }
 }
+
 
 @media screen and (min-width: 1280px) {
     .hamburger,
@@ -45,7 +58,8 @@
         justify-content: center;
         align-items: center;
     }
-    .hamburger {
+    .hamburger,
+    .header__phone_icon {
         display: block;
     }
     .header__phone {
@@ -609,7 +623,7 @@
 @media screen and (max-width: 900px) {
 
     .header__kid-bg {
-        bottom: -200px; 
+        bottom: -200px;
         background-position: right;
     }
     .show {
@@ -627,21 +641,24 @@
             }
         }
     }
-    .wizzard__item:nth-child(1) {
+    .wizzard__item:nth-child(1),
+    .wizzard__item:nth-child(2),
+    .wizzard__item:nth-child(3) {
         position: static;
         .wizzard__item_number,
         {
             color: #fff;
         }
         .wizzard__item_text {
+            margin-top: 0px;
             color: #fff;
             margin-left: 12px;
         }
 
 
         &:after {
-        top: 150px;
-        left: 13px;
+            top: 150px;
+            left: 13px;
         }
     }
     .wizzard {
@@ -739,6 +756,31 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .horizontal-slider__container[data-scroller="1"] {
+        height: auto!important;
+        position: static!important;
+
+        >.horizontal-slider__container_wrapper {
+            top: 0!important;
+            position: static!important;
+            >.scroller {
+                flex-wrap: wrap;
+                width: 100%!important;
+                transform: none!important;
+                margin-top: 40px;
+                > .horizontal-slider__item{
+                    width: 100%;
+                    max-width: 450px!important;
+                    min-width: auto;
+                    margin: auto;
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 670px) {
     .header__kid-bg {
         bottom: -350px;
@@ -752,8 +794,8 @@
     }
     .wizzard__item {
         flex-wrap: wrap;
-    } 
-     .wizzard__item:nth-child(1) {
+    }
+    .wizzard__item:nth-child(1) {
         &:after {
             content: none;
         }
@@ -965,8 +1007,8 @@
         width: 100%;
         min-width: 250px;
         &_text {
-            line-height: 16px;
-            font-size: 12px;
+            line-height: 20px;
+            font-size: 16px;
         }
     }
     .horizontal-slider.secondary .horizontal-slider__item {
@@ -979,7 +1021,7 @@
     }
     .header .top-block__title span {
         padding: 0 3px;
-    } 
+    }
     .logo {
         img {
             width: 180px;
@@ -988,8 +1030,7 @@
     .header .top-block__title {
         margin-top: 60px;
         font-size: 28px;
-        line-height: 26px; 
-        text-align: center;
+        line-height: 26px; // text-align: center;
         // text-shadow: 1px 1px 7px #000;
         letter-spacing: 1px;
     }
@@ -997,7 +1038,7 @@
         font-size: 18px;
         line-height: 22px;
         margin-top: 20px; // text-shadow: 1px 1px 7px #fff;
-        text-align: center;
+        // text-align: center;
         br {
             display: none;
         }
@@ -1011,6 +1052,10 @@
         .section-title {
             width: 100%;
         }
+    }
+
+    .wizzard__item_number {
+        font-size: 72px;
     }
 
     .shows {
@@ -1061,9 +1106,9 @@
                 margin-bottom: 20px;
             }
             .input {
-               input {
-                 width: 110px;
-               }
+                input {
+                    width: 110px;
+                }
             }
             .radio__toggle {
                 width: 110px;
@@ -1226,7 +1271,8 @@
         .gifts__bottom-text {
             text-align: center;
             color: #fff;
-            margin-top: 50px;
+            margin-top: 150px;
+            width: 100%;
             text-shadow: 1px 1px 7px #000;
             text-align: center;
             font-size: 18px;
@@ -1251,11 +1297,22 @@
             }
         }
     }
+    .addresses__title {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .addresses .container {
+        padding: 0 10px;
+    }
+    .addresses__address,
+    .addresses__address_metro {
+        font-size: 13px;
+    }
 
     .addresses .addresses__col_item {
-        width: 100%;
+        // width: 100%;
         &.metro {
-            width: 100%;
+            // width: 100%;
         }
     }
     .faq__item_title {
@@ -1285,5 +1342,15 @@
         left: 0;
 
         border-radius: 0 0px 10px 10px;
+    }
+}
+
+
+@media screen and (max-width: 360px) {
+    .gifts {
+        .gifts__bottom-text {
+            margin-top: 40px;
+            font-size: 16px;
+        }
     }
 }

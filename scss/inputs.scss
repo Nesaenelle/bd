@@ -171,12 +171,34 @@
             background: url(img/calculator/checkmark.png) no-repeat;
             background-position: center!important;
             background-size: 50%;
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                width: calc(100% + 10px);
+                height: calc(100% + 10px);
+                margin-left: -5px;
+                margin-top: -5px;
+                pointer-events: auto;
+            }
         }
         &_no {
             @extend .radio-control;
             background: url(img/calculator/close.png) no-repeat;
             background-position: center!important;
             background-size: 50%;
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                width: calc(100% + 10px);
+                height: calc(100% + 10px);
+                margin-left: -5px;
+                margin-top: -5px;
+                pointer-events: auto;
+            }
         }
     }
 }
